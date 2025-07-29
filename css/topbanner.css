@@ -1,0 +1,20 @@
+.announcement-banner {
+  background-color: #5b3dfd; /* match purple-blue color */
+  color: white;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 999;
+}
+
+.announcement-banner p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.announcement-banner .arrow {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}

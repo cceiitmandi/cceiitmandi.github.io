@@ -1,0 +1,47 @@
+.metrics-section {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #ffffff;
+}
+
+.metrics-intro {
+  font-size: 1.2rem;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.metrics-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.metric-tile {
+  text-align: center;
+  min-width: 120px;
+}
+
+.metric-tile h2 {
+  font-size: 2.5rem;
+  color: #350f94;
+  margin-bottom: 8px;
+  font-family: "Oswald";
+}
+
+.metric-tile p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metrics-grid {
+    gap: 30px;
+  }
+  .metric-tile h2 {
+    font-size: 2rem;
+  }
+}

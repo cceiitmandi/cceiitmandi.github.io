@@ -1,0 +1,29 @@
+/* Responsive Layouts */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-image {
+        margin-top: 2rem;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #0c4a6e;
+        position: absolute;
+        right: 1rem;
+        top: 60px;
+        border-radius: 0.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }

@@ -1,0 +1,33 @@
+.table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #f7fafd;
+  font-family: Arial, sans-serif;
+  border-spacing: 0;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f4f8;
+  font-weight: bold;
+}
+
+table a {
+  color: #0000EE; /* standard blue link */
+  text-decoration: none;
+}

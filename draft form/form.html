@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Registration Form</title>
+
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      appearance: none;
+    }
+
+    .form-group .gender-options {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .form-group .gender-options label {
+      font-weight: normal;
+    }
+
+    button {
+      width: 100%;
+      background: #007BFF;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #successMessage {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>CCE Activities Registration Form</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender *</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Transgender"> Transgender</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number *</label>
+        <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required placeholder="10-digit number">
+      </div>
+
+      <div class="form-group">
+        <label for="qualification">Educational Qualification *</label>
+        <select id="qualification" name="qualification" required>
+          <option value="">Select</option>
+          <option>Bachelor Degree</option>
+          <option>Master Degree</option>
+          <option>PhD</option>
+          <option>Others</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="programId">Program ID *</label>
+        <select id="programId" name="programId" required>
+          <option value="">Select</option>
+          <option>CCE01</option>
+          <option>CCE02</option>
+          <option>CCE03</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage">✅ Registration submitted successfully!</div>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch("https://script.google.com/macros/s/AKfycbwLs-aisba4zGQlAoY5H1yrEbNSAG1xtzooVeKqm5yjBNzHYYT1mlzsPf6yl34qlnmToQ/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('successMessage').style.display = 'block';
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch(error => {
+        alert("Error occurred: " + error.message);
+      });
+    });
+  </script>
+</body>
+</html>

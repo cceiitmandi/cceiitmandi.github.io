@@ -1,0 +1,55 @@
+.announcement-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #5b3dfd;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      z-index: 9999;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      flex-wrap: wrap;
+    }
+
+    .announcement-banner p {
+      margin: 0;
+      flex: 1;
+      text-align: left;
+    }
+
+    .close-banner {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    
+
+    @media (max-width: 600px) {
+
+      .announcement-banner {
+        font-size: 0.9rem;
+        padding: 1rem;
+        max-width: calc(100% - 2rem);
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .announcement-banner p {
+        margin-bottom: 0.5rem;
+      }
+
+      .close-banner {
+        align-self: flex-end;
+      }
+    }

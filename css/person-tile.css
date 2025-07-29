@@ -1,0 +1,92 @@
+.people-section {
+  background-color: #f8fafc;
+  padding: 2rem;
+  text-align: center;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+@media (min-width: 768px) {
+  .person-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.person-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .person-image {
+    margin-bottom: 0;
+  }
+}
+
+.person-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.person-content h3 {
+  font-size: 1.5rem;
+  color: #0c4a6e;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.designation {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 0.8rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: #0369a1;
+  margin-bottom: 0.3rem;
+}
+
+.link a {
+  color: #0369a1;
+  text-decoration: none;
+}

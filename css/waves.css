@@ -1,0 +1,48 @@
+.waves{
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+}
+
+.wave-section-separator div {
+  /* background-color: #001141; */
+  margin: 0;
+  padding:0;
+  color: #fff;
+  text-align:center;
+}
+
+svg {
+  width:100%;
+  display: block;
+  height: 175px;
+}
+
+.wave {
+  animation: wave 4s linear;
+  opacity: .9;
+  animation-iteration-count:infinite;
+  fill: #f7fafc;
+}
+
+.gooeff {
+    filter: url(#goo);
+}
+
+#wave2 {
+  animation-duration: 5s;
+  animation-direction: reverse;
+  opacity: .6;
+  fill: #cac8d5;
+}
+#wave3 {
+  animation-duration: 6s;
+  opacity:.3;
+  fill: #e8e1e1;
+}
+
+@keyframes wave {
+  to {transform: translateX(-100%);}
+}

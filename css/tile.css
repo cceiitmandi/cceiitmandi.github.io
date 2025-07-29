@@ -1,0 +1,53 @@
+.activities-section {
+  padding: 1rem;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.activity-tile {
+  background-color: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.activity-tile:hover {
+  border: 2px solid #1d4ed8;
+}
+
+.activity-tile h3 {
+  font-size: 1.2rem;
+  color: #292996;
+  margin-bottom: 0.5rem;
+}
+
+.activity-tile p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.activity-tile a {
+  text-decoration: none;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+.activity-tile a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRAYAS 3.0 | CCE, IIT Mandi</title>
+  <link rel="stylesheet" href="prayas_css/style.css"/>
+  <link rel="stylesheet" href="prayas_css/speaker.css"/>
+  <link rel="stylesheet" href="prayas_css/focusarea.css"/>
+  <link rel="stylesheet" href="prayas_css/twogrid.css"/>
+  <link rel="stylesheet" href="prayas_css/testimonial.css"/>
+  <link rel="stylesheet" href="prayas_css/metrics.css"/>
+  <link rel="stylesheet" href="prayas_css/footer.css"/>
+  <link rel="stylesheet" href="prayas_css/overlay.css"/>
+
+  <script src="prayas_js/overlay.js" defer></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='EB Garamond'">
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="https://iitmandi.ac.in/"><img style="display: block;" src="prayas_img/iitmdlogo.png" alt="IIT Mandi Logo"/></a>
+      <a href="https://cce.iitmandi.ac.in/"><img style="display: block;" src="prayas_img/ccelogo.png" alt="CCE Logo"/></a>
+      <strong><a href="index.html" style="text-decoration: none;"><span style="font-family: Oswald; font-weight: 350; color: aliceblue; font-size: 1.4rem;">PRAYAS 3.0</span></a></strong>
+    </div>
+    <div class="auth-buttons" id="desktopAuth">
+      <a class="btn light" onclick="openVideo('https://www.youtube.com/embed/RwvpN_Xi8lM?si=AvtxfoDQVwqR06xM')">PRAYAS 1.0</a>
+      <a class="btn light" onclick="openVideo('https://www.youtube.com/embed/RwvpN_Xi8lM?si=AvtxfoDQVwqR06xM')">PRAYAS 2.0</a>
+    </div>
+
+    <!-- Video Overlay -->
+    <div id="videoOverlay" class="video-overlay" onclick="closeVideo(event)">
+      <div class="video-container">
+        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a class="btn light" onclick="openVideo('https://www.youtube.com/embed/RwvpN_Xi8lM?si=AvtxfoDQVwqR06xM')">PRAYAS 1.0</a>
+    <a class="btn light" onclick="openVideo('https://www.youtube.com/embed/RwvpN_Xi8lM?si=AvtxfoDQVwqR06xM')">PRAYAS 2.0</a>
+  </div>
+
+<main class="hero">
+    <h1 style="font-family: Oswald; font-size: 4.2rem; font-weight: 400; padding: 0; margin: 0;">PRAYAS 3.0</h1>
+    <h2 style="font-family: EB Garamond; font-size: 1.7rem; font-weight: 400; padding: 0; margin-bottom: 1rem;">An Odyssey of Curiosity, Learning and Growth in the Lap of Himalayas.</h2>
+    <p class="subheading">
+      A month-long residential initiative by CCE, IIT Mandi. Not just an event, an experience. A movement of makers, thinkers, and innovators.
+      PRAYAS 3.0 is your launchpad into the worlds that will define tomorrow.
+    </p>
+    <div class="button-group">
+      <a class="btn pill" href="gallery.html">Photo Gallery</a>
+      <a class="btn pill" href="media.html">In Media</a>
+      <a class="btn pill" href="">Report</a>
+    </div>
+</main>
+
+<div class="hero-image">
+    <img src="prayas_img/heroimg.JPG" alt="Group Photo PRAYAS 3.0 (2025)"/>
+</div>
+
+<section class="heroperson">
+  <div class="heroperson-content">
+    <p class="heroperson-text">
+      "PRAYAS is about planting seeds of curiosity. We hope this experience will stay with these students for a long time and influence how they approach learning in their life. I hope the confidence they’ve gained here pushes some of them to take up science or engineering seriously in the future."
+    </p>
+  </div>
+  <div class="heroperson-profile">
+    <img src="prayas_img/tushar.JPG" alt="Head, CCE, IIT Mandi" />
+    <div class="profile-info">
+      <h4>Dr. Tushar Jain</h4>
+      <p>Head, Centre for Continuing Education, IIT Mandi</p>
+    </div>
+  </div>
+</section>
+
+<section class="focus-areas">
+  <h2>Focus Areas</h2>
+  <div class="focus-grid">
+    <div class="focus-card">
+      <div class="icon-circle">
+        <img src="prayas_img/fa1.png" alt="Arduino">
+      </div>
+      <p>Embedded Systems <br> & Arduino Basics (Robotics)</p>
+    </div>
+    <div class="focus-card">
+      <div class="icon-circle">
+        <img src="prayas_img/fa2.png" alt="Sensors">
+      </div>
+      <p>Advanced Arduino &<br>Sensor Integration (Robotics)</p>
+    </div>
+    <div class="focus-card">
+      <div class="icon-circle">
+        <img src="prayas_img/fa3.png" alt="Python AI">
+      </div>
+      <p>Python & AI<br>Fundamentals</p>
+    </div>
+    <div class="focus-card">
+      <div class="icon-circle">
+        <img src="prayas_img/fa4.png" alt="Computer Vision">
+      </div>
+      <p>Internet of Things (IoT)<br> & Project Implementation</p>
+    </div>
+  </div>
+</section>
+
+<section class="tile-section">
+  <div class="tile-grid">
+    <!-- Tile 1: Extra-curricular Events -->
+    <div class="info-tile">
+      <h3>Extra-curricular Events/Activities</h3>
+      <p>
+        PRAYAS 3.0 is not just about technical sessions—students also engage in team-building activities,
+        creativity challenges, leadership tasks, and cultural programs that build a holistic development experience.
+      </p>
+      <ul>
+        <li>Team-building Sessions & Icebreaker Games</li>
+        <li>Yoga and Meditation</li>
+        <li>Creativity and Leadership Sessions</li>
+        <li>Robo-Football Game</li>
+      </ul>
+    </div>
+
+    <!-- Tile 2: Learning Outcomes -->
+    <div class="info-tile">
+      <h3>Learning Outcomes</h3>
+      <p>This curriculum ensures a balanced mix of theory and application, preparing students for future opportunities in technology and innovation. The students will:</p>
+      <ul>
+        <li><strong>Develop a strong foundation</strong> in Arduino, Python, and AI</li>
+        <li><strong>Integrate IoT Sensors</strong></li>
+        <li><strong>Build Basic AI/ML Learning models</strong> and apply computer vision</li>
+        <li><strong>Gain Practical Experience</strong> through Hands-on Projects</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="scrolling-faculty-wrapper">
+  <h2>Faculty & Speaker</h2>
+  <div class="scrolling-faculty-track">
+    <!-- Duplicated for infinite loop effect -->
+    <div class="faculty-card">
+      <img src="prayas_img/satvasheel.jpg" alt="Dr. Satvasheel Powar">
+      <div class="faculty-info">
+        <p><strong>Dr. Satvasheel Powar</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/kaushik.jpg" alt="Dr. Kaushik Haldar">
+      <div class="faculty-info">
+        <p><strong>Dr. Kaushik Haldar</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/ashish.jpg" alt="Dr. Ashish Bollimbala">
+      <div class="faculty-info">
+        <p><strong>Dr. Ashish Bollimbala</strong></p>
+        <span>SOM, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/rajneesh.JPG" alt="Mr. Rajneesh Jindia">
+      <div class="faculty-info">
+        <p><strong>Mr. Rajneesh Jindia</strong></p>
+        <span>Head, Google TV India</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/indu.jpg" alt="Dr. Indu Joshi">
+      <div class="faculty-info">
+        <p><strong>Dr. Indu Joshi</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/prateek.jpg" alt="Dr. Prateek Saxena">
+      <div class="faculty-info">
+        <p><strong>Dr. Prateek Saxena</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/narender.jpg" alt="Dr. Narender Dhar">
+      <div class="faculty-info">
+        <p><strong>Dr. Narender Dhar</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/karteek.jpeg" alt="Dr. V. Karteek">
+      <div class="faculty-info">
+        <p><strong>Dr. V. Karteek</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <!-- Duplicate the entire set again for infinite scroll effect -->
+    <div class="faculty-card">
+      <img src="prayas_img/satvasheel.jpg" alt="Dr. Satvasheel Powar">
+      <div class="faculty-info">
+        <p><strong>Dr. Satvasheel Powar</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <img src="prayas_img/kaushik.jpg" alt="Dr. Kaushik Haldar">
+      <div class="faculty-info">
+        <p><strong>Dr. Kaushik Haldar</strong></p>
+        <span>SCEE, IIT Mandi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <h2>What Learners Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-tile">
+      <p>"The program helped me understand embedded systems in a very hands-on way. Loved the team activities!"</p>
+      <span class="author">Aditi Sharma</span>
+      <small>ECE Student, IIT Mandi</small>
+    </div>
+    <div class="testimonial-tile">
+      <p>"Excellent learning environment with expert mentors. The Arduino sessions were my favorite."</p>
+      <span class="author">Rohan Mehta</span>
+      <small>1st Year BTech, IIT Mandi</small>
+    </div>
+    <div class="testimonial-tile">
+      <p>"I was new to Python, but this program made it approachable. The AI mini-projects were very helpful."</p>
+      <span class="author">Sneha Kapoor</span>
+      <small>CSE Student, PRAYAS 3.0</small>
+    </div>
+    <div class="testimonial-tile">
+      <p>"PRAYAS 3.0 brought out my creative side. I presented a real-world solution with my team in just 4 weeks."</p>
+      <span class="author">Arjun Nair</span>
+      <small>Participant, PRAYAS 3.0</small>
+    </div>
+    <div class="testimonial-tile">
+      <p>"The faculty were engaging and supportive. I gained clarity on career paths in AI and embedded systems."</p>
+      <span class="author">Meera Joshi</span>
+      <small>2nd Year Student, IIT Mandi</small>
+    </div>
+    <div class="testimonial-tile">
+      <p>"Truly an enriching experience. The final project was challenging but incredibly rewarding."</p>
+      <span class="author">Ravi Prasad</span>
+      <small>Core Team, PRAYAS 3.0</small>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-section">
+  <p class="metrics-intro">
+    PRAYAS 3.0 brought together passion, innovation, and collaboration and hands-on learning. 
+  </p>
+  <div class="metrics-grid">
+    <div class="metric-tile">
+      <h2>120+</h2>
+      <p>Learners Participated</p>
+    </div>
+    <div class="metric-tile">
+      <h2>200+</h2>
+      <p>Hours of Sessions & Talks</p>
+    </div>
+    <div class="metric-tile">
+      <h2>20+</h2>
+      <p>Faculty Members & Mentors</p>
+    </div>
+    <div class="metric-tile">
+      <h2>10+</h2>
+      <p>Student Projects</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <h2 class="footer-title">PRAYAS 3.0</h2>
+    <i><p style="font-family: EB Garamond; font-size: 1.5rem; margin-bottom: 2rem; padding: 0;">Everything starts with a single PRAYAS. Make Yours Count.</p></i>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <p><a href="mailto:cceoffice@gmail.com">cceoffice@iitmandi.ac.in</a> / <a href="https://cce.iitmandi.ac.in" target="_blank">cce.iitmandi.ac.in</a> </p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="">Contact</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#">CCE Upcoming Activities</a>
+    </div>
+    <p class="footer-copy">&copy; CCE, IIT Mandi. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script src="prayas_js/script.js"></script>
+</body>
+</html>

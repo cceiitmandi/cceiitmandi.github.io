@@ -1,0 +1,68 @@
+html {
+      scroll-behavior: smooth;
+      max-width: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    .vision-mission {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #f1f5f9;
+    }
+
+    .vision-mission div {
+      max-width: 400px;
+      margin: 1rem;
+    }
+
+    .card {
+      background: #e2e8f0;
+      padding: 1rem;
+      margin: 0.15rem auto;
+      max-width: 375px;
+      border-radius: 0.5rem;
+      display: inline-grid;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .normal p{
+      padding: 2rem;
+    }
+
+
+/* Section Styling */
+    .activities,
+    .vision-mission,
+    .slideshow,
+    .about {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .activities h2,
+    .slideshow h2,
+    .carousel-section h2,
+    .vision-mission h2,
+    .about h2 {
+      font-size: 2rem;
+      color: #0369a1;
+      margin-bottom: 1rem;
+    }
+
+    

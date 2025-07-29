@@ -1,0 +1,233 @@
+.search-box {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    #searchInput {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      width: 100%;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .course-card {
+      border: 1px solid #38bdf8;
+      border-radius: 7.5px;
+      margin-bottom: 1.7rem;
+      padding: 1rem 1.25rem;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    }
+
+    .card-title {
+      background-color: #c1d4f2;
+      color: #3b82f6;
+      padding: 0.5rem 0.9rem;
+      border-radius: 7.5px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .course-info p {
+      margin: 0.25rem 0;
+    }
+
+    .course-info a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .course-info a:hover {
+      text-decoration: underline;
+    }
+
+    .note-red {
+      color: darkred;
+      font-weight: 500;
+      padding-top: 1rem;
+    }
+
+    #pList {
+      padding: 1.5rem 5vw 0 5vw;
+    }
+
+    #imp {
+      background-color: #c9dd39;
+      color: #071c26;
+    }
+        
+    .isActive {
+      padding-left: 0.5rem;
+      color: darkgreen;
+    }
+
+    .isInactive {
+      padding-left: 0.5rem;
+      color: darkred;
+    }
+
+    span .lastdate {
+      color: red;
+      font-weight: 500;
+      display: inline-flex;
+    }
+
+    .links {
+      margin-top: 1rem;
+    }
+
+    .links a {
+      color:#a0228b
+    }
+
+    .links a:hover, a:active {
+      color:#40ab07
+    }
+
+
+    @media (max-width: 600px)
+    {
+      .search-box {
+        padding: 0 1rem;
+      }
+    }
+
+
+    /* FILTER BAR */
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      background-color: #13a7ec;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: #0369a1;
+    }
+
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.modal-content .qr {
+  width: 60%;
+  max-width: 250px;
+  margin: 10px auto;
+  display: block;
+}
+
+.modal-content .note {
+  font-size: 0.95rem;
+  color: #c21e1e;
+  margin-bottom: 10px;
+}
+
+.modal-content .bank-info {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.modal-content .bank-info li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.close {
+  color: #333;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-info {
+  flex: 1 1 300px;
+}
+
+.course-fees {
+  flex: 1 1 260px;
+  align-self: flex-start;
+  overflow-x: auto;
+  max-width: 500px;
+}
+
+.course-fees table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.course-fees th,
+.course-fees td {
+  border: 1px solid #ddd;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+.course-fees thead {
+  background-color: #241771;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .card-flex {
+    flex-direction: column;
+  }
+}
+
+
+    

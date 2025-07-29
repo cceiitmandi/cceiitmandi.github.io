@@ -1,0 +1,55 @@
+
+.tile-section {
+  padding: 60px 7.5%;
+  background-color: #e2dff1;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.info-tile {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.info-tile h3 {
+  color: #350f94; /* Dark blue */
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  font-family: "Oswald";
+}
+
+.info-tile p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.info-tile ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.info-tile ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.info-tile ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #350f94;
+  font-weight: bold;
+}
+

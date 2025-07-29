@@ -1,0 +1,58 @@
+.testimonial-section {
+  padding: 30px 5%;
+  background-color: #e2dff1;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  font-family: "EB Garamond";
+  font-weight: 500;;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-tile {
+  background-color: #f0f2f5;
+  padding: 20px ;
+  border-radius: 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-tile p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+.testimonial-tile .author {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  font-family: "Oswald";
+  font-weight: 300;
+}
+
+.testimonial-tile small {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}

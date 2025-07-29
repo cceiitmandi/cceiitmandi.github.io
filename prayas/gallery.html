@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery | PRAYAS 3.0 | CCE, IIT Mandi</title>
+  <link rel="stylesheet" href="prayas_css/style.css"/>
+  <link rel="stylesheet" href="prayas_css/gallery.css"/>
+  <link rel="stylesheet" href="prayas_css/footer.css"/>
+  <link rel="stylesheet" href="prayas_css/overlay.css"/>
+
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='EB Garamond'">
+
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="https://iitmandi.ac.in/"><img style="display: block;" src="prayas_img/iitmdlogo.png" alt="IIT Mandi Logo"/></a>
+      <a href="https://cce.iitmandi.ac.in/"><img style="display: block;" src="prayas_img/ccelogo.png" alt="CCE Logo"/></a>
+      <a href="index.html" style="text-decoration: none;"><span style="font-family: Oswald; font-weight: 350; color: aliceblue; font-size: 1.4rem;">PRAYAS 3.0</span></a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <h1 style="font-family: Oswald; font-size: 3rem; font-weight: 400; padding: 0; margin: 0;">Photo Gallery</h1>
+  </main>
+
+
+<section class="gallery-section">
+    <div class="gallery-grid">
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/heroimg.JPG" alt="Veledictory Ceremony Group Photo" onclick="openLightbox(this)">
+        </div>
+        <p>Veledictory Ceremony Group Photo</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/2.jpg" alt="PARYAS 3.0 Learners in Classroom" onclick="openLightbox(this)">
+        </div>
+        <p>PARYAS 3.0 Learners in Classroom</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/3.jpg" alt="Team Discussions with Student Mentors" onclick="openLightbox(this)">
+        </div>
+        <p>Team Discussions with Student Mentors</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/4.jpg" alt="Project Showcase - Robo-Football Game" onclick="openLightbox(this)">
+        </div>
+        <p>Project Showcase - Robo-Football Game</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/5.jpg" alt="A Robo-Football Team" onclick="openLightbox(this)">
+        </div>
+        <p>A Robo-Football Team</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/6.jpg" alt="Session by Mr. Rajneesh, Head, Google TV India, Google" onclick="openLightbox(this)">
+        </div>
+        <p>Session by Mr. Rajneesh, Head, Google TV India, Google</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/7.jpg" alt="PRAYAS Learners playing Bollyball" onclick="openLightbox(this)">
+        </div>
+        <p>PRAYAS Learners playing Bollyball</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/8.jpg" alt="Two Robos Fighting in Robo-Football Game" onclick="openLightbox(this)">
+        </div>
+        <p>Two Robos Fighting in Robo-Football Game</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/9.jpg" alt="Human-tracking Eye-imitating Robo by PRAYAS Learners" onclick="openLightbox(this)">
+        </div>
+        <p>Human-tracking Eye-imitating Robo by PRAYAS Learners</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/10.jpg" alt="Robo-Football Deck" onclick="openLightbox(this)">
+        </div>
+        <p>Robo-Football Deck</p>
+      </div>
+      <div class="gallery-tile">
+        <div class="image-wrapper">
+          <img src="prayas_img/11.jpg" alt="PRAYAS 3.0 Learners" onclick="openLightbox(this)">
+        </div>
+        <p>PRAYAS 3.0 Learners</p>
+      </div>
+    </div>
+
+    <!-- Lightbox with navigation -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <button class="lightbox-nav prev" onclick="navigateLightbox(-1)">&#10094;</button>
+      <img id="lightbox-img" src="" alt="Full View">
+      <button class="lightbox-nav next" onclick="navigateLightbox(1)">&#10095;</button>
+    </div>
+</section>
+
+<script src="prayas_js/script.js"></script>
+
+<script src="prayas_js/overlay.js" defer></script>
+
+
+<!-- FULL-SCREEN BLACK MODE -->
+<script>
+let currentImageIndex = 0;
+let galleryImages = [];
+
+function openLightbox(imgElement) {
+  galleryImages = Array.from(document.querySelectorAll('.gallery-tile img'));
+  currentImageIndex = galleryImages.indexOf(imgElement);
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = imgElement.src;
+  lightbox.style.display = 'flex';
+}
+
+function closeLightbox(event) {
+  // Only close if the user clicked directly on the black overlay (not image or nav buttons)
+  if (event.target.id === 'lightbox') {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+}
+
+function navigateLightbox(direction) {
+  if (!galleryImages.length) return;
+
+  currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+  const newImg = galleryImages[currentImageIndex];
+  document.getElementById('lightbox-img').src = newImg.src;
+}
+</script>
+
+</body>
+</html>

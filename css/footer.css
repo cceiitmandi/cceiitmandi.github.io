@@ -1,0 +1,46 @@
+    .footer {
+      background-color: rgba(12, 58, 98);
+      color: white;
+      padding: 7.75rem 0 3rem 0;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #9c8cf7;
+    }
+
+    .footer a:hover {
+      color: aquamarine;
+    }
+
+    /* Footer Socials */
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      background: transparent;
+    }
+
+    .footer-socials img {
+      width: 1.5rem;
+      height: 1.5rem;
+      filter: invert(100%) brightness(200%);
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .footer-socials img:hover {
+      opacity: 0.8;
+    }
+
+
+    @media (max-width: 600px) {
+      .footer-socials img {
+        width: 24px;
+        height: 24px;
+      }
+    }
