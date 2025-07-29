@@ -47,7 +47,11 @@ html {
 
 
 /* Section Styling */
-    .activities,
+    .activities {
+      padding: 0 2rem 2rem 2rem;
+      text-align: center;
+    }
+
     .vision-mission,
     .slideshow,
     .about {

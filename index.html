@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/announcementbanner.css" />
   <link rel="stylesheet" href="css/responsivecss.css" />
   <link rel="stylesheet" href="css/waves.css" />
+
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
   <script src="js/floatbar.css"></script>
@@ -57,7 +58,7 @@
         </div>
         <a href="mous.html">MOUs</a>
         <a href="facilities.html">Facilities</a>
-        <a href="#">Tinkering Lab</a>
+        <a href="tinkeringlab.html">Tinkering Lab</a>
         <a href="people.html">People</a>
         <a href="downloads.html">Downloads</a>
       </nav>
@@ -103,28 +104,16 @@
   </section>
 
  
-  <!-- Activities Section -->
+  <!-- ONGOING/CURRENT ACTIVITIES -->
   <section class="activities">
     <h2>Ongoing Activities</h2>
     <div class="card">
-      A Five-day GIAN course on Data-Based Systems and Control at IIT Mandi
-      <span><a href="#">Website</a> | <a href="#">Brochure</a></span>
-    </div>
-    <div class="card">
-      GIAN course on Wetting, Capillarity, and Phase Transitions
-      <span><a href="#">Website</a> | <a href="#">Brochure</a></span>
-    </div>
-    <div class="card">
-      GIAN course on Wetting, Capillarity, and Phase Transitions
-      <span><a href="#">Website</a> | <a href="#">Brochure</a></span>
-    </div>
-    <div class="card">
-      One Month Program on AI & Robotics (PRAYAS 3.0)
-      <span><a href="#">Website</a> | <a href="#">Brochure</a></span>
+      GAIN course on Elements of Smart Structure at IIT Mandi
+      <span><a href="https://research.iitmandi.ac.in/eoss2025/" target="_blank">Website</a> | <a href="https://research.iitmandi.ac.in/eoss2025/files/Poster_stc.pdf">Brochure</a></span>
     </div>
   </section>
 
-  <!-- Carousal -->
+  <!-- IMAGE SLIDESHOW -->
   <section class="slideshow" style="position: relative;">
     <h2>Highlights</h2>
     <div class="carousel-wrapper">
@@ -145,7 +134,7 @@
   </section>
 
 
-  <!-- Vision and Mission Section -->
+  <!-- VISION/MISSION -->
   <section class="vision-mission">
     <div>
       <h2>Vision</h2>
@@ -157,7 +146,7 @@
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section class="about-section">
     <div class="about-container">
       <div class="about-text">
@@ -180,16 +169,16 @@
     </div>
   </section>
 
-  <!-- Announcement Banner -->
+  <!-- ANNOUNCEMENT BANNER -->
   <div class="announcement-banner" id="announcementBanner">
     <p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Join us in Denver from June 7 – 9 to see what’s coming next →</p>
     <button class="close-banner" id="closeBanner">×</button>
   </div>
 
-  <!-- Footer Section -->
+  <!-- FOOTER -->
   <footer class="footer">
 
-      <!-- Waves HR -->
+  <!-- WAVES -->
   <section class="waves" style="top:0; transform: rotate(180deg);">
     <div>
     <svg viewBox="0 0 120 28" preserveAspectRatio="none">
@@ -245,7 +234,8 @@
     &copy; 2025, CCE, IIT Mandi. All rights reserved.
   </footer>
 
-  <script>
+<!-- SLIDESHOW SCRIPT -->
+<script>
   const slideContainer = document.getElementById("carouselSlide");
   const slides = slideContainer.querySelectorAll("img");
   const caption = document.getElementById("carouselCaption");
@@ -309,7 +299,7 @@
     });
   </script>
 
-  <!-- Dismissible Banner Script (should be INSIDE) -->
+  <!-- DISMISS BANNER (should be INSIDE) -->
   <script>
     document.getElementById("closeBanner").addEventListener("click", function () {
       document.getElementById("announcementBanner").style.display = "none";
