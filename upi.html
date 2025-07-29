@@ -11,53 +11,66 @@
       margin: 0;
       padding: 40px 20px;
     }
+
     .form-container {
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
       background: white;
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
+
     h2 {
       text-align: center;
       margin-bottom: 20px;
       font-size: 24px;
     }
+
     .note {
-      color: red;
+      color: #b40404;
       text-align: center;
-      font-weight: bold;
-      font-size: 14px;
-      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 2rem;
     }
+
     label {
       display: block;
       margin-top: 15px;
       font-weight: 600;
     }
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    input[type="date"],
     select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 5px;
       margin-top: 6px;
       box-sizing: border-box;
     }
+
+    input[type="file"] {
+      margin-top: 6px;
+    }
+
     .radio-group {
       display: flex;
       gap: 20px;
       margin-top: 8px;
     }
+
     .radio-group label {
       font-weight: normal;
     }
+
     button {
       width: 100%;
-      background-color: #007bff;
+      background-color: #0088ff;
       color: white;
       padding: 12px;
       margin-top: 25px;
@@ -67,28 +80,90 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     button:active {
       background-color: #0056b3;
     }
-    #qrCode {
+
+    .flex-row {
+      display: flex;
+      gap: 3rem;
       margin-top: 30px;
-      text-align: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
     }
-    #qrCode img {
+
+    .qr-container {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .qr-container img {
       margin-top: 10px;
       border-radius: 12px;
-      border: 4px solid #007bff;
+      border: 3px solid #007bff;
       cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .bank-details {
+      flex: 1;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+
+    #paymentSection {
+      display: none;
+    }
+
+    #accNumber {
+      cursor: pointer;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 2px;
+    }
+
+    .copy-field {
+      cursor: pointer;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 2px;
+    }
+
+
+    @media (max-width: 600px) {
+      .flex-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .qr-container, .bank-details {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="form-container">
+    <img src="ccelogo.png" alt="CCE, IIT Mandi Logo" width="150" height="150" style="display: block; margin: auto;">
     <h2>CCE Activities Registration Form</h2>
     <div class="note">
       Please save a screenshot/PDF of the Payment Confirmation page and Transaction ID/UTR Number of the Transaction.
     </div>
+
     <form id="registrationForm">
       <label for="name">Full Name *</label>
       <input type="text" id="name" required />
@@ -123,23 +198,75 @@
         <option value="Industry People">Industry People</option>
       </select>
 
-      <button type="button" onclick="generateQR()">Generate UPI QR Code</button>
-    </form>
+      <button type="button" id="generateBtn" onclick="generateQR()">Generate UPI QR Code</button>
 
-    <div id="qrCode"></div>
+      <div class="flex-row" id="qrAndDetails" style="display: none;">
+        <div class="qr-container" id="qrCode"></div>
+
+        <div class="bank-details">
+          <strong>Bank Account</strong>
+          <table>
+            <tr><td><strong>Bank Name</strong></td><td>Punjab National Bank (PNB)</td></tr>
+            <tr><td><strong>Bank Branch</strong></td><td>Kamand, Mandi, HP - 175075</td></tr>
+            <tr><td><strong>Account Name</strong></td><td>CCE, IIT Mandi</td></tr>
+            <tr>
+              <td><strong>Account Number</strong></td>
+              <td>
+                <span class="copy-field" onclick="copyField(this)" data-copy="7315000100034369">7315000100034369</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>IFSC</strong></td>
+              <td>
+                <span class="copy-field" onclick="copyField(this)" data-copy="PUNB0731500">PUNB0731500</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>MICR Code</strong></td>
+              <td>
+                <span class="copy-field" onclick="copyField(this)" data-copy="175024138">175024138</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>SWIFT Code</strong></td>
+              <td>
+                <span class="copy-field" onclick="copyField(this)" data-copy="PUNBINBBPAR">PUNBINBBPAR</span>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="paymentSection">
+        <label for="paymentDate">Payment Date *</label>
+        <input type="date" id="paymentDate" required />
+
+        <label for="utr">UPI Payment ID / UTR Number *</label>
+        <input type="text" id="utr" required />
+
+        <label for="paymentProof">Upload Payment Proof (PDF/Image, ≤1MB) *</label>
+        <input type="file" id="paymentProof" accept=".pdf,image/*" required onchange="validateFile()" />
+      </div>
+    </form>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script>
     const fees = {
       "Faculty": 1,
-      "Student": 2,
-      "Local Student": 3,
-      "Industry People": 4
+      "Student": 1,
+      "Local Student": 1,
+      "Industry People": 1
     };
 
     function clearQRCode() {
       document.getElementById("qrCode").innerHTML = "";
+      document.getElementById("qrAndDetails").style.display = "none";
+      document.getElementById("paymentSection").style.display = "none";
+      document.getElementById("generateBtn").innerText = "Generate UPI QR Code";
     }
 
     function generateQR() {
@@ -154,8 +281,8 @@
       }
 
       const amount = fees[category];
-      const upiId = "aakashera-1@okhdfcbank";
-      const payee = "Aakash G";
+      const upiId = "example@upi";
+      const payee = "CCE, IIT Mandi";
       const txnNote = `${programme}_${name}`;
       const upiUrl = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payee)}&am=${amount}&cu=INR&tn=${encodeURIComponent(txnNote)}`;
 
@@ -165,12 +292,35 @@
           return;
         }
 
+
+        /* <p><strong>CLICK/SCAN QR Code to Pay ₹${amount}</strong></p> */
         document.getElementById("qrCode").innerHTML = `
-          <p><strong>Click the QR code to pay ₹${amount}</strong></p>
+          <p><strong>CLICK/SCAN QR Code to Pay</strong></p>
           <a href="${upiUrl}" target="_blank">
             <img src="${url}" alt="UPI QR Code" />
           </a>
         `;
+        document.getElementById("qrAndDetails").style.display = "flex";
+        document.getElementById("paymentSection").style.display = "block";
+        document.getElementById("generateBtn").innerText = "Make Payment";
+      });
+    }
+
+    function validateFile() {
+      const fileInput = document.getElementById('paymentProof');
+      const file = fileInput.files[0];
+      if (file && file.size > 1024 * 1024) {
+        alert("File size should be less than or equal to 1MB.");
+        fileInput.value = "";
+      }
+    }
+
+    function copyField(element) {
+      const value = element.getAttribute('data-copy');
+      navigator.clipboard.writeText(value).then(() => {
+        alert(`Copied: ${value}`);
+      }).catch(err => {
+        alert("Failed to copy: " + err);
       });
     }
   </script>
