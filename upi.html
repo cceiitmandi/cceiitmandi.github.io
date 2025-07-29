@@ -132,10 +132,10 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script>
     const fees = {
-      "Faculty": 1000,
-      "Student": 2500,
-      "Local Student": 1000,
-      "Industry People": 10000
+      "Faculty": 1,
+      "Student": 2,
+      "Local Student": 3,
+      "Industry People": 4
     };
 
     function clearQRCode() {
@@ -154,8 +154,8 @@
       }
 
       const amount = fees[category];
-      const upiId = "example@upi";
-      const payee = "CCE, IIT Mandi";
+      const upiId = "aakashera-1@okhdfcbank";
+      const payee = "Aakash G";
       const txnNote = `${programme}_${name}`;
       const upiUrl = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payee)}&am=${amount}&cu=INR&tn=${encodeURIComponent(txnNote)}`;
 
