@@ -31,13 +31,12 @@
 }
 
 .activity-tile h3 {
-  font-size: 1.2rem;
+  font-size: 1.2  rem;
   color: #292996;
-  margin-bottom: 0.5rem;
 }
 
 .activity-tile p {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0rem;
   font-size: 0.95rem;
   color: #475569;
 }
@@ -50,4 +49,34 @@
 
 .activity-tile a:hover {
   text-decoration: underline;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status::before {
+  content: "●";
+  font-size: 1rem;
+  margin-right: 0.35rem;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.inactive {
+  color: #d4713c;
+}
+
+.status.concluded {
+  color: #959521;
 }
