@@ -33,6 +33,11 @@
       cursor: pointer;
     }
 
+    a.link {
+      text-decoration: none;
+      color: white;
+    }
+
     
 
     @media (max-width: 600px) {
@@ -43,10 +48,6 @@
         max-width: calc(100% - 2rem);
         flex-direction: column;
         align-items: flex-start;
-      }
-
-      .announcement-banner p {
-        margin-bottom: 0.5rem;
       }
 
       .close-banner {

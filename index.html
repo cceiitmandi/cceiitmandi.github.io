@@ -6,7 +6,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>CCE, IIT Mandi | Centre for Continuing Education</title>
 
-  <!-- External Stylesheets and Fonts -->
+  <!-- External CSS, FONTS -->
   <link rel="stylesheet" href="css/floatbar.css" />
   <link rel="stylesheet" href="css/slideshow.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -74,33 +74,33 @@
     <p>Indian Institute of Technology, Mandi</p>
 
   <!-- Waves HR -->
-  <section class="waves" style="bottom:0;">
-    <div>
-    <svg viewBox="0 0 120 28" preserveAspectRatio="none">
-    <defs> 
-      <mask id="xxx">
-        <circle cx="7" cy="12" r="40" fill="#fff" />
-      </mask>
-      
-      <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="
-              1 0 0 0 0  
-              0 1 0 0 0  
-              0 0 1 0 0  
-              0 0 0 13 -9" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-        <path id="wave" d="M 0,10 C 30,10 30,12.5 60,12.5 90,12.5 90,10 120,10 150,10 150,12.5 180,12.5 210,12.5 210,10 240,10 v 28 h -240 z" />
-      </defs> 
+    <section class="waves" style="bottom:0;">
+      <div>
+      <svg viewBox="0 0 120 28" preserveAspectRatio="none">
+      <defs> 
+        <mask id="xxx">
+          <circle cx="7" cy="12" r="40" fill="#fff" />
+        </mask>
+        
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0  
+                0 1 0 0 0  
+                0 0 1 0 0  
+                0 0 0 13 -9" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+          <path id="wave" d="M 0,10 C 30,10 30,12.5 60,12.5 90,12.5 90,10 120,10 150,10 150,12.5 180,12.5 210,12.5 210,10 240,10 v 28 h -240 z" />
+        </defs> 
 
-      <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
-      <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
-      <g class="gooeff">
-        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
-    </svg>
-    </div>
-  </section>
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        <g class="gooeff">
+          <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </svg>
+      </div>
+    </section>
   </section>
 
  
@@ -123,7 +123,7 @@
             <img src="images/highlights/1.jpg" alt="Slide 1" data-caption="Sh. Rajnath Singh, Hon'ble Defence Minister of India, inaugerating CCE Office">
             <img src="images/highlights/2.JPG" alt="Slide 2" data-caption="Group Photo: GAIN Course on Data Control and Systems">
             <img src="images/highlights/3.jpg" alt="Slide 3" data-caption="Group Photo: GAIN Course on Wetting, Capillarity, and Phase Transitions ">
-            <img src="images/highlights/4.jpg" alt="Slide 3" data-caption="Group Photo: PRAYAS 3.0 ">
+            <img src="images/highlights/4.jpg" alt="Slide 3" data-caption="Group Photo: PRAYAS 3.0 (2025)">
           </div>
           <button class="carousel-btn prev" onclick="showPrevSlide()">❮</button>
           <button class="carousel-btn next" onclick="showNextSlide()">❯</button>
@@ -134,8 +134,11 @@
   </section>
 
 
+
+
   <!-- VISION/MISSION -->
   <section class="vision-mission">
+
     <div>
       <h2>Vision</h2>
       <p>A self-sustainable centre to build a workforce for nation capacity building in STEM and management-related fields.</p>
@@ -144,7 +147,9 @@
       <h2>Mission</h2>
       <p>Provide learners with a platform to study and gain exposure at IIT Mandi through outreach programmes.</p>
     </div>
+
   </section>
+  
 
   <!-- ABOUT -->
   <section class="about-section">
@@ -171,7 +176,7 @@
 
   <!-- ANNOUNCEMENT BANNER -->
   <div class="announcement-banner" id="announcementBanner">
-    <p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Join us in Denver from June 7 – 9 to see what’s coming next →</p>
+    <a class="link" href=""><p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Highlights, Photo Gallery and Report →</p></a>
     <button class="close-banner" id="closeBanner">×</button>
   </div>
 

@@ -4,11 +4,6 @@
   text-align: center;
 }
 
-.mou-section h2 {
-  font-size: 2rem;
-  color: #0c4a6e;
-  margin-bottom: 2rem;
-}
 
 .mou-list {
   list-style: none;
@@ -58,4 +53,27 @@
   background-color: #e0e7ff;
   color: #1d4ed8;
   border-color: #c7d2fe;
+}
+
+
+@media (max-width: 600px) {
+  .mou-section {
+    padding: 1rem;
+  }
+
+  .mou-list li::before {
+    font-size: 0.9rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .mou-list a {
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+  }
+
+  .mou-list li {
+    gap: 0.5rem;
+  }
 }
