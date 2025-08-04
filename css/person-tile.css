@@ -1,13 +1,13 @@
 .people-section {
   background-color: #f8fafc;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
 }
 
 .people-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.1rem;
 }
 
 @media (min-width: 768px) {
