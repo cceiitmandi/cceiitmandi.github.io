@@ -58,7 +58,7 @@
         <a href="facilities.html">Facilities</a>
         <a href="tinkeringlab.html">Tinkering Lab</a>
         <a href="people.html">People</a>
-        <a href="downloads.html">Downloads</a>
+        <a href="downloads.html" class="activePage">Downloads</a>
       </nav>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
     </div>
@@ -117,7 +117,8 @@
             <tr>
               <td>1</td>
               <td>Honorarium Form</td>
-              <td><a href="#" target="_blank">PDF</a></td>
+              <td><a onclick="downloadFile('ccelogo.png', 'ccelogo.pdf')" style="cursor: pointer; text-decoration: none;">PDF</a></td>
+              
               <td>-</td>
             </tr>
             <tr>
@@ -130,13 +131,13 @@
               <td>3</td>
               <td>IIT Mandi Logo</td>
               <td>-</td>
-              <td><a href="#" target="_blank">PNG</a></td>
+              <td><a onclick="downloadFile('iitmandilogopng.png', 'iitmandilogopng.pdf')" style="cursor: pointer; text-decoration: none;">PNG</a></td>
             </tr>
             <tr>
               <td>4</td>
               <td>CCE Logo</td>
               <td>-</td>
-              <td><a href="#" target="_blank">PNG</a></td>
+              <td><a onclick="downloadFile('ccelogopng.png', 'ccelogopng.pdf')" style="cursor: pointer; text-decoration: none;">PNG</a></td>
             </tr>
           </tbody>
         </table>
@@ -204,26 +205,6 @@
     &copy; 2025, CCE, IIT Mandi. All rights reserved.
   </footer>
 
-  <!-- Slider (INSIDE HTML) -->
-  <script>
-    const slideContainer = document.getElementById("carouselSlide");
-    const slides = slideContainer.querySelectorAll("img");
-    const caption = document.getElementById("carouselCaption");
-
-    let index = 0;
-
-    function showNextSlide() {
-      index = (index + 1) % slides.length;
-      slideContainer.style.transform = `translateX(-${index * 100}%)`;
-      caption.textContent = slides[index].getAttribute("data-caption") || "";
-    }
-
-    // Initial caption
-    caption.textContent = slides[0].getAttribute("data-caption") || "";
-
-    setInterval(showNextSlide, 5000); // 5 seconds
-  </script>
-
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->
@@ -248,11 +229,17 @@
     });
   </script>
 
-  <!-- DISMISS BANNER (Inside HTML) -->
+
+  <!-- DOWNLOAD SCRIPT -->
   <script>
-    document.getElementById("closeBanner").addEventListener("click", function () {
-      document.getElementById("announcementBanner").style.display = "none";
-    });
+    function downloadFile(fileUrl, fileName) {
+      const a = document.createElement("a");
+      a.href = fileUrl;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
   </script>
 
 </body>
