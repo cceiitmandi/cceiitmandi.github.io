@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/announcementbanner.css" />
   <link rel="stylesheet" href="css/responsivecss.css" />
   <link rel="stylesheet" href="css/waves.css" />
+  <link rel="stylesheet" href="css/translation.css" />
 
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
@@ -59,12 +60,21 @@
         <a href="mous.html">MOUs</a>
         <a href="facilities.html">Facilities</a>
         <a href="tinkeringlab.html">Tinkering Lab</a>
-        <a href="people.html">People</a>
+        <a href="team.html">Team</a>
         <a href="downloads.html">Downloads</a>
       </nav>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
     </div>
   </header>
+
+
+  <!-- TRANSLATION -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- 3. Your PNG Button -->
+  <button id="translateBtn" title="Translate to Hindi">
+    <img src="hindi.png" alt="Translate">
+  </button>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -72,6 +82,7 @@
     <h2>Centre for</h2>
     <h1>Continuing Education</h1>
     <p>Indian Institute of Technology Mandi</p>
+</a>
 
   <!-- Waves HR -->
     <section class="waves" style="bottom:0;">
@@ -316,6 +327,55 @@
       document.getElementById("announcementBanner").style.display = "none";
     });
   </script>
+
+
+  <!-- TRANSLATION HINDI -->
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'hi',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<!-- 5. Load Google Translate -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- 6. Translation Trigger -->
+<script>
+  document.getElementById("translateBtn").addEventListener("click", function () {
+    const triggerTranslation = () => {
+      const iframe = document.querySelector("iframe.goog-te-menu-frame");
+      if (iframe) {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const hindiOption = innerDoc.querySelector("a[lang='hi']");
+        if (hindiOption) {
+          hindiOption.click();
+          return true;
+        }
+      }
+      return false;
+    };
+
+    const openDropdown = () => {
+      const select = document.querySelector(".goog-te-combo");
+      if (select) {
+        select.value = 'hi'; // set Hindi
+        select.dispatchEvent(new Event('change'));
+      }
+    };
+
+    // Google Translate needs to build iframe; give it a bit of time
+    setTimeout(() => {
+      openDropdown();
+      setTimeout(() => {
+        triggerTranslation();
+      }, 700);
+    }, 700);
+  });
+</script>
 
 </body>
 </html>
