@@ -11,15 +11,15 @@
   margin: 0 auto;
   position: relative;
 
-  /* We still hide overflow horizontally so slides off-screen aren't visible */
-  overflow: hidden;
+  /* Hide overflow horizontally so slides off-screen aren't visible */
+  overflow-x: hidden;
   border-radius: 16px;
 }
 
 /* Horizontal track that we translate with JS */
 .carousel-track {
   display: flex;
-  align-items: start;              
+  align-items: flex-start;        
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
@@ -27,25 +27,26 @@
 /* Each slide occupies full viewport width */
 .slide {
   flex: 0 0 100%;
-  margin: 0;                        
+  margin: 0;
   display: block;
 }
 
 /* Image fills a fixed, responsive height; no tint/overlay */
 .slide img {
   width: 100%;
-  height: var(--image-h);           
-  object-fit: cover;               
+  height: var(--image-h);
+  object-fit: cover;
   display: block;
-  border-radius: 16px;              
+  border-radius: 16px;
+}
 
 /* NO gradient overlay */
 .slide::after { content: none; }
 
 /* Caption sits BELOW the image, inside the figure */
 .caption {
-  position: static;                 
-  margin-top: 10px;                 
+  position: static;
+  margin-top: 10px;
   background-color: #16094dd9;
   color: #ffffff;
   font-size: 0.95rem;
@@ -57,7 +58,7 @@
 /* Prev/Next buttons: centered over the IMAGE area (not the caption) */
 .carousel-btn {
   position: absolute;
-  top: calc(var(--image-h) / 2);   
+  top: calc(var(--image-h) / 2);
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.4);
   border: none;
