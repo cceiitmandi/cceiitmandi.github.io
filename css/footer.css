@@ -1,5 +1,5 @@
     .footer {
-      background-color: rgba(12, 58, 98);
+      background-color: #1d487c;
       color: white;
       padding: 7.75rem 0 3rem 0;
       text-align: center;
@@ -8,9 +8,21 @@
       overflow: hidden;
     }
 
+    .footer::before {
+      content: "";
+      display: block;
+      width: 80px; /* adjust size */
+      height: 80px;
+      background-image: url('../ccelogo.png'); /* replace with your logo path */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto 1rem auto; /* centers and adds space below */
+    }
+
     .footer a {
       text-decoration: none;
-      color: #9c8cf7;
+      color: #b0a4f5;
     }
 
     .footer a:hover {
@@ -32,9 +44,14 @@
       filter: invert(100%) brightness(200%);
       transition: opacity 0.2s ease-in-out;
     }
+    
 
     .footer-socials img:hover {
       opacity: 0.8;
+    }
+
+    .copyrighttext {
+      color: #9285da;
     }
 
 

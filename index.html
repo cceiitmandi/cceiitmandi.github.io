@@ -20,7 +20,6 @@
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
   <script src="js/floatbar.css"></script>
-   
 
   <style>
  
@@ -56,6 +55,7 @@
             <a href="activities/egd.html">Exposure Gateway Day (EGD)</a>
           </div>
         </div>
+        <a href="prayas/index.html">PRAYAS</a>
         <a href="mous.html">MOUs</a>
         <a href="facilities.html">Facilities</a>
         <a href="tinkeringlab.html">Tinkering Lab</a>
@@ -108,32 +108,43 @@
   <section class="activities">
     <h2>Ongoing Activities</h2>
     <div class="card">
-      GAIN course on Elements of Smart Structure at IIT Mandi
+      GIAN course on Elements of Smart Structure at IIT Mandi
       <span><a href="https://research.iitmandi.ac.in/eoss2025/" target="_blank">Website</a> | <a href="https://research.iitmandi.ac.in/eoss2025/files/Poster_stc.pdf">Brochure</a></span>
     </div>
   </section>
 
+
   <!-- IMAGE SLIDESHOW -->
-  <section class="slideshow" style="position: relative;">
+  <section class="slideshow non" aria-label="Highlights slideshow">
     <h2>Highlights</h2>
-    <div class="carousel-wrapper">
-      <div>
-        <div class="carousel-container">
-          <div class="carousel-slide" id="carouselSlide">
-            <img src="images/highlights/1.jpg" alt="Slide 1" data-caption="Sh. Rajnath Singh, Hon'ble Defence Minister of India, inaugerating CCE Office">
-            <img src="images/highlights/2.JPG" alt="Slide 2" data-caption="Group Photo: GIAN Course on Data Control and Systems">
-            <img src="images/highlights/3.jpg" alt="Slide 3" data-caption="Group Photo: GIAN Course on Wetting, Capillarity, and Phase Transitions ">
-            <img src="images/highlights/4.jpg" alt="Slide 3" data-caption="Group Photo: PRAYAS 3.0 (2025)">
-          </div>
-          <button class="carousel-btn prev" onclick="showPrevSlide()">❮</button>
-          <button class="carousel-btn next" onclick="showNextSlide()">❯</button>
-        </div>
-        <div class="carousel-caption" id="carouselCaption"></div>
+
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <figure class="slide">
+          <img src="images/highlights/1.jpg" alt="Sh. Rajnath Singh inaugurating CCE Office">
+          <figcaption class="caption">Sh. Rajnath Singh, Hon'ble Defence Minister of India, inaugurating CCE Office</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/2.jpg" alt="Group Photo: GIAN Course on Data Control and Systems">
+          <figcaption class="caption">Group Photo: GIAN Course on Data Control and Systems</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/3.jpg" alt="Group Photo: GIAN Course on Wetting, Capillarity, and Phase Transitions">
+          <figcaption class="caption">Group Photo: GIAN Course on Wetting, Capillarity, and Phase Transitions</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/4.jpg" alt="Group Photo: PRAYAS 3.0 (2025)">
+          <figcaption class="caption">Group Photo: PRAYAS 3.0 (2025)</figcaption>
+        </figure>
       </div>
+
+      <button class="carousel-btn prev" type="button" aria-label="Previous slide">❮</button>
+      <button class="carousel-btn next" type="button" aria-label="Next slide">❯</button>
     </div>
   </section>
-
-
 
 
   <!-- VISION/MISSION -->
@@ -141,11 +152,12 @@
 
     <div>
       <h2>Vision</h2>
-      <p>A self-sustainable centre to build a workforce for nation capacity building in STEM and management-related fields.</p>
+      <p>To be a leading hub for inclusive, impactful learning that empowers individuals and builds a skilled workforce for nation capacity building in STEM and management-related fields.</p>
     </div>
     <div>
       <h2>Mission</h2>
-      <p>Provide learners with a platform to study and gain exposure at IIT Mandi through outreach programmes.</p>
+      <p>Provide learners with a platform to study and gain exposure at IIT Mandi through outreach programmes and to deliver accessible, high-quality continuing education that equips learners with skills, knowledge, and opportunities for lifelong growth.
+      </p>
     </div>
 
   </section>
@@ -176,7 +188,7 @@
 
   <!-- ANNOUNCEMENT BANNER -->
   <div class="announcement-banner" id="announcementBanner">
-    <a class="link" href=""><p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Highlights, Photo Gallery and Report →</p></a>
+    <a class="link" href="prayas/index.html"><p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Highlights, Photo Gallery and Report →</p></a>
     <button class="close-banner" id="closeBanner">×</button>
   </div>
 
@@ -219,7 +231,7 @@
         Kamand, Mandi, Himachal Pradesh - 175075<br>
         Email: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a><br>
         P: 01905-267742, 267788 <br>
-        <a href="https://www.google.com/maps?q=31.781483,76.994398">FIND CCE ON GOOGLE MAP</a>
+        <a href="https://www.google.com/maps?q=31.781483,76.994398">CCE ON GOOGLE MAP</a>
       </p>
 
       <!-- Social Links -->
@@ -236,48 +248,12 @@
       </section>
     </div>
     <br>
-    &copy; 2025, CCE, IIT Mandi. All rights reserved.
+    <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
   </footer>
 
-<!-- SLIDESHOW SCRIPT -->
-<script>
-  const slideContainer = document.getElementById("carouselSlide");
-  const slides = slideContainer.querySelectorAll("img");
-  const caption = document.getElementById("carouselCaption");
 
-  let index = 0;
-  let slideInterval;
-
-  function startSlideShow() {
-    slideInterval = setInterval(showNextSlide, 8000);
-  }
-
-  function resetSlideShow() {
-    clearInterval(slideInterval);
-    startSlideShow();
-  }
-
-  function showNextSlide() {
-    index = (index + 1) % slides.length;
-    updateSlide();
-    resetSlideShow();
-  }
-
-  function showPrevSlide() {
-    index = (index - 1 + slides.length) % slides.length;
-    updateSlide();
-    resetSlideShow();
-  }
-
-  function updateSlide() {
-    slideContainer.style.transform = `translateX(-${index * 100}%)`;
-    caption.textContent = slides[index].getAttribute("data-caption") || "";
-  }
-
-  // Initialize
-  updateSlide();
-  startSlideShow();
-</script>
+<!-- SLIDESHOW JS -->
+<script src="js/slideshow.js"></script>
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->

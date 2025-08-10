@@ -1,79 +1,90 @@
 .slideshow {
   background-color: #f2f6fa;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-.carousel-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 1rem 0;
-}
-
+/* One place to control image height across all slides */
 .carousel-container {
-  width: 100%;
+  --image-h: clamp(280px, 56vw, 560px);  /* tweak this to taste */
   max-width: 1000px;
-  aspect-ratio: 16 / 9;
+  margin: 0 auto;
   position: relative;
+
+  /* We still hide overflow horizontally so slides off-screen aren't visible */
   overflow: hidden;
-}
-
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  margin: 0;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
   border-radius: 16px;
 }
 
-.carousel-caption {
-  margin-top: 10px;
-  font-size: 16px;
-  text-align: center;
-  color: #333;
+/* Horizontal track that we translate with JS */
+.carousel-track {
+  display: flex;
+  align-items: start;              
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
+/* Each slide occupies full viewport width */
+.slide {
+  flex: 0 0 100%;
+  margin: 0;                        
+  display: block;
+}
+
+/* Image fills a fixed, responsive height; no tint/overlay */
+.slide img {
+  width: 100%;
+  height: var(--image-h);           
+  object-fit: cover;               
+  display: block;
+  border-radius: 16px;              
+
+/* NO gradient overlay */
+.slide::after { content: none; }
+
+/* Caption sits BELOW the image, inside the figure */
+.caption {
+  position: static;                 
+  margin-top: 10px;                 
+  background-color: #16094dd9;
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Prev/Next buttons: centered over the IMAGE area (not the caption) */
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: calc(var(--image-h) / 2);   
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   border: none;
-  color: white;
-  padding: 10px 16px;
-  font-size: 24px;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  z-index: 2;
   border-radius: 10px;
-  z-index: 10;
-  transition: background-color 0.25s ease;
+  line-height: 1;
 }
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
 .carousel-btn:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-@media (max-width: 600px) {
-  .carousel-btn {
-    padding: 6px 10px;
-    font-size: 18px;
-  }
-}
-
+/* Mobile tweaks */
 @media (max-width: 768px) {
-  .carousel-caption {
-    font-size: 14px;
-  }
+  .carousel-container { --image-h: clamp(220px, 60vw, 420px); }
+  .caption { font-size: 0.85rem; padding: 0.5rem 0.75rem; }
+  .carousel-btn { font-size: 1.5rem; padding: 0.3rem 0.6rem; }
+}
+
+/* Motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { transition: none; }
 }

@@ -43,11 +43,15 @@
   color: #1a1a1a;
   font-family: "Oswald";
   font-weight: 300;
+  display: block;
+  margin-bottom: 4px; /* Ensures consistent spacing */
 }
 
 .testimonial-tile small {
   font-size: 0.9rem;
   color: #555;
+  display: block; /* Forces it to be on a new line */
+  margin-top: 0; /* Prevents extra variation from default styles */
 }
 
 /* Responsive */

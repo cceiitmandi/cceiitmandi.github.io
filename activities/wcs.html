@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRAYAS 3.0 (2025) | CCE, IIT Mandi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Workshops, Conferences, Symposiums | CCE, IIT Mandi</title>
 
   <!-- External Stylesheets and Fonts -->
-  <link rel="stylesheet" href="css/floatbar.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/responsivecss.css" />
-  <link rel="stylesheet" href="css/waves.css" />
+  <link rel="stylesheet" href="../css/floatbar.css" />
+  <link rel="stylesheet" href="../css/hero.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/responsivecss.css" />
+  <link rel="stylesheet" href="../css/waves.css" />
+  <link rel="stylesheet" href="../css/tile.css" />
 
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
   <script src="js/floatbar.css"></script>
+   
 
   <style>
  
@@ -28,9 +31,9 @@
   <header class="floating-navbar">
     <div class="navbar-content">
       <div class="navbar-left">
-        <a href="/index.html">
-          <img src="iitmdlogo.png" alt="IIT Mandi" class="nav-logo">
-          <img src="ccelogo.png" alt="CCE" class="nav-logo">
+        <a href="../index.html">
+          <img src="../iitmdlogo.png" alt="IIT Mandi" class="nav-logo">
+          <img src="../ccelogo.png" alt="CCE" class="nav-logo">
         </a>
         <span class="brand-text">CCE, IIT Mandi</span>
       </div>
@@ -38,24 +41,25 @@
         <div class="dropdown">
           <a href="#">Activities</a>
           <div class="dropdown-content">
-            <a href="#">Leadership Training Programme</a>
-            <a href="#">PM Vishwakarma</a>
-            <a href="#">Capacity Building Programme</a>
-            <a href="#">Short-term Courses</a>
-            <a href="#">Online Courses</a>
-            <a href="#">Faculty Development Programs (FDPs)</a>
-            <a href="#">Conferences, Workshops & Symposiums</a>
-            <a href="#">GIAN Courses</a>
-            <a href="#">NPTEL Courses</a>
-            <a href="#">MSME Courses</a>
-            <a href="#">Exposure Gateway Day (EGD)</a>
+            <a style="background-color: rgb(66, 191, 237); color: rgb(22, 19, 91); " href="../upcoming.html">Upcoming Activities</a>
+            <a href="leadership-dev.html">Leadership Training Programme</a>
+            <a href="pm-vishwakarma.html">PM Vishwakarma Courses</a>
+            <a href="stc.html">Short-Term Courses (STCs)</a>
+            <a href="online.html">Online Courses</a>
+            <a href="faculty-dev.html">Faculty Development Programs (FDPs)</a>
+            <a href="wcs.html">Workshops, Conferences & Symposiums</a>
+            <a href="GIAN.html">GIAN Courses</a>
+            <a href="NPTEL.html">NPTEL Courses</a>
+            <a href="msme.html">MSME Courses</a>
+            <a href="egd.html">Exposure Gateway Day (EGD)</a>
           </div>
         </div>
-        <a href="mous.html">MOUs</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="#">Tinkering Lab</a>
-        <a href="people.html">People</a>
-        <a href="downloads.html">Downloads</a>
+        <a href="prayas.html">PRAYAS</a>
+        <a href="../mous.html">MOUs</a>
+        <a href="../facilities.html">Facilities</a>
+        <a href="../tinkeringlab.html">Tinkering Lab</a>
+        <a href="../team.html">Team</a>
+        <a href="../downloads.html">Downloads</a>
       </nav>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
     </div>
@@ -63,10 +67,9 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="images/heroimg.jpg" alt="Hero Background">
-    <h2>welcome to</h2>
-    <h1>PRAYAS 3.0</h1>
-    <p>Centre for Continuing Education (CCE), IIT Mandi</p>
+    <img src="../images/heroimg.jpg" alt="Hero Background">
+    <h1>Workshops, Conferences, Symposiums</h1>
+    <p>Centre for Continuing Education, IIT Mandi </p>
 
   <!-- Waves HR -->
   <section class="waves" style="bottom:0;">
@@ -99,7 +102,7 @@
   </section>
 
   <!-- PAGE CONTENT -->
-  <section>
+  <section class="activities-section">
 
   </section>
 
@@ -160,30 +163,8 @@
       </section>
     </div>
     <br>
-    &copy; 2025, CCE, IIT Mandi. All rights reserved.
+    <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
   </footer>
-
-  <!-- Slider (INSIDE HTML) -->
-  <script>
-    const slideContainer = document.getElementById("carouselSlide");
-    const slides = slideContainer.querySelectorAll("img");
-    const caption = document.getElementById("carouselCaption");
-
-    let index = 0;
-
-    function showNextSlide() {
-      index = (index + 1) % slides.length;
-      slideContainer.style.transform = `translateX(-${index * 100}%)`;
-      caption.textContent = slides[index].getAttribute("data-caption") || "";
-    }
-
-    // Initial caption
-    caption.textContent = slides[0].getAttribute("data-caption") || "";
-
-    setInterval(showNextSlide, 5000); // 5 seconds
-  </script>
-
-
 
   <!-- Menu Toggle Script (INSIDE HTML) -->
   <script>
@@ -204,13 +185,6 @@
       if (!isClickInsideMenu && !isClickOnToggle) {
         menu.classList.remove('active');
       }
-    });
-  </script>
-
-  <!-- Dismissible Banner Script (should be INSIDE) -->
-  <script>
-    document.getElementById("closeBanner").addEventListener("click", function () {
-      document.getElementById("announcementBanner").style.display = "none";
     });
   </script>
 
