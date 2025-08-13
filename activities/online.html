@@ -54,7 +54,7 @@
             <a href="egd.html">Exposure Gateway Day (EGD)</a>
           </div>
         </div>
-        <a href="prayas.html">PRAYAS</a>
+        <a href="../prayas/index.html">PRAYAS</a>
         <a href="../mous.html">MOUs</a>
         <a href="../facilities.html">Facilities</a>
         <a href="../tinkeringlab.html">Tinkering Lab</a>
@@ -107,7 +107,7 @@
 
     <!-- Activity 1 -->
     <div class="activity-tile">
-      <span class="header"><h3>CCE Minor in Business Analytics</h3><p class="status active">ACTIVE</p></span>
+      <span class="header"><h3>CCE Minor in Business Analytics</h3></span>
       <p>
         <a href="" target="_blank">🎥 Introductory VideoByte</a> &nbsp;|&nbsp;
         <!-- <a href="reports/iot-beginners.pdf" target="_blank">📄 Poster</a>  &nbsp;|&nbsp; -->
@@ -117,7 +117,7 @@
 
     <!-- Activity 2 -->
     <div class="activity-tile">
-      <span class="header"><h3>CCE Minor in Artificial Intelligence and Data Science</h3><p class="status inactive">INACTIVE</p></span>
+      <span class="header"><h3>CCE Minor in Artificial Intelligence and Data Science</h3></span>
       <p>
         <a href="" target="_blank">🎥 Introductory VideoByte</a> &nbsp;|&nbsp;
         <!-- <a href="reports/iot-beginners.pdf" target="_blank">📄 Poster</a>  &nbsp;|&nbsp; -->
@@ -127,7 +127,7 @@
 
     <!-- Activity 3 -->
     <div class="activity-tile">
-      <span class="header"><h3>CCE Minor in CSE and Advanced Technologies</h3><p class="status concluded">CONCLUDED</p></span>
+      <span class="header"><h3>CCE Minor in CSE and Advanced Technologies</h3></span>
       <p>
         <a href="" target="_blank">🎥Introductory VideoByte</a> &nbsp;|&nbsp;
         <!-- <a href="reports/iot-beginners.pdf" target="_blank">📄 Poster</a>  &nbsp;|&nbsp; -->
@@ -137,7 +137,7 @@
 
     <!-- Activity 4 -->
     <div class="activity-tile">
-      <span class="header"><h3>CCE Minor in Cyber Security & Ethical Hacking</h3><p class="status active">ACTIVE</p></span>
+      <span class="header"><h3>CCE Minor in Cyber Security & Ethical Hacking</h3></span>
       <p>
         <a href="" target="_blank">🎥 Introductory VideoByte</a> &nbsp;|&nbsp;
         <!-- <a href="reports/iot-beginners.pdf" target="_blank">📄 Poster</a>  &nbsp;|&nbsp; -->
@@ -147,7 +147,7 @@
 
     <!-- Activity 5 -->
     <div class="activity-tile">
-      <span class="header"><h3>CCE Minor in Embedded Systems</h3><p class="status active">ACTIVE</p></span>
+      <span class="header"><h3>CCE Minor in Embedded Systems</h3></span>
       <p>
         <a href="" target="_blank">🎥 Introductory VideoByte</a> &nbsp;|&nbsp;
         <!-- <a href="reports/iot-beginners.pdf" target="_blank">📄 Poster</a>  &nbsp;|&nbsp; -->
@@ -218,26 +218,6 @@
     <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
   </footer>
 
-  <!-- Slider (INSIDE HTML) -->
-  <script>
-    const slideContainer = document.getElementById("carouselSlide");
-    const slides = slideContainer.querySelectorAll("img");
-    const caption = document.getElementById("carouselCaption");
-
-    let index = 0;
-
-    function showNextSlide() {
-      index = (index + 1) % slides.length;
-      slideContainer.style.transform = `translateX(-${index * 100}%)`;
-      caption.textContent = slides[index].getAttribute("data-caption") || "";
-    }
-
-    // Initial caption
-    caption.textContent = slides[0].getAttribute("data-caption") || "";
-
-    setInterval(showNextSlide, 5000); // 5 seconds
-  </script>
-
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->
@@ -259,13 +239,6 @@
       if (!isClickInsideMenu && !isClickOnToggle) {
         menu.classList.remove('active');
       }
-    });
-  </script>
-
-  <!-- Dismissible Banner Script (should be INSIDE) -->
-  <script>
-    document.getElementById("closeBanner").addEventListener("click", function () {
-      document.getElementById("announcementBanner").style.display = "none";
     });
   </script>
 

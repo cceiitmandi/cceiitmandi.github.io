@@ -1,0 +1,26 @@
+.video-section {
+  text-align: center; /* ensures caption is centered */
+  margin: 20px auto;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video-caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #001f4d; /* dark navy blue */
+  font-weight: 450;
+}

@@ -54,7 +54,7 @@
             <a href="egd.html">Exposure Gateway Day (EGD)</a>
           </div>
         </div>
-        <a href="prayas.html">PRAYAS</a>
+        <a href="../prayas/index.html">PRAYAS</a>
         <a href="../mous.html">MOUs</a>
         <a href="../facilities.html">Facilities</a>
         <a href="../tinkeringlab.html">Tinkering Lab</a>
@@ -201,26 +201,6 @@
     <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
   </footer>
 
-  <!-- Slider (INSIDE HTML) -->
-  <script>
-    const slideContainer = document.getElementById("carouselSlide");
-    const slides = slideContainer.querySelectorAll("img");
-    const caption = document.getElementById("carouselCaption");
-
-    let index = 0;
-
-    function showNextSlide() {
-      index = (index + 1) % slides.length;
-      slideContainer.style.transform = `translateX(-${index * 100}%)`;
-      caption.textContent = slides[index].getAttribute("data-caption") || "";
-    }
-
-    // Initial caption
-    caption.textContent = slides[0].getAttribute("data-caption") || "";
-
-    setInterval(showNextSlide, 5000); // 5 seconds
-  </script>
-
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->
@@ -242,13 +222,6 @@
       if (!isClickInsideMenu && !isClickOnToggle) {
         menu.classList.remove('active');
       }
-    });
-  </script>
-
-  <!-- Dismissible Banner Script (should be INSIDE) -->
-  <script>
-    document.getElementById("closeBanner").addEventListener("click", function () {
-      document.getElementById("announcementBanner").style.display = "none";
     });
   </script>
 

@@ -268,26 +268,6 @@
 
   <script src="js/gallery.js"></script>  
 
-  <!-- Slider (INSIDE HTML) -->
-  <script>
-    const slideContainer = document.getElementById("carouselSlide");
-    const slides = slideContainer.querySelectorAll("img");
-    const caption = document.getElementById("carouselCaption");
-
-    let index = 0;
-
-    function showNextSlide() {
-      index = (index + 1) % slides.length;
-      slideContainer.style.transform = `translateX(-${index * 100}%)`;
-      caption.textContent = slides[index].getAttribute("data-caption") || "";
-    }
-
-    // Initial caption
-    caption.textContent = slides[0].getAttribute("data-caption") || "";
-
-    setInterval(showNextSlide, 5000); // 5 seconds
-  </script>
-
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->

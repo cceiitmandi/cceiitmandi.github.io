@@ -4,7 +4,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <title>PRAYAS 3.0 | CCE, IIT Mandi</title>
+  
   <link rel="stylesheet" href="prayas_css/style.css"/>
   <link rel="stylesheet" href="prayas_css/speaker.css"/>
   <link rel="stylesheet" href="prayas_css/focusarea.css"/>
@@ -13,6 +15,7 @@
   <link rel="stylesheet" href="prayas_css/metrics.css"/>
   <link rel="stylesheet" href="prayas_css/footer.css"/>
   <link rel="stylesheet" href="prayas_css/overlay.css"/>
+  <link rel="stylesheet" href="prayas_css/vidplay.css"/>
 
   <script src="prayas_js/overlay.js" defer></script>
 
@@ -80,6 +83,21 @@
     </div>
   </div>
 </section>
+
+
+  <section class="video-section">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/OnL5J4uIC7I?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&modestbranding=1&showinfo=0&loop=1" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="autoplay; fullscreen" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p class="video-caption">PRAYAS 3.0 @ IIT Mandi (CCE, IIT Mandi Youtube Channel)</p>
+  </section>
+
 
 <section class="focus-areas non">
   <h2>Focus Areas</h2>
@@ -297,5 +315,20 @@
 </footer>
 
 <script src="prayas_js/script.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const videoFrame = document.getElementById("autoplayVideo");
+    let src = videoFrame.getAttribute("src");
+
+    // Ensure autoplay + mute params are always included
+    if (!src.includes("autoplay=1")) {
+      src += (src.includes("?") ? "&" : "?") + "autoplay=1&mute=1";
+      videoFrame.setAttribute("src", src);
+    }
+  });
+</script>
+
+
 </body>
 </html>
