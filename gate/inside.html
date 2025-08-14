@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Inside</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name=”robots” content=”noindex”>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+    }
+    .notice {
+      text-align: center;
+      max-width: 420px;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    #content {
+      display: none; /* Hidden until access check passes */
+      text-align: center;
+    }
+    .video-section {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 960px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+  color: #082066;
+}
+
+/* Keep video area responsive with 16:9 aspect */
+.video-wrap {
+  position: relative;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  aspect-ratio: 16 / 9;
+}
+
+/* Make the video fill the wrapper */
+#playVideo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Custom controls */
+.video-controls {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .6rem .8rem;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.0));
+}
+
+.pp-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: .45rem .7rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(4px);
+  user-select: none;
+}
+
+.pp-btn:active { transform: translateY(1px); }
+
+/* Seek slider */
+.seek {
+  flex: 1 1 auto;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.35);
+  outline: none;
+}
+
+/* WebKit */
+.seek::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0;
+  margin-top: -4px; /* center thumb */
+}
+/* Firefox */
+.seek::-moz-range-thumb {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .video-controls { gap: .6rem; padding: .5rem .6rem; }
+  .pp-btn { font-size: .95rem; padding: .4rem .6rem; }
+}
+
+  </style>
+</head>
+<body>
+  
+  <!-- Shown during check or when blocking -->
+  <div class="notice" id="notice">
+    Checking access…
+  </div>
+
+  <!-- Real page content -->
+  <div id="content">
+    <h1>CCE Insider</h1>
+    <p>Your page content here.</p>
+
+    <section class="video-section">
+      <h2 class="video-title">Current Video on CCE LED Wall Display</h2>
+
+      <div class="video-wrap">
+
+        <video id="playVideo"
+              src="activeslide.mp4"
+              preload="metadata"
+              playsinline
+              controlslist="nodownload noplaybackrate noremoteplayback"
+              disablepictureinpicture>
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div class="video-controls" aria-label="Player controls">
+          <button id="playPause" class="pp-btn" aria-label="Play">▶</button>
+          <input id="seek" class="seek" type="range" min="0" value="0" step="0.01" aria-label="Seek" />
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const ok = sessionStorage.getItem("cce_gate_ok") === "1";
+    const t  = Number(sessionStorage.getItem("cce_gate_time") || "0");
+    const fresh = (Date.now() - t) < (2 * 60 * 60 * 1000); // 2 hours
+
+    if (!ok || !fresh) {
+      document.getElementById("notice").textContent =
+        "You cannot access this page without the password. Redirecting to CCE Insider Login.";
+
+      setTimeout(() => {
+        location.href = "gate.html";
+      }, 5000);
+    } else {
+      // Hide notice, show content
+      document.getElementById("notice").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }
+  </script>
+
+  <script>
+    (() => {
+  const video = document.getElementById("playVideo");
+  const playPause = document.getElementById("playPause");
+  const seek = document.getElementById("seek");
+
+  // We’re using custom controls, so make sure default controls are off
+  video.removeAttribute("controls");
+
+  // Discourage save via context menu (not foolproof)
+  video.addEventListener("contextmenu", (e) => e.preventDefault());
+
+  // Update slider max when metadata is ready
+  video.addEventListener("loadedmetadata", () => {
+    seek.max = String(video.duration || 0);
+  });
+
+  // Keep slider in sync during playback
+  video.addEventListener("timeupdate", () => {
+    if (!isScrubbing) {
+      seek.value = String(video.currentTime);
+    }
+  });
+
+  // Toggle play/pause
+  function updateButton() {
+    playPause.textContent = video.paused ? "▶" : "⏸";
+    playPause.setAttribute("aria-label", video.paused ? "Play" : "Pause");
+  }
+
+  playPause.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener("play", updateButton);
+  video.addEventListener("pause", updateButton);
+  video.addEventListener("ended", updateButton);
+
+  // Seeking logic
+  let isScrubbing = false;
+
+  const commitSeek = (val) => {
+    const t = Math.max(0, Math.min(Number(val), Number(seek.max || 0)));
+    video.currentTime = t;
+  };
+
+  seek.addEventListener("input", (e) => {
+    // user is dragging; reflect position but don't fight user
+    isScrubbing = true;
+  });
+
+  seek.addEventListener("change", (e) => {
+    commitSeek(e.target.value);
+    isScrubbing = false;
+  });
+
+  // Optional: pause while scrubbing on mobile for smoother seeking
+  seek.addEventListener("pointerdown", () => { isScrubbing = true; });
+  seek.addEventListener("pointerup", (e) => {
+    commitSeek(seek.value);
+    isScrubbing = false;
+  });
+
+  // Initialize button state
+  updateButton();
+})();
+
+  </script>
+</body>
+</html>

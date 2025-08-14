@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="css/announcementbanner.css" />
   <link rel="stylesheet" href="css/responsivecss.css" />
   <link rel="stylesheet" href="css/waves.css" />
+  <link rel="stylesheet" href="css/splashscreen.css" />
+
+  <script src="js/splashscreen.js" defer></script>
 
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
@@ -25,8 +28,32 @@
  
   </style>
 
+<!-- Splash Screen SCRIPT (1/2) -->
+<script>
+  (function () {
+    try {
+      if (sessionStorage.getItem('cceSplashSeen') === '1') {
+        document.documentElement.classList.add('splash-seen');
+      }
+    } catch (e) { /* ignore */ }
+  })();
+</script>
+
 </head>
 <body>
+
+    <!-- Splash Screen -->
+    <div id="splash" role="status" aria-live="polite" aria-label="Loading">
+      <div class="splash-inner">
+        
+        <img src="ashokachakra.gif" alt="IIT Mandi Logo" class="splash-logo">
+        <!-- <img src="ccelogo.png" alt="CCE Logo" class="splash-logo"> -->
+
+        <p class="splash-text">Happy 78th Independence Day</p>
+
+        <div class="spinner" aria-hidden="true"></div>
+      </div>
+    </div>
 
   <!-- Navigation Bar -->
   <header class="floating-navbar">
@@ -239,6 +266,8 @@
         <a href="https://www.google.com/maps?q=31.781483,76.994398">CCE ON GOOGLE MAP</a>
       </p>
 
+      <span id="pv">—</span> views
+
       <!-- Social Links -->
       <section class="footer-socials">
         <a href="https://www.linkedin.com/company/cce-iitmandi" target="_blank" aria-label="LinkedIn">
@@ -259,6 +288,23 @@
 
 <!-- SLIDESHOW JS -->
 <script src="js/slideshow.js"></script>
+
+
+<script>
+  (async () => {
+    const url = encodeURIComponent(location.origin + location.pathname); // count per page
+    const badge = `https://hitscounter.dev/counter/tag.svg?url=${url}`;
+    try {
+      const svg = await fetch(badge, { cache: "no-store" }).then(r => r.text());
+      // Extract last number in the SVG (total hits). Service embeds numbers as <text>…</text>.
+      const m = svg.match(/>(\d[\d,]*)<\/text>\s*<\/g>\s*<\/svg>$/);
+      const total = m ? m[1].replace(/,/g, "") : null;
+      document.getElementById("pv").textContent = total ? Number(total).toLocaleString() : "N/A";
+    } catch {
+      document.getElementById("pv").textContent = "N/A";
+    }
+  })();
+</script>
 
 
   <!-- Menu Toggle Script (INSIDE HTML) -->
