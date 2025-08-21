@@ -1,0 +1,60 @@
+/* ===== Splash Screen ===== */
+html.splash-seen #splash {
+  opacity: 0;
+  visibility: hidden;
+  transition: none;   /* important: prevents the brief fade-in/fade-out blink */
+}
+
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(120% 120% at 50% 0%, #f4f8fc 40%, #dfe9f6 100%);
+  display: grid;
+  place-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+#splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-inner {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.splash-logo {
+  height: 150px;
+  margin: 0 .4rem .4rem .4rem;
+  vertical-align: middle;
+  object-fit: contain;
+  /* filter: drop-shadow(0 2px 6px rgba(0,0,0,.12)); */
+}
+
+.splash-text {
+  margin: .25rem 0 1rem;
+  font: 600 1.5rem/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #082066;
+  letter-spacing: .2px;
+}
+
+/* Spinner */
+.spinner {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(8,32,102,.18);
+  border-top-color: #3379d5;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+  #splash { transition: none; }
+}

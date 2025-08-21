@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Condensed">
+    <link rel="stylesheet" href="../css/non.css" />
+
+
+    <title>CCE Minors | IIT Mandi</title>
+    <style>
+        /* Minimalist CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base Styles */
+        :root {
+            --primary-dark: #0a192f;
+            --primary-light: #1e293b;
+            --secondary: #1f3a5f;
+            --accent: #60e0f1;
+            --light: #ffffff;
+            --gray: #cbd5e1;
+            --border: #4a5568;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: "Roboto Condensed", sans-serif;
+            color: var(--light);
+            background-color: var(--primary-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0284c7;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--primary-dark);
+            box-shadow: 0 2px 10px var(--shadow);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+
+        .logo-icon {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(to bottom, #0a192f, #1e293b);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--primary-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: var(--primary-dark);
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: var(--primary-dark);
+            box-shadow: 0 4px 6px var(--shadow);
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: var(--primary-light);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-footer {
+            padding: 0 20px 20px;
+        }
+
+        .learn-more {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .learn-more:hover {
+            letter-spacing: 0.5px;
+        }
+
+        /* Testimonials */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-light);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 47, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--primary-dark);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.3);
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.8rem;
+            color: var(--light);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .modal-video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: var(--primary-light);
+        }
+
+        .modal-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .modal-description {
+            margin: 20px 0;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .modal-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .modal-footer .btn {
+            flex: 1;
+            text-align: center;
+        }
+        
+        /* Hide scrollbar for all browsers */
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">●</div>
+                <div>CCE Minors</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#minors">Minor Programs</a></li>
+                    <li><a href="#online">Online Programs</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>CCE Minors</h1>
+            <p>Discover our Minor programs, Online MSc, and MTech courses designed to enhance your academic and professional journey</p>
+            <a href="#minors" class="btn">Explore Programs</a>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Program Impact</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">20,000+</div>
+                    <p>Students doing this program along with another degree</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3000+</div>
+                    <p>Working Professionals studying in the program</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">850+</div>
+                    <p>Secured Admission to Masters/PhD programs</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <p>BS students in Top 100 Ranks of GATE Exam 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minor Programs -->
+    <section id="minors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Minor Programs</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" onclick="openModal('minor1')">
+                    <div class="card-image" style="background: linear-gradient(135deg, #005be5, #00d3ff);"></div>
+                    <div class="card-body">
+                        <h3>Data Science</h3>
+                        <p>Master the art of extracting insights from data using cutting-edge tools and techniques.</p>
+                        <p><strong>Duration:</strong> 1 Year</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="program-card" onclick="openModal('minor2')">
+                    <div class="card-image" style="background: linear-gradient(135deg, #10b981, #34d399);"></div>
+                    <div class="card-body">
+                        <h3>Cyber Security</h3>
+                        <p>Protect digital assets and systems from evolving cyber threats in our interconnected world.</p>
+                        <p><strong>Duration:</strong> 1 Year</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="program-card" onclick="openModal('minor3')">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);"></div>
+                    <div class="card-body">
+                        <h3>Artificial Intelligence</h3>
+                        <p>Explore the fundamentals of AI and machine learning to build intelligent systems.</p>
+                        <p><strong>Duration:</strong> 1 Year</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Programs 
+    <section id="online">
+        <div class="container">
+            <div class="section-title">
+                <h2>Online Programs</h2>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card" onclick="openModal('online1')">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ec4899, #f472b6);"></div>
+                    <div class="card-body">
+                        <h3>Online MSc in Data Science</h3>
+                        <p>Advanced program covering statistical analysis, machine learning, and big data technologies.</p>
+                        <p><strong>Duration:</strong> 2 Years</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+                <div class="program-card" onclick="openModal('online2')">
+                    <div class="card-image" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);"></div>
+                    <div class="card-body">
+                        <h3>MTech in Computer Science</h3>
+                        <p>Specialized research-oriented program focusing on advanced computing technologies.</p>
+                        <p><strong>Duration:</strong> 2 Years</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Don't Take Our Word For It</h2>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Student Testimonial"></iframe>
+            </div>
+            <div class="testimonial-nav">
+                <div class="dot active" onclick="changeVideo(0)"></div>
+                <div class="dot" onclick="changeVideo(1)"></div>
+                <div class="dot" onclick="changeVideo(2)"></div>
+                <div class="dot" onclick="changeVideo(3)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo non"><img src="../ccelogo.png" alt="CCE Logo" style="width: 7.5%; height: auto;"></div>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">CCE Website</a></li>
+                    <li><a href="">CCE Fellows</a></li>
+                    <li><a href="">IIT Mandi Website</a></li>
+                </ul>
+                <div class="copyright">
+                    &copy; 2023 CCE, IIT Mandi. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="minor1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Minor in Data Science</h3>
+                <button class="close-modal" onclick="closeModal('minor1')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Data Science Program Overview"></iframe>
+                </div>
+                <div class="modal-description">
+                    <p>The Minor in Data Science is designed to provide students with foundational knowledge and practical skills in data analysis, statistical modeling, and machine learning. This program equips students with the ability to extract meaningful insights from complex datasets and make data-driven decisions.</p>
+                    <p>This interdisciplinary program combines mathematical foundations, programming skills, and domain-specific knowledge to prepare students for careers in data analytics, business intelligence, and data science roles across various industries.</p>
+                    <p>Through hands-on projects and real-world case studies, students will develop expertise in data visualization, predictive modeling, and machine learning algorithms. The curriculum emphasizes both theoretical understanding and practical application, ensuring graduates are well-prepared for the demands of the modern data-driven economy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="window.location.href='#'">Website</button>
+                    <button class="btn" onclick="window.location.href='#'">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="minor2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Minor in Cyber Security</h3>
+                <button class="close-modal" onclick="closeModal('minor2')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Cyber Security Program Overview"></iframe>
+                </div>
+                <div class="modal-description">
+                    <p>The Minor in Cyber Security addresses the growing need for skilled professionals in protecting digital assets and infrastructure. This program covers essential concepts in network security, cryptography, ethical hacking, and risk management.</p>
+                    <p>In an era where cyber threats are increasingly sophisticated, this program provides comprehensive training in identifying vulnerabilities, implementing security protocols, and responding to security incidents. Students will learn about threat analysis, security protocols, incident response, and compliance frameworks.</p>
+                    <p>The curriculum emphasizes both theoretical knowledge and practical skills through lab sessions and case studies. Students will gain hands-on experience with security tools and technologies, preparing them for careers in cybersecurity, information technology, and related fields.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="window.location.href='#'">Website</button>
+                    <button class="btn" onclick="window.location.href='#'">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="minor3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Minor in Artificial Intelligence</h3>
+                <button class="close-modal" onclick="closeModal('minor3')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="AI Program Overview"></iframe>
+                </div>
+                <div class="modal-description">
+                    <p>The Minor in Artificial Intelligence introduces students to the fundamentals of AI and machine learning. This program covers core concepts including neural networks, natural language processing, computer vision, and robotics.</p>
+                    <p>With AI transforming industries across the globe, this program provides students with the technical foundation to understand and develop intelligent systems. Through coursework and projects, students will explore how machines can perceive, reason, and learn from data.</p>
+                    <p>The curriculum includes programming for AI, machine learning algorithms, deep learning, and AI ethics. Students will develop intelligent systems and applications as part of their coursework, gaining valuable experience that prepares them for careers in AI development, research, and innovation.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="window.location.href='#'">Website</button>
+                    <button class="btn" onclick="window.location.href='#'">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div id="online1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Online MSc in Data Science</h3>
+                <button class="close-modal" onclick="closeModal('online1')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Online MSc Program Overview"></iframe>
+                </div>
+                <div class="modal-description">
+                    <p>The Online MSc in Data Science is a comprehensive program designed for working professionals seeking to advance their careers in the data-driven economy. This program combines rigorous academic content with practical applications.</p>
+                    <p>Offered entirely online, this program provides flexibility for professionals to balance their education with work and personal commitments. The curriculum covers advanced topics in statistical analysis, machine learning, big data technologies, and data visualization.</p>
+                    <p>Students will complete a research project in their area of interest, applying their knowledge to solve real-world problems. The program also includes opportunities for collaboration with industry partners and access to expert faculty mentors.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="window.location.href='#'">Website</button>
+                    <button class="btn" onclick="window.location.href='#'">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="online2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>MTech in Computer Science</h3>
+                <button class="close-modal" onclick="closeModal('online2')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="MTech Program Overview"></iframe>
+                </div>
+                <div class="modal-description">
+                    <p>The MTech in Computer Science is a research-oriented program designed for students interested in pursuing advanced studies in computing technologies. This program focuses on cutting-edge research areas and innovation.</p>
+                    <p>With a strong emphasis on research, this program prepares students for careers in academia, research institutions, or advanced technical roles in industry. The curriculum includes advanced coursework in algorithms, systems, and theory, followed by a research thesis.</p>
+                    <p>Specializations include artificial intelligence, cybersecurity, distributed systems, and other emerging areas in computer science. Students will have access to state-of-the-art computing facilities and opportunities to collaborate with leading researchers in the field.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="window.location.href='#'">Website</button>
+                    <button class="btn" onclick="window.location.href='#'">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // testimonial navigation
+        let currentVideoIndex = 0;
+        const videoUrls = [
+            "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+        ];
+
+        function changeVideo(index) {
+            const videoContainer = document.querySelector('.video-container');
+            const iframe = videoContainer.querySelector('iframe');
+            const dots = document.querySelectorAll('.dot');
+
+            // Update the iframe source
+            iframe.src = videoUrls[index];
+
+            // Update active dot
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            currentVideoIndex = index;
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

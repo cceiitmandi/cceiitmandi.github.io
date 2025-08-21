@@ -1,0 +1,276 @@
+:root {
+  --dark-blue: #0b2c79;
+  --blue-shade: #1e40af;
+  --gray-bg: #f9fafb;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --border: #d3d4d6;
+  --highlight: #2563eb;
+  --footer-bg: #2c3554;
+  --tag-bg: #dbeafe;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--gray-bg);
+  color: var(--text-dark);
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: var(--white);
+  border-right: 1px solid var(--border);
+  padding: 20px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: var(--dark-blue);
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-btn.active {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.nav-btn:hover:not(.active) {
+  background-color: #f1f1f1;
+  color: var(--dark-blue);
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 30px 40px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.title-row h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.event-count {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--highlight);
+}
+
+.dot-separator {
+  font-size: 2rem;
+  color: #c4c4c4;
+  margin-bottom: 2px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.event-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--highlight);
+  margin-bottom: 6px;
+}
+
+.event-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--dark-blue);
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.event-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.event-info-row a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.last-date {
+  color: red;
+  font-weight: bold;
+}
+
+.event-footer {
+  background: var(--footer-bg);
+  padding: 10px 16px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  gap: 16px;
+  margin: 0 -20px -20px -20px;
+}
+
+.event-footer a {
+  color: rgba(83, 237, 237, 0.785);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.event-footer a :hover {
+  color: #53ed98c8;
+}
+
+/* Arrows */
+.nav-arrow {
+  background: none;
+  border: none;
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 2px 8px;
+}
+
+/* Mobile */
+.topbar-mobile {
+  display: none;
+  background: var(--dark-blue);
+  padding: 12px 20px;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-logo {
+  width: 40px;
+  height: auto;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background: white;
+    z-index: 10;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
+
+  .topbar-mobile {
+    display: flex;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .event-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .event-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .sidebar .logo,
+  .sidebar img:not(.mobile-logo) {
+    display: none;
+  }
+
+  .sidebar .month-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+
+.event-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
