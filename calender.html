@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>CCE Events Calendar</title>
-  <link rel="stylesheet" href="css/calender.css" />
-  <link rel="stylesheet" href="css/non.css" />
+  
+  <link rel="stylesheet" href="css/calender.css"/>
+  <link rel="stylesheet" href="css/non.css"/>
+
   <script defer src="js/calender.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,14 +16,32 @@
 
   <!-- Mobile Topbar -->
   <div class="topbar-mobile">
-    <img src="ccelogo.png" class="mobile-logo" alt="Logo">
+    <a href="index.html"><img src="ccelogo.png" class="mobile-logo" alt="Logo"></a>
+    <h1 class="mobile-title">CCE Calendar</h1>
     <button id="menuToggle" class="menu-btn">☰</button>
   </div>
 
-  <div class="page">
-    <!-- Sidebar -->
+  <!-- Modal Sidebar for Mobile -->
+  <div class="modal-overlay" id="modalOverlay">
     <aside class="sidebar">
-      <div class="logo"><img src="ccelogo.png" alt="CCE Logo"></div>
+      <div class="nav month-list">
+        <nav class="nav">
+          <button class="nav-btn active" data-month="all">ALL</button>
+          <button class="nav-btn" data-month="2025-08">August 2025</button>
+          <button class="nav-btn" data-month="2025-09">September 2025</button>
+          <button class="nav-btn" data-month="2025-10">October 2025</button>
+          <button class="nav-btn" data-month="2025-11">November 2025</button>
+          <button class="nav-btn" data-month="2025-12">December 2025</button>
+          <button class="nav-btn" data-month="2026-01">January 2026</button>
+        </nav>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Main Page -->
+  <div class="page">
+    <!-- Sidebar for desktop -->
+    <aside class="sidebar desktop-only">
       <div class="nav month-list">
         <nav class="nav">
           <button class="nav-btn active" data-month="all">ALL</button>

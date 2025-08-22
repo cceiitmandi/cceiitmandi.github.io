@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       insiteLink: "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-187",
     },
     {
-      title: "Workshop on Building Cognitive Experiments",
+      title: "Workshop on “Building Cognitive Experiments”",
       category: "Workshop",
       id: "IITM/WS/RG/272",
       start: "2025-09-18",
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       insiteLink: "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-177",
     },
     {
-      title: "Indigeneity in the Global South",
+      title: "Conference on “Indigeneity in the Global South”",
       category: "Conference",
       id: "IITM/Conf/SSD/263",
       start: "2025-09-10",
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       insiteLink: "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-171",
     },
     {
-      title: "XIII Biennial Conference of INSEE on Ecological Restoration for a Resilient Society: Economics, Policies and Institutions",
+      title: "XIII Biennial Conference of INSEE on Ecological Restoration",
       category: "Conference",
       id: "IITM/Conf/SSD/258",
       start: "2026-01-10",
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.getElementById("prevMonth");
   const nextBtn = document.getElementById("nextMonth");
   const menuBtn = document.getElementById("menuToggle");
-  const sidebar = document.querySelector(".sidebar");
+  const modalOverlay = document.getElementById("modalOverlay");
 
   const monthOrder = ["2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01"];
   let currentIndex = -1;
@@ -91,126 +91,87 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderEvents(filterMonth = "all") {
-  const today = new Date("2025-08-01");
-  let filtered = events.filter(e => new Date(e.end) >= today);
+    const today = new Date("2025-08-01");
+    let filtered = events.filter(e => new Date(e.end) >= today);
 
-  if (filterMonth !== "all") {
-    filtered = filtered.filter(e => e.start.startsWith(filterMonth));
+    if (filterMonth !== "all") {
+      filtered = filtered.filter(e => e.start.startsWith(filterMonth));
+    }
+
+    filtered.sort((a, b) => new Date(a.start) - new Date(b.start));
+
+    eventCount.textContent = `[${filtered.length}]`;
+    eventList.innerHTML = "";
+
+    if (filtered.length === 0) {
+      eventList.innerHTML = '<p style="font-size: 1.1rem; color: #888; padding: 10px;">No Events/Activities this month yet.</p>';
+      return;
+    }
+
+    filtered.forEach(e => {
+      const card = document.createElement("div");
+      card.className = "event-card";
+
+      let html = `
+        <div class="event-title-row">
+          <h3 class="event-title">${e.title}</h3>
+          ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
+        </div>
+        <div class="event-info-row">
+          <div class="event-meta">🆔 ${e.id}</div>
+          ${e.start && e.end ? `<div class="event-meta">📅 ${formatDate(e.start)} to ${formatDate(e.end)}</div>` : ""}
+          ${e.location ? `<div class="event-meta">📍 ${e.location}</div>` : ""}
+          ${e.coordinator ? `<div class="event-meta">👤 Coordinator(s): ${e.coordinator}</div>` : ""}
+          ${e.lastDate ? `<div class="event-meta last-date">Last Date: ${e.lastDate}</div>` : ""}
+          ${e.insiteLink ? `<div class="event-meta">🔗 <a href="${e.insiteLink}" target="_blank">Insite OM Link</a></div>` : ""}
+        </div>
+      `;
+
+      const hasFooterLinks = e.website || e.registration || e.payment;
+      if (hasFooterLinks) {
+        html += `<div class="event-footer">`;
+        if (e.website) html += `<a href="${e.website}" target="_blank">Website</a>`;
+        if (e.registration) html += `<a href="${e.registration}" target="_blank">Registration Link</a>`;
+        if (e.payment) html += `<a href="${e.payment}" target="_blank">Payment link</a>`;
+        html += `</div>`;
+      }
+
+      card.innerHTML = html;
+      eventList.appendChild(card);
+    });
   }
-
-  filtered.sort((a, b) => {
-    const sa = new Date(a.start), sb = new Date(b.start);
-    if (sa - sb !== 0) return sa - sb;
-    const ea = new Date(a.end), eb = new Date(b.end);
-    return Math.abs(ea - today) - Math.abs(eb - today);
-  });
-
-  eventCount.textContent = `[${filtered.length}]`;
-  eventList.innerHTML = "";
-
-  // ✅ SHOW NO EVENTS MESSAGE
-  if (filtered.length === 0) {
-    eventList.innerHTML = '<p style="font-size: 1.1rem; color: #888; padding: 10px;">No Events/Activities this month yet.</p>';
-    return;
-  }
-
-  filtered.forEach(e => {
-    const card = document.createElement("div");
-    card.className = "event-card";
-
-    let html = `
-      <div class="event-title-row">
-        <div class="event-title">${e.title}</div>
-        ${e.category ? `<span class="tag">${e.category}</span>` : ""}
-      </div>
-      <div class="event-info-row">
-        <div class="event-meta">🆔 ${e.id}</div>`;
-
-    if (e.start && e.end) {
-      html += `<div class="event-meta">📅 ${formatDate(e.start)} to ${formatDate(e.end)}</div>`;
-    }
-
-    if (e.location) {
-      html += `<div class="event-meta">📍 ${e.location}</div>`;
-    }
-
-    if (e.coordinator) {
-      html += `<div class="event-meta">👤 Coordinator(s): ${e.coordinator}</div>`;
-    }
-
-    if (e.lastDate) {
-      html += `<div class="event-meta last-date">Last Date: ${e.lastDate}</div>`;
-    }
-
-    if (e.insiteLink) {
-      html += `<div class="event-meta">🔗 <a href="${e.insiteLink}" target="_blank">Insite OM Link</a></div>`;
-    }
-
-    html += `</div>`; // close event-info-row
-
-    const hasFooterLinks = e.website || e.registration || e.payment;
-
-    if (hasFooterLinks) {
-      html += `<div class="event-footer">`;
-
-      if (e.website) {
-        html += `<a href="${e.website}" target="_blank">Website</a>`;
-      }
-
-      if (e.registration) {
-        html += `<a href="${e.registration}" target="_blank">Registration Link</a>`;
-      }
-
-      if (e.payment) {
-        html += `<a href="${e.payment}" target="_blank">Payment link</a>`;
-      }
-
-      html += `</div>`;
-    }
-
-    card.innerHTML = html;
-    eventList.appendChild(card);
-  });
-
-  monthTitle.textContent =
-    filterMonth === "all"
-      ? "All Upcoming Events/Activities"
-      : new Date(filterMonth + "-01").toLocaleString("default", {
-          month: "long",
-          year: "numeric"
-        });
-}
-
 
   navButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       navButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+
       const m = btn.getAttribute("data-month");
-      renderEvents(m);
       currentIndex = monthOrder.indexOf(m);
-      if (window.innerWidth <= 768) sidebar.classList.remove("active");
+      renderEvents(m);
+
+      monthTitle.textContent = m === "all" ? "ALL Events/Activities" : btn.textContent.trim();
+      if (window.innerWidth <= 768) modalOverlay.classList.remove("active");
     });
   });
 
   prevBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
-      const m = monthOrder[currentIndex];
-      document.querySelector(`[data-month="${m}"]`).click();
+      document.querySelectorAll(`[data-month="${monthOrder[currentIndex]}"]`).forEach(btn => btn.click());
     }
   });
 
   nextBtn.addEventListener("click", () => {
     if (currentIndex < monthOrder.length - 1) {
       currentIndex++;
-      const m = monthOrder[currentIndex];
-      document.querySelector(`[data-month="${m}"]`).click();
+      document.querySelectorAll(`[data-month="${monthOrder[currentIndex]}"]`).forEach(btn => btn.click());
     }
   });
 
-  menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
+  menuBtn.addEventListener("click", () => modalOverlay.classList.add("active"));
+  modalOverlay.addEventListener("click", e => {
+    if (!e.target.closest(".sidebar")) modalOverlay.classList.remove("active");
   });
 
   renderEvents();
