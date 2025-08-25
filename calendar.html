@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>CCE Calendar | CCE, IIT Mandi</title>
+  
+  <link rel="stylesheet" href="calendar/calendar.css"/>
+  <link rel="stylesheet" href="css/non.css"/>
+
+  <script defer src="calendar/calendar.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Mobile Topbar -->
+  <div class="topbar-mobile">
+    <a href="index.html"><img src="ccelogo.png" class="mobile-logo" alt="Logo"></a>
+    <h1 class="mobile-title">CCE Calendar</h1>
+    <button id="menuToggle" class="menu-btn">☰</button>
+  </div>
+
+  <!-- Modal Sidebar for Mobile -->
+  <div class="modal-overlay" id="modalOverlay">
+    <aside class="sidebar">
+      <div class="nav month-list">
+        <nav class="nav">
+          <button class="nav-btn active" data-month="all">ALL</button>
+          <button class="nav-btn" data-month="2025-08">August 2025</button>
+          <button class="nav-btn" data-month="2025-09">September 2025</button>
+          <button class="nav-btn" data-month="2025-10">October 2025</button>
+          <button class="nav-btn" data-month="2025-11">November 2025</button>
+          <button class="nav-btn" data-month="2025-12">December 2025</button>
+          <button class="nav-btn" data-month="2026-01">January 2026</button>
+        </nav>
+      </div>
+      <div class="sidebar-note mobile-only">
+        <p><strong>Note:</strong> CCE Calendar only lists upcoming in-person on-campus events/activities under the purview of CCE. For other activities/programmes run by CCE, checkout relevant options under 'Activities' menu on <a href="index.html">Homepage</a>. <strong>CCE Calendar is only updated when the OM related to the event/activity is officially released.</strong></p>
+        <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Main Page -->
+  <div class="page">
+    <!-- Sidebar for desktop -->
+    <aside class="sidebar desktop-only">
+      <div class="nav month-list">
+        <nav class="nav">
+          <button class="nav-btn active" data-month="all">ALL</button>
+          <button class="nav-btn" data-month="2025-08">August 2025</button>
+          <button class="nav-btn" data-month="2025-09">September 2025</button>
+          <button class="nav-btn" data-month="2025-10">October 2025</button>
+          <button class="nav-btn" data-month="2025-11">November 2025</button>
+          <button class="nav-btn" data-month="2025-12">December 2025</button>
+          <button class="nav-btn" data-month="2026-01">January 2026</button>
+        </nav>
+      </div>
+
+      <div class="sidebar-note">
+        <p><strong>Note:</strong> CCE Calendar only lists upcoming in-person on-campus events/activities under the purview of CCE. For other activities/programmes run by CCE, checkout relevant options under 'Activities' menu on <a href="index.html">Homepage</a>. <br> <strong>CCE Calendar is only updated when the OM related to the event/activity is officially released.</strong></p>
+        <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
+
+        <br>
+
+        <p>Developed by: <a href="mailto:aakashgautam@iitmandi.ac.in">Aakash Gautam, CCE</a></p>
+      </div>
+    </aside>
+
+      
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="title-row non">
+        <button id="prevMonth" class="nav-arrow">&lsaquo;</button>
+        <h2 id="monthTitle">ALL Events/Activities</h2>
+        <button id="nextMonth" class="nav-arrow">&rsaquo;</button>
+        <span class="dot-separator">·</span>
+        <span id="eventCount" class="event-count">[0]</span>
+      </div>
+      <div class="event-list" id="eventList"></div>
+    </main>
+  </div>
+
+</body>
+</html>

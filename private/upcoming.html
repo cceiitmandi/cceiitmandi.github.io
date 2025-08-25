@@ -4,17 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <title>Team | CCE, IIT Mandi</title>
+  <title>Upcoming Activities | CCE, IIT Mandi</title>
 
   <!-- External Stylesheets and Fonts -->
   <link rel="stylesheet" href="css/floatbar.css" />
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/person-tile.css" />
   <link rel="stylesheet" href="css/responsivecss.css" />
   <link rel="stylesheet" href="css/waves.css" />
-  <link rel="stylesheet" href="css/non.css" />
+  <link rel="stylesheet" href="css/upcoming.css" />
 
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
@@ -59,7 +58,7 @@
         <a href="mous.html">MOUs</a>
         <a href="facilities.html">Facilities</a>
         <a href="tinkeringlab.html">Tinkering Lab</a>
-        <a href="team.html" class="activePage">Team</a>
+        <a href="team.html">Team</a>
         <a href="downloads.html">Downloads</a>
       </nav>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
@@ -69,7 +68,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <img src="images/heroimg.jpg" alt="Hero Background">
-    <h1>Team</h1>
+    <h1>Upcoming Activities</h1>
     <p>Centre for Continuing Education, IIT Mandi</p>
 
   <!-- Waves HR -->
@@ -103,91 +102,46 @@
   </section>
 
   <!-- PAGE CONTENT -->
-  <section class="people-section non">
-  
-    <!-- Dr. Tushar Jain -->
-    <div class="person-card" style="max-width: fit-content; margin-inline: auto;">
-      <div class="person-image">
-        <img src="images/people/tj.jpg" alt="Dr. Tushar Jain">
-      </div>
-      <div class="person-content">
-        <h3>Dr. Tushar JAIN</h3>
-        <p class="designation">Head, Centre for Continuing Education</p>
-        <p class="bio">
-          Associate Professor, IIT Mandi & Dean (Students), IIT Mandi
-        </p>
-        <p class="link">📧 <a href="mailto:headcce@iitmandi.ac.in">headcce@iitmandi.ac.in</a></p>
-        <p class="link">🌐 <a href="https://faculty.iitmandi.ac.in/~tushar/">Faculty Website</a></p>
-      </div>
-    </div>
-    <br>
 
-  <div class="people-grid">
-    <!-- Pavin Samuel -->
-    <div class="person-card">
-      <div class="person-image">
-        <img src="images/people/ps.jpg" alt="Pavin Samuel">
-      </div>
-      <div class="person-content">
-        <h3>Pavin S. Samuel</h3>
-        <p class="designation">Junior Superintendent</p>
-        <p class="link">📧 <a href="mailto:pavin@iitmandi.ac.in">pavin@iitmandi.ac.in</a></p>
-      </div>
-    </div>
+  <section>
 
-    <!-- Aakash Gautam -->
-    <div class="person-card">
-      <div class="person-image">
-        <img src="images/people/ag.jpg" alt="Aakash Gautam">
-      </div>
-      <div class="person-content">
-        <h3>Aakash Gautam</h3>
-        <p class="designation">JLA (Tech)</p>
-        <p class="bio">Member of Technical Staff; Webmaster, CCE Website</p>
-        <p class="link">📧 <a href="mailto:aakashgautam@iitmandi.ac.in">aakashgautam@iitmandi.ac.in</a></p>
-        <p class="link">🌐 <a href="aakashgautam.github.io">Personal Website</a></p>
-      </div>
-      </div>
-    
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search by Name or ID">
+  </div>
 
-    <!-- Amit -->
-    <div class="person-card">
-      <div class="person-image">
-        <img src="images/people/ak.jpeg" alt="Amit Kumar">
-      </div>
-      <div class="person-content">
-        <h3>Amit Kumar</h3>
-        <p class="designation">Junior Assistant</p>
-        <p class="link">📧 <a href="mailto:amit_kumar@iitmandi.ac.in">amit_kumar@iitmandi.ac.in</a></p>
-      </div>
-    </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCourses('all')">ALL</button>
+    <button class="filter-btn" onclick="filterCourses('cert')">CERTIFICATE</button>
+    <button class="filter-btn" onclick="filterCourses('stc')">SHORT-TERM</button>
+    <button class="filter-btn" onclick="filterCourses('fdpltpcbp')">FDP / LTP / CBP</button>
+    <button class="filter-btn" onclick="filterCourses('gian')">GIAN</button>
+    <button class="filter-btn" onclick="filterCourses('wcs')">WORKSHOP / CONFERENCE / SYMPOSIUM</button>
+  </div>
 
-    <!-- Rakesh -->
-    <div class="person-card">
-      <div class="person-image">
-        <img src="images/people/rk.jpg" alt="Rakesh Kumar">
-      </div>
-      <div class="person-content">
-        <h3>Rakesh Kumar</h3>
-        <p class="designation">Office Assistant</p>
-        <p class="link">📧 <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
-      </div>
-    </div>
+  <div id="pList">
 
-    <!-- Ram Lal -->
-    <div class="person-card">
-      <div class="person-image">
-        <img src="images/people/rl.png" alt="Ram Lal">
-      </div>
-      <div class="person-content">
-        <h3>Ram Lal Sharma</h3>
-        <p class="designation">Office Attendant</p>
+    <!-- tile 1 -->
+    <div class="course-card" data-category="gian">
+      <span class="card-title">GIAN Course</span> <span class="isActive"> ⬤ ACTIVE</span>
+      <div class="course-info">
+        <p><strong>Name of the Programme:</strong> GIAN Course - Elements of Smart Structures (<strong>Programme ID:</strong> IITM/GIAN/VSC/271) </p>
+        <p><strong>Duration/Time Period:</strong> December 15 to December 20, 2025</p>
+
+        <p><strong>Coordinator(s)/Organizer(s)/Convener(s):</strong> Prof. Vishal Singh Chauhan, SMME, IIT Mandi</p>
+
+        <p><strong>Contact Email ID:</strong> <a href="mailto:eoss@iitmandi.ac.in">eoss@iitmandi.ac.in</a></p>
+
+        <span>Last Date of Registration: <p class="lastdate">30 November 2025</p></span>
+
+        <div class="links">
+          <a href="https://research.iitmandi.ac.in/eoss2025/" target="_blank">Website</a> · <a href="#" onclick="openPaymentModal('', 'Important: Save the screenshot/PDF of the Payment Confirmation Page. It is required to be uploaded in the Registration.')"> Payment Link</a> · <a href="https://docs.google.com/forms/d/1IYRs6W0bFk7q0kFCMpD3fzc_PAK6z3XOVP3xbe5rIwc/viewform?edit_requested=true" target="_blank">Registration Link</a>
+        </div>
       </div>
     </div>
 
   </div>
-  </section>
 
+  </section>
 
 
   <!-- Footer Section -->
@@ -249,6 +203,28 @@
     <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
   </footer>
 
+  <!-- OVERLAY BANK Details -->
+  <div id="paymentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePaymentModal()">&times;</span>
+    <h3>Payment Information</h3>
+    <p id="specialNote" class="note"></p>
+    <img id="qrImage" src="" alt="CCE IIT Mandi UPI QR Code" class="qr">
+    <h4 style="color: darkblue;">8290544445m@pnb</h4>
+    <ul class="bank-info">
+      <li><strong>Bank Name:</strong> Punjab National Bank (PNB)</li>
+      <li><strong>Bank Branch:</strong> IIT Kamand, Mandi (H.P.) - 175075</li>
+      <li><strong>Account Name:</strong> CCE, IIT Mandi</li>
+      <li><strong>Account Number:</strong> 7315000100034369</li>
+      <li><strong>IFSC:</strong> PUNB0731500</li>
+      <li><strong>MICR Code:</strong> 175024138</li>
+      <li><strong>SWIFT Code:</strong> PUNBINBBPAR</li>
+    </ul>
+  </div>
+</div>
+
+
+
   <!-- Menu Toggle Script (INSIDE HTML) -->
   <script>
     const menuToggle = document.getElementById('menuToggle');
@@ -270,6 +246,77 @@
       }
     });
   </script>
+
+  <!-- UPCOMING Search -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const programmeList = document.getElementById("pList");
+    const courseCards = programmeList.getElementsByClassName("course-card");
+
+    searchInput.addEventListener("keyup", function () {
+      const query = this.value.toLowerCase();
+
+      Array.from(courseCards).forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+
+    // RESETS TEXTBOX ON FILTER BUTTON CLICK
+    document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      searchInput.value = "";
+      // optionally: re-display all or apply filter
+     });
+    });
+  </script>
+
+  <!-- FILTER SCRIPT -->
+  <script>
+    function filterCourses(category) {
+      const cards = document.querySelectorAll('.course-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Highlight active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Show/Hide based on category
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category').toUpperCase();
+        if (category === 'all' || cat === category.toUpperCase()) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+  <script>
+  function openPaymentModal(imagePath, noteText) {
+    document.getElementById("qrImage").src = imagePath;
+    document.getElementById("specialNote").textContent = noteText;
+    document.getElementById("paymentModal").style.display = "block";
+  }
+
+  function closePaymentModal() {
+    document.getElementById("paymentModal").style.display = "none";
+  }
+
+  // Close modal if clicked outside the content
+  window.addEventListener("click", function (event) {
+    const modal = document.getElementById("paymentModal");
+    if (event.target === modal) {
+      closePaymentModal();
+    }
+  });
+</script>
+
 
 </body>
 </html>

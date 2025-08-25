@@ -28,6 +28,8 @@
   text-align: center;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .facility-card img {
@@ -35,6 +37,7 @@
   border-radius: 12px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
+  flex-shrink: 0;
 }
 
 .facility-card h3 {
@@ -51,4 +54,5 @@
   font-size: 0.9rem;
   color: #475569;
   line-height: 1.6;
+  flex-grow: 1;
 }
