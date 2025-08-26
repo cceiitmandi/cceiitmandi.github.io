@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 👇 Load events from JSON
-  fetch('calendar/events.json')
+  fetch('calendar/calendar.json')
     .then(res => res.json())
     .then(data => {
       events = data;
