@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let html = `
         <div class="event-title-row">
-          <h3 class="event-title">${e.title} ${isOngoing ? '<span class="ongoing-tag">ONGOING</span>' : ''}</h3>
+          <h3 class="event-title">${e.title} ${isOngoing ? '<span class="ongoing-tag">LIVE</span>' : ''}</h3>
           ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
         </div>
         <div class="event-info-row">
