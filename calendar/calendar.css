@@ -328,3 +328,15 @@ body {
     display: block;
   }
 }
+
+.ongoing-tag {
+  background-color: #34d399; /* green background */
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+

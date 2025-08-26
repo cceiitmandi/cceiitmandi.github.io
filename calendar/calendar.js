@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderEvents(filterMonth = "all") {
-    const today = new Date("2025-08-01");
+    const today = new Date(); // real-time date
     let filtered = events.filter(e => new Date(e.end) >= today);
 
     if (filterMonth !== "all") {
@@ -44,9 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = document.createElement("div");
       card.className = "event-card";
 
+      const startDate = new Date(e.start);
+      const endDate = new Date(e.end);
+      const isOngoing = today >= startDate && today <= endDate;
+
       let html = `
         <div class="event-title-row">
-          <h3 class="event-title">${e.title}</h3>
+          <h3 class="event-title">${e.title} ${isOngoing ? '<span class="ongoing-tag">ONGOING</span>' : ''}</h3>
           ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
         </div>
         <div class="event-info-row">
@@ -106,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!e.target.closest(".sidebar")) modalOverlay.classList.remove("active");
   });
 
-  // 👇 Load events from JSON
+  // Load events from JSON
   fetch('calendar/calendar.json')
     .then(res => res.json())
     .then(data => {
