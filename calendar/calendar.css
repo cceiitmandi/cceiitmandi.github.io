@@ -332,30 +332,30 @@ body {
 .ongoing-tag {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  background-color: #bb2424dc; /* deep red */
+  gap: 6px;
+  background-color: #d32f2f; /* red */
   color: white;
-  font-size: 0.5rem;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 999px; /* pill shape */
   margin-left: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  height: 24px;
+  line-height: 1;
 }
 
-/* Dot inside tag */
+/* White dot inside */
 .ongoing-tag::before {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
 
-/* On mobile, stack ONGOING tag below title */
+/* On mobile: move below the title */
 @media (max-width: 768px) {
   .event-title-row {
     flex-direction: column;
@@ -367,5 +367,3 @@ body {
     margin-top: 6px;
   }
 }
-
-
