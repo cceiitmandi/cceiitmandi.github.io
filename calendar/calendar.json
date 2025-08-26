@@ -9,6 +9,15 @@
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188"
   },
   {
+    "title": "Sample Testing Workshop",
+    "category": "Conference",
+    "id": "IITM/Conf/PFS/000",
+    "start": "2025-08-24",
+    "end": "2025-08-27",
+    "coordinator": "Prof. XYZ, SCS",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188"
+  },
+  {
     "title": "Workshop on “Advanced Instrumentation”",
     "category": "Workshop",
     "id": "IITM/WS-AMRC/AH/274",
