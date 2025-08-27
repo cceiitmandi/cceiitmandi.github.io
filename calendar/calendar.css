@@ -335,11 +335,11 @@ body {
   gap: 6px;
   background-color: #b62525dc; /* red */
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: bold;
-  padding: 4px 12px;
+  padding: 4px 8px;
   border-radius: 999px; /* pill shape */
-  margin-left: 10px;
+  margin-left: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
