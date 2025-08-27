@@ -335,7 +335,7 @@ body {
   gap: 6px;
   background-color: #b62525dc; /* red */
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 4px 12px;
   border-radius: 999px; /* pill shape */
@@ -343,9 +343,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
+  vertical-align: middle; 
+  position: relative;
+  top: -2px;
 }
 
-/* White dot inside */
 .ongoing-tag::before {
   content: '';
   width: 10px;
@@ -353,6 +355,7 @@ body {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
+  animation: pulse 1.5s infinite;
 }
 
 /* On mobile: move below the title */
@@ -366,4 +369,11 @@ body {
     margin-left: 0;
     margin-top: 6px;
   }
+}
+
+/* Pulsing effect */
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+  100% { opacity: 1; transform: scale(1); }
 }
