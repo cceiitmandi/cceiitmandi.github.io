@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ID Verification | IIT Mandi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+
+<div class="box">
+  <a href="iitmandi.ac.in"><img src="iitmdlogo.png" alt="Logo" class="logo"></a>
+  <div class="admin-text">IIT Mandi's Administration</div>
+
+  <h2>ID Verification System</h2>
+
+  <input type="text" id="empId" placeholder="Enter Employee ID">
+  <button class="btn-primary" onclick="verify()">Verify ID</button>
+  <button class="btn-grey" onclick="startScan()">Scan ID's QR Code</button>
+
+  <div id="loader"></div>
+  <div id="reader"></div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal" onclick="closeModalOnOutsideClick(event, 'successModal')">
+  <div class="modal-content">
+    <div class="icon-circle">
+      <img src="verified.png" alt="Verified" class="status-icon">
+    </div>
+    <h3 class="verified-text">Verified</h3>
+    <img id="photo" class="emp-photo" src="">
+    <p><strong id="name" class="verified-name"></strong></p>
+    <p id="designation" class="verified-designation"></p>
+    <p><span id="empID" class="verified-id"></span></p>
+  </div>
+</div>
+
+
+<!-- Error Modal -->
+<div class="modal" id="errorModal" onclick="closeModalOnOutsideClick(event, 'errorModal')">
+  <div class="modal-content">
+    <div class="icon-circle">
+      <img src="non-verified.png" alt="Not Verified" class="status-icon">
+    </div>
+    <h3 class="not-verified-text">Not Verified</h3>
+    <p>Employee ID not found.</p>
+  </div>
+</div>
+
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbz9Bi75G8VSPn0MQUzo4DgC-73kU-fhRycjjdZKumGQ9qwDk5dSIyOl9xOGLIk9r0EJwg/exec";
+
+  async function verify() {
+    const id = document.getElementById('empId').value.trim();
+    if (!id) return;
+
+    toggleLoader(true);
+
+    try {
+      const response = await fetch(`${scriptURL}?id=${id}`);
+      const data = await response.json();
+
+      toggleLoader(false);
+
+      if (data.verified) {
+        // document.getElementById('photo').src = data.image;
+        document.getElementById('name').innerText = data.name;
+        document.getElementById('designation').innerText = data.designation;
+        document.getElementById('empID').innerText = `#${data.id}`;
+        showModal('successModal');
+      } else {
+        showModal('errorModal');
+      }
+    } catch (error) {
+      toggleLoader(false);
+      showModal('errorModal');
+    }
+  }
+
+  function startScan() {
+    const reader = document.getElementById('reader');
+    reader.style.display = 'block';
+
+    const qrScanner = new Html5Qrcode("reader");
+    qrScanner.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 250 },
+      qrCodeMessage => {
+        document.getElementById("empId").value = qrCodeMessage;
+        qrScanner.stop();
+        reader.style.display = "none";
+        verify();
+      },
+      errorMessage => {
+        console.warn("QR Scan error:", errorMessage);
+      }
+    ).catch(err => {
+      console.error("Failed to start scanner:", err);
+    });
+  }
+
+  function toggleLoader(show) {
+    document.getElementById("loader").style.display = show ? "block" : "none";
+  }
+
+  function showModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function closeModalOnOutsideClick(event, modalId) {
+    const modalContent = document.querySelector(`#${modalId} .modal-content`);
+    if (!modalContent.contains(event.target)) {
+      document.getElementById(modalId).style.display = "none";
+      document.getElementById('empId').value = '';
+    }
+  }
+</script>
+
+</body>
+</html>
