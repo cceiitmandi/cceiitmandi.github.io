@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menuToggle");
   const modalOverlay = document.getElementById("modalOverlay");
 
-  const monthOrder = ["2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01"];
+  const monthOrder = ["2025-09", "2025-10", "2025-11", "2025-12", "2026-01"];
   let currentIndex = -1;
 
   function formatDate(str) {
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const isOngoing = today >= startDate && today <= endDate;
 
       let html = `
-        <div class="event-title-row">
-          <h3 class="event-title">${e.title} ${isOngoing ? '<span class="ongoing-tag">LIVE</span>' : ''}</h3>
+        <div class="event-title-row non">
+          <h3 class="event-title non">${e.title} ${isOngoing ? '<span class="ongoing-tag">LIVE</span>' : ''}</h3>
           ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
         </div>
         <div class="event-info-row">
@@ -63,12 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       `;
 
-      const hasFooterLinks = e.website || e.registration || e.payment;
-      if (hasFooterLinks) {
+      if (e.links && e.links.length > 0) {
         html += `<div class="event-footer">`;
-        if (e.website) html += `<a href="${e.website}" target="_blank">Website</a>`;
-        if (e.registration) html += `<a href="${e.registration}" target="_blank">Registration Link</a>`;
-        if (e.payment) html += `<a href="${e.payment}" target="_blank">Payment link</a>`;
+        e.links.forEach(link => {
+          html += `<a href="${link.url}" target="_blank">${link.label}</a>`;
+        });
         html += `</div>`;
       }
 

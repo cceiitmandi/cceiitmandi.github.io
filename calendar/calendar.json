@@ -9,15 +9,6 @@
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188"
   },
   {
-    "title": "Sample Testing Workshop",
-    "category": "Conference",
-    "id": "IITM/Conf/PFS/000",
-    "start": "2025-08-24",
-    "end": "2025-08-29",
-    "coordinator": "Prof. XYZ, SCS",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188"
-  },
-  {
     "title": "Workshop on “Advanced Instrumentation”",
     "category": "Workshop",
     "id": "IITM/WS-AMRC/AH/274",
@@ -27,7 +18,7 @@
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-189"
   },
   {
-    "title": "Workshop on “Building Cognitive Experiments”",
+    "title": "Workshop on “Building Cognitive Experiments: Hands on Training in Psychtoolbox, Psychopy MATLAB & Python Basics”",
     "category": "Workshop",
     "id": "IITM/WS/RG/272",
     "start": "2025-09-18",
@@ -42,9 +33,12 @@
     "id": "IITM/GIAN/VSC/271",
     "start": "2025-12-15",
     "end": "2025-12-20",
+    "location": "SMME, IIT Mandi",
     "coordinator": "Prof. Vishal Singh Chauhan, SMME",
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-182",
-    "website": "https://research.iitmandi.ac.in/eoss2025/"
+    "links": [
+      { "label": "Website", "url": "https://research.iitmandi.ac.in/eoss2025/" }
+    ]
   },
   {
     "title": "Computer Vision, Graphics and Image Processing",
@@ -54,7 +48,9 @@
     "end": "2025-12-20",
     "coordinator": "Dr. Arnav Bhavsar Vinayak and Dr. Adity Nigam, SCEE",
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-177",
-    "website": "https://icvgip.in/2025/"
+    "links": [
+      { "label": "Website", "url": "https://icvgip.in/2025/" }
+    ]
   },
   {
     "title": "Conference on “Indigeneity in the Global South”",
@@ -81,16 +77,19 @@
     "start": "2025-12-10",
     "end": "2025-12-13",
     "coordinator": "Dr. Ramna Thakur, SHSS",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-190"
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-190",
+    "links": [
+      { "label": "Announcement Document", "url": "https://www.iitmandi.ac.in/pdf/announcements/IHEPA13_%20conference_brochure.pdf" }
+    ]
   },
   {
-    "title": "“Indian Judgement and Decision Making” (IJDM-2025)",
+    "title": "2025 Applied Behavioral Science and Decision Making",
     "category": "Conference",
     "id": "IITM/Conf/VD/278",
     "start": "2025-11-01",
     "end": "2025-11-02",
     "coordinator": "Prof. Varun Dutt, SCEE",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-193"
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-195"
   },
   {
     "title": "AiXCELRATE 3.0",
@@ -98,6 +97,7 @@
     "id": "IITM/Symp/AB/279",
     "start": "2025-09-06",
     "end": "2025-09-07",
+    "location": "SOM, IIT Mandi",
     "coordinator": "Dr. Ashish Bollimbala, SOM",
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-194"
   }
