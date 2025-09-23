@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <title>CCE, IIT Mandi | Centre for Continuing Education</title>
+  <title>Centre for Continuing Education (CCE), IIT Mandi</title>
 
   <!-- External CSS, FONTS -->
   <link rel="stylesheet" href="css/floatbar.css" />
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/announcementbanner.css" />
   <link rel="stylesheet" href="css/responsivecss.css" />
   <link rel="stylesheet" href="css/waves.css" />
+  <link rel="stylesheet" href="css/popupmodal.css" />
   <link rel="stylesheet" href="splash/splashscreen.css" />
   <link rel="stylesheet" href="css/non.css" />
 
@@ -23,7 +24,8 @@
 
   <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
 
-  <script src="js/floatbar.css"></script>
+  <script src="js/floatbar.js"></script>
+  <script src="js/popupmodal.js" defer></script>
 
   <style>
  
@@ -84,6 +86,7 @@
           </div>
         </div>
         <a href="prayas/index.html">PRAYAS</a>
+        <a href="mmttp.html">MMTTP</a>
         <a href="mous.html">MOUs</a>
         <a href="facilities.html">Facilities</a>
         <a href="tinkeringlab.html">Tinkering Lab</a>
@@ -136,16 +139,16 @@
   <section class="activities">
     <h2>Ongoing Activities</h2>
     <div class="card">
+      Advanced Optical Diagnostic Techniques (8-12 December, 2025)
+      <span><a href="assets/posters/Advanced Optical Diagnostic Techniques.pdf" target="_blank">Poster</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScMBWIKc-zO6kPn5pooQxZoQ4MFEeMdT8XdZkggUvcvrv8afw/viewform" target="_blank">Regsitration Form</a></span>
+    </div>
+    <div class="card">
+      Short-Term Course on Electric and Hybrid Vehicles (8-12 December, 2025)
+      <span><a href="assets/posters/Short-Term Course on Electric and Hybrid Vehicles.pdf" target="_blank">Poster</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW5VVO3apVBLPA_yFuKcBDnaT4BCFeusMj6We2ThlCFkPh3A/viewform" target="_blank">Regsitration Form</a></span>
+    </div>
+    <div class="card">
       GIAN course on Elements of Smart Structure at IIT Mandi (15-20 December, 2025)
       <span><a href="https://research.iitmandi.ac.in/eoss2025/" target="_blank">Website</a> | <a href="https://research.iitmandi.ac.in/eoss2025/files/Poster_stc.pdf">Brochure</a></span>
-    </div>
-    <div class="card">
-      Advances in Electron Microscopy and Its Applications(11-12 December, 2025)
-      <span><a href="https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188" target="_blank">Insite OM link</a></span>
-    </div>
-    <div class="card">
-      XIII Biennial Conference of INSEE on Ecological Restoration (10-14 January, 2026)
-      <span><a href="https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-165" target="_blank">Insite OM link</a></span>
     </div>
     <br>
     <a href="calendar.html" class="calendarlink">Check CCE Calendar →</a>
@@ -229,11 +232,11 @@
     </div>
   </section>
 
-  <!-- ANNOUNCEMENT BANNER -->
+  <!-- ANNOUNCEMENT BANNER 
   <div class="announcement-banner" id="announcementBanner">
-    <a class="link" href="prayas/index.html"><p><strong>PRAYAS 3.0 / 2025</strong> &nbsp;·&nbsp; Highlights, Photo Gallery and Report →</p></a>
+    <a class="link" href="prayas/index.html"><p><strong>CCE, IIT Mandi </strong> &nbsp;·&nbsp; NextGen Learning &nbsp;·&nbsp; Newsletter 2025 →</p></a>
     <button class="close-banner" id="closeBanner">×</button>
-  </div>
+  </div> -->
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -292,7 +295,7 @@
     </div>
     <br>
     <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
-  </footer>
+  </footer> 
 
 
 <!-- SLIDESHOW JS -->
@@ -327,6 +330,33 @@
       document.getElementById("announcementBanner").style.display = "none";
     });
   </script>
+
+<!-- Newsletter Modal -->
+<div id="nlModal" class="nl" data-enable="true" data-once="true">
+  <div class="nl__backdrop" data-close="true"></div>
+
+  <div class="nl__dialog" tabindex="-1">
+    <!-- <h3 class="nl__title">CCE Newsletter 2025</h3> -->
+
+    <img class="nl__cover" src="assets/newsletter2025.jpg"
+         alt="CCE Newsletter 2025 cover">
+
+    <p class="nl__desc">Would you like to view this Newsletter?</p>
+
+    <div class="nl__actions">
+      <a class="nl__btn nl__btn--primary"
+         href="assets/CCE Newsletter 2025.pdf"
+         target="_blank" rel="noopener" download>Yes, please</a>
+
+      <button class="nl__btn nl__btn--ghost" type="button" data-close="true">
+        Maybe not this time
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
 
 </body>
 </html>

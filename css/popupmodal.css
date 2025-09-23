@@ -1,0 +1,101 @@
+/* ===== Overlay ===== */
+.nl{
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: none;                 /* shown when .open is added */
+}
+.nl.open{
+  display: flex;
+  align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
+  padding: 20px;                 /* screen-edge breathing */
+}
+/* Hard toggle from HTML */
+.nl[data-enable="false"]{ display: none !important; }
+
+.nl__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+}
+
+/* ===== Dialog (narrower for portrait cover; no inner scroll) ===== */
+.nl__dialog{
+  position: relative;
+  z-index: 1;
+  width: clamp(320px, 86vw, 460px); /* narrower than before to remove side gaps */
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  padding: 14px 16px 16px;
+  display: grid;
+  grid-template-rows: auto auto auto; /* title | image | actions+desc */
+  gap: 12px;
+  overflow: hidden;                   /* no inner scrollbar */
+  outline: none;                      /* remove black outline on click */
+}
+
+/* ===== Title & Description (center) ===== */
+.nl__title{
+  margin: 0;
+  text-align: center;
+  font: 700 1.25rem/1.25 system-ui,-apple-system,"Cormorant Garamond",Roboto,Arial,sans-serif;
+  color:#0f172a;
+}
+.nl__desc{
+  margin: 6px 0 0;
+  text-align: center;
+  color:#334155;
+  font-size:.95rem;
+}
+
+/* ===== Cover image (always fully visible; no crop; no scroll) ===== */
+.nl__cover{
+  display: block;
+  width: 100%;
+  height: auto;                   /* keep natural aspect */
+  max-height: 64vh;              /* leave room for text/buttons */
+  object-fit: contain;           /* never crop; show whole image */
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== Actions: equal-size buttons, centered ===== */
+.nl__actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal widths */
+  gap: .65rem;
+  align-items: stretch;
+  justify-items: stretch;
+  margin-top: 6px;
+}
+.nl__btn{
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: .7rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background:#eef2f7;
+  color:#111827;
+  border-color:#e2e8f0;
+}
+.nl__btn--primary{
+  background:#524ae1;
+  color:#fff;
+  border-color: transparent;
+}
+
+.nl__btn--primary:hover{
+  background:#2c269d;
+  color:#fff;
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 520px){
+  .nl__dialog{ width: 94vw; max-height: 92vh; }
+  .nl__cover{ max-height: 58vh; }
+}

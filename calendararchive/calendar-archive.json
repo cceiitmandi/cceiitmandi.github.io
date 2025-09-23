@@ -1,0 +1,88 @@
+[
+  {
+    "title": "International Conference on Robotics & Automation",
+    "id": "IITM/Conf/RA/2022-001",
+    "category": "Conference",
+    "coordinator": "Prof. Anil Kumar, SCEE",
+    "start": "2022-12-05",
+    "end": "2022-12-08",
+    "participantCount": 250,
+    "location": "IIT Mandi Campus",
+    "links": [
+      { "label": "Poster", "url": "https://example.com/2022/robotics/poster.pdf" },
+      { "label": "Website", "url": "https://example.com/2022/robotics" },
+      { "label": "Group Photo", "url": "https://example.com/2022/robotics/group.jpg" }
+    ]
+  },
+  {
+    "title": "Faculty Development Programme on AI & ML",
+    "id": "IITM/FDP/CS/2023-011",
+    "category": "FDP",
+    "coordinator": "Prof. Manoj Thakur, SCEE",
+    "start": "2023-11-01",
+    "end": "2023-11-10",
+    "participantCount": 100,
+    "location": "CCE Hall, IIT Mandi",
+    "links": [
+      { "label": "Poster", "url": "https://example.com/2023/fdp/poster.pdf" },
+      { "label": "Website", "url": "https://example.com/2023/fdp" },
+      { "label": "Group Photo", "url": "https://example.com/2023/fdp/group.jpg" }
+    ]
+  },
+  {
+    "title": "Workshop on Sustainable Energy",
+    "id": "IITM/WS/EN/2024-021",
+    "category": "Workshop",
+    "coordinator": "Dr. Neha Sharma, SCEE",
+    "start": "2024-03-15",
+    "end": "2024-03-18",
+    "participantCount": 80,
+    "location": "New Campus Auditorium",
+    "links": [
+      { "label": "Poster", "url": "https://example.com/2024/energy/poster.pdf" },
+      { "label": "Website", "url": "https://example.com/2024/energy" },
+      { "label": "Group Photo", "url": "https://example.com/2024/energy/group.jpg" }
+    ]
+  },
+  {
+    "title": "National Seminar on Data Science Applications",
+    "id": "IITM/NS/DS/2024-033",
+    "category": "Seminar",
+    "coordinator": "Prof. Rakesh Gupta, SMME",
+    "start": "2024-09-20",
+    "end": "2024-09-22",
+    "participantCount": 150,
+    "location": "Main Seminar Hall",
+    "links": [
+      { "label": "Poster", "url": "https://example.com/2024/ds/poster.pdf" },
+      { "label": "Website", "url": "https://example.com/2024/ds" }
+    ]
+  },
+  {
+    "title": "BTech (Semiconductor Design & Technology) - IIT Mandi & NCU Gurugram",
+    "id": "IITM/AC/SDT/2025-041",
+    "category": "Academic Course",
+    "coordinator": "Prof. Hitesh Shrimali, SCEE",
+    "start": "2025-08-01",
+    "end": "2029-07-01",
+    "participantCount": 120,
+    "location": "IIT Mandi Campus",
+    "links": [
+      { "label": "Website", "url": "https://example.com/2025/sdt" }
+    ]
+  },
+  {
+    "title": "Capacity Building Programme for PGT Mathematics (SCERT Delhi)",
+    "id": "IITM/FDP/Math/2025-055",
+    "category": "FDP",
+    "coordinator": "Prof. Manoj Thakur, SOM & SMSS",
+    "start": "2025-09-22",
+    "end": "2025-09-26",
+    "participantCount": 100,
+    "location": "CCE, IIT Mandi",
+    "links": [
+      { "label": "Poster", "url": "https://example.com/2025/math/poster.pdf" },
+      { "label": "Group Photo", "url": "https://example.com/2025/math/group.jpg" }
+    ]
+  }
+]

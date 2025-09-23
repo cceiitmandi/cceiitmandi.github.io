@@ -9,6 +9,67 @@
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-188"
   },
   {
+    "title": "Short-term Training Program in EV (Electric Vehicles)",
+    "category": "Training Course",
+    "id": "00",
+    "start": "2025-10-15",
+    "end": "2025-09-18",
+    "coordinator": "Dr. Gajendra Singh, SMME"
+  },
+  {
+    "title": "Kullhad Economy Festival (KEF) 2025",
+    "category": "Festival",
+    "id": "IITM/KEF/VHRC/281",
+    "start": "2025-10-02",
+    "end": "2025-10-06",
+    "coordinator": "Dr. Venkatesh Hanumant Rao Chembrolu, IKSHMA",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/09-198"
+  },
+  {
+    "title": "Capacity Building Programme for PGT Mathematics (SCERT Delhi)",
+    "category": "FDP",
+    "id": "00",
+    "start": "2025-09-22",
+    "end": "2025-09-26",
+    "location": "CCE, IIT Mandi",
+    "coordinator": "Prof. Manoj Thakur, SOM & SMSS"
+  },
+  {
+    "title": "Capacity Building Programme for PGT Biology (SCERT Delhi)",
+    "category": "FDP",
+    "id": "00",
+    "start": "2025-10-06",
+    "end": "2025-10-10",
+    "location": "CCE, IIT Mandi",
+    "coordinator": "Dr. Trayambak Basak & Dr Ekta Makhija, SBB"
+  },
+  {
+    "title": "Capacity Building Programme for PGT Chemistry (SCERT Delhi)",
+    "category": "FDP",
+    "id": "00",
+    "start": "2025-10-13",
+    "end": "2025-10-17",
+    "location": "CCE, IIT Mandi",
+    "coordinator": "Dr. Moupriya Das, SCS"
+  },
+  {
+    "title": "Capacity Building Programme for PGT Physics (SCERT Delhi)",
+    "category": "FDP",
+    "id": "00",
+    "start": "2025-11-03",
+    "end": "2025-11-07",
+    "location": "CCE, IIT Mandi",
+    "coordinator": "Dr. Ravindra Kumar Yadav, SPS"
+  },
+  {
+    "title": "BTech (Semiconductor Design & Technology) - IIT Mandi & NCU Gurugram",
+    "category": "Academic Course",
+    "id": "00",
+    "start": "2025-08-01",
+    "end": "2029-07-01",
+    "coordinator": "Prof. Hitesh Shrimali, SCEE, IIT Mandi"
+  },
+  {
     "title": "Workshop on “Advanced Instrumentation”",
     "category": "Workshop",
     "id": "IITM/WS-AMRC/AH/274",
@@ -79,7 +140,7 @@
     "coordinator": "Dr. Ramna Thakur, SHSS",
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-190",
     "links": [
-      { "label": "Announcement Document", "url": "https://www.iitmandi.ac.in/pdf/announcements/IHEPA13_%20conference_brochure.pdf" }
+      { "label": "Announcement", "url": "https://www.iitmandi.ac.in/pdf/announcements/IHEPA13_%20conference_brochure.pdf" }
     ]
   },
   {
@@ -90,15 +151,5 @@
     "end": "2025-11-02",
     "coordinator": "Prof. Varun Dutt, SCEE",
     "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-195"
-  },
-  {
-    "title": "AiXCELRATE 3.0",
-    "category": "Symposium",
-    "id": "IITM/Symp/AB/279",
-    "start": "2025-09-06",
-    "end": "2025-09-07",
-    "location": "SOM, IIT Mandi",
-    "coordinator": "Dr. Ashish Bollimbala, SOM",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-194"
   }
 ]

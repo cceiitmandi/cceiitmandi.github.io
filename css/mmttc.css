@@ -1,0 +1,130 @@
+/* ===== MMTTC Section ===== */
+.mmt.tc-section {
+  background: #f8fafc;
+  padding: 2.5rem 1rem;
+}
+
+.mmt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+/* Two columns on medium+ screens */
+@media (min-width: 900px) {
+  .mmt-container {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Left column (copy) */
+.mmt-copy h2 {
+  margin: 0 0 .75rem 0;
+  color: #0f172a;                /* slate-900 */
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 700;
+}
+
+.mmt-copy p {
+  color: #334155;                /* slate-700 */
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.mmt-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  border: 2px solid transparent;
+}
+
+.btn.primary {
+  background: #16135b;           /* your dark indigo */
+  color: #fff;
+}
+.btn.primary:hover { background: #0f0d45; transform: translateY(-1px); }
+
+.btn.outline {
+  background: #edeff6;
+  color: #16135b;
+  border-color: #cbd5e1;         /* slate-300 */
+}
+.btn.outline:hover { background: #e2e8f0; transform: translateY(-1px); }
+
+/* Right column (card) */
+.mmt-card {
+  position: relative;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border: 1px solid #e2e8f0;     /* slate-200 */
+  overflow: hidden;
+}
+
+.mmt-card-ribbon {
+  background: #c8a007;           /* warm golden header */
+  color: #1f2937;                /* gray-800 for contrast */
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: .3px;
+  padding: .85rem 1rem;
+  text-align: center;
+}
+
+.mmt-card-body {
+  padding: 1.1rem 1rem 1.25rem;
+  text-align: center;
+}
+
+.mmt-avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: .5rem auto 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.mmt-name {
+  margin: 0 0 .25rem 0;
+  font-size: 1.15rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.mmt-role {
+  margin: 0 0 .6rem 0;
+  color: #475569;                 /* slate-600 */
+  font-size: .95rem;
+}
+
+.mmt-mail {
+  color: #1d4ed8;                 /* blue-700 */
+  font-weight: 600;
+  text-decoration: none;
+}
+.mmt-mail:hover { text-decoration: underline; }
+
+/* Small tweaks for narrow screens */
+@media (max-width: 520px) {
+  .btn { width: 100%; text-align: center; }
+  .mmt-avatar { width: 140px; height: 140px; }
+}

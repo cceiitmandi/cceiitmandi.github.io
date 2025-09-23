@@ -1,56 +1,53 @@
 .announcement-banner {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #5b3dfd;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      z-index: 9999;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      flex-wrap: wrap;
-    }
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5b3dfd;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  z-index: 9999;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-    .announcement-banner p {
-      margin: 0;
-      flex: 1;
-      text-align: left;
-    }
+.announcement-banner a.link {
+  flex: 1;                    /* take remaining space */
+  text-decoration: none;
+  color: white;
+}
 
-    .close-banner {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
+.announcement-banner p {
+  margin: 0;
+  text-align: left;
+}
 
-    a.link {
-      text-decoration: none;
-      color: white;
-    }
+.close-banner {
+  margin-left: auto;           /* push it to the far right */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
 
-    
-
-    @media (max-width: 600px) {
-
-      .announcement-banner {
-        font-size: 0.9rem;
-        padding: 1rem;
-        max-width: calc(100% - 2rem);
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .close-banner {
-        align-self: flex-end;
-      }
-    }
+@media (max-width: 600px) {
+  .announcement-banner {
+    font-size: 0.9rem;
+    padding: 1rem;
+    max-width: calc(100% - 2rem);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .close-banner {
+    margin-left: 0;
+    align-self: flex-end;       /* stay to the right on mobile */
+  }
+}

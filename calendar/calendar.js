@@ -24,13 +24,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderEvents(filterMonth = "all") {
     const today = new Date(); // real-time date
-    let filtered = events.filter(e => new Date(e.end) >= today);
+    
+    let filtered = events.filter(e => {
+      let endDate = new Date(e.end);
+      endDate.setHours(20, 0, 0, 0); // Include Only Until 8:00 PM on END date
+      return endDate >= today;
+    });
 
     if (filterMonth !== "all") {
-      filtered = filtered.filter(e => e.start.startsWith(filterMonth));
-    }
+      const [year, month] = filterMonth.split("-").map(Number);
 
-    filtered.sort((a, b) => new Date(a.start) - new Date(b.start));
+      filtered = filtered.filter(e => {
+        const start = new Date(e.start);
+        const end = new Date(e.end);
+
+        // Range for the selected month
+        const monthStart = new Date(year, month - 1, 1);                // first day of the month
+        const monthEnd = new Date(year, month, 0, 23, 59, 59, 999);     // last day of the month
+
+        // Keep event if it overlaps with the month
+        return start <= monthEnd && end >= monthStart;
+    });}
+
+
+    filtered.sort((a, b) => {
+      const aStart = new Date(a.start);
+      const aEnd = new Date(a.end);
+      const bStart = new Date(b.start);
+      const bEnd = new Date(b.end);
+
+      const aMultiMonth = (aEnd.getFullYear() !== aStart.getFullYear()) || (aEnd.getMonth() !== aStart.getMonth());
+      const bMultiMonth = (bEnd.getFullYear() !== bStart.getFullYear()) || (bEnd.getMonth() !== bStart.getMonth());
+
+      // Multi-month events first
+      if (aMultiMonth && !bMultiMonth) return -1;
+      if (!aMultiMonth && bMultiMonth) return 1;
+
+      // Otherwise, sort by start date
+      return aStart - bStart;
+    });
 
     eventCount.textContent = `[${filtered.length}]`;
     eventList.innerHTML = "";
@@ -46,11 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const startDate = new Date(e.start);
       const endDate = new Date(e.end);
+      endDate.setHours(20, 0, 0, 0); // make LIVE valid until 8 PM of end date
       const isOngoing = today >= startDate && today <= endDate;
 
       let html = `
         <div class="event-title-row non">
-          <h3 class="event-title non">${e.title} ${isOngoing ? '<span class="ongoing-tag">LIVE</span>' : ''}</h3>
+          <h3 class="event-title non">${e.title} ${isOngoing ? '<span class="ongoing-tag">ONGOING</span>' : ''}</h3>
           ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
         </div>
         <div class="event-info-row">

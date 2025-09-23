@@ -1,18 +1,18 @@
-.tinkering-section {
+.web-section {
   padding: 0rem 2.5rem 1.5rem 2.5rem;
   background-color: #f9fbfc;
 }
-.tinkering-container {
+.web-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
 }
-.tinker-text {
+.web-text {
   flex: 1;
 }
-.tinker-card {
+.web-card {
   flex: 0 0 300px;
   background: #fff;
   border-radius: 6px;
@@ -36,7 +36,7 @@
   color: #11336d;
   margin-bottom: 0.5rem;
 }
-a.tinker-btn {
+a.web-btn {
   display: inline-block;
   background: #110963;
   color: #fff;
@@ -47,17 +47,17 @@ a.tinker-btn {
   font-weight: bold;
 }
 
-a.tinker-btn:hover {
+a.web-btn:hover {
   background: #3c5cda;
   color: #fff;
 }
 
 
 @media (max-width: 768px) {
-  .tinkering-container {
+  .web-container {
     flex-direction: column;
   }
-  .tinker-card {
+  .web-card {
     width: 100%;
     max-width: none;
     margin-top: 2rem;
