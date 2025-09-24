@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Workshop on Advanced Instrumentation – 2024",
+    "category": "Workshop",
+    "id": "IITM/WS/AMRC/2024/001",
+    "start": "2024-12-05",
+    "end": "2024-12-06",
+    "coordinator": "Prof. Aditi Halder, SCS",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/WS/2024/AMRC/001"
+  },
+  {
+    "title": "National Seminar on Renewable Energy – 2023",
+    "category": "Conference",
+    "id": "IITM/Conf/RE/2023/010",
+    "start": "2023-12-20",
+    "end": "2023-12-22",
+    "coordinator": "Dr. X Y, Department of Energy",
+    "links": [
+      { "label": "Program", "url": "https://example.com/seminar2023" },
+      { "label": "Brochure", "url": "https://example.com/brochure2023.pdf" }
+    ]
+  },
+  {
+    "title": "Symposium on AI and Society – 2023",
+    "category": "Symposium",
+    "id": "IITM/Symp/AI/2023/005",
+    "start": "2023-11-10",
+    "end": "2023-11-12",
+    "coordinator": "Prof. Z W, Department of CS",
+    "location": "IIT Mandi",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/Symp/AI/2023/005"
+  },
+  {
+    "title": "Annual Tech Fest – 2022",
+    "category": "Festival",
+    "id": "IITM/Fest/Tech/2022/100",
+    "start": "2022-12-08",
+    "end": "2022-12-10",
+    "coordinator": "Team Tech, CCE"
+  },
+  {
+    "title": "ICE Workshop – 2022",
+    "category": "Workshop",
+    "id": "IITM/WS/ICE/2022/020",
+    "start": "2022-10-05",
+    "end": "2022-10-07",
+    "coordinator": "Dr. A B, Department of Engineering",
+    "links": [
+      { "label": "Details", "url": "https://example.com/ice2022" }
+    ]
+  }
+]

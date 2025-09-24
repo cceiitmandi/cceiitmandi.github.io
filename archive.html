@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <title>Calendar Archive | CCE, IIT Mandi</title>
+  <title>CCE Archive | CCE, IIT Mandi</title>
   
-  <link rel="stylesheet" href="calendararchive/calendar-archive.css"/>
+  <link rel="stylesheet" href="archive/archive.css"/>
   <link rel="stylesheet" href="css/non.css"/>
-  <script defer src="calendararchive/calendar-archive.js"></script>
+
+  <script defer src="archive/archive.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +17,7 @@
   <!-- Mobile Topbar -->
   <div class="topbar-mobile">
     <a href="index.html"><img src="ccelogo.png" class="mobile-logo" alt="Logo"></a>
-    <h1 class="mobile-title">Calendar Archive</h1>
+    <h1 class="mobile-title non">CCE Archive</h1>
     <button id="menuToggle" class="menu-btn">☰</button>
   </div>
 
@@ -26,15 +27,18 @@
       <div class="nav year-list">
         <nav class="nav">
           <button class="nav-btn active" data-year="all">ALL</button>
-          <button class="nav-btn" data-year="2022">2022</button>
-          <button class="nav-btn" data-year="2023">2023</button>
-          <button class="nav-btn" data-year="2024">2024</button>
           <button class="nav-btn" data-year="2025">2025</button>
+          <button class="nav-btn" data-year="2024">2024</button>
+          <button class="nav-btn" data-year="2023">2023</button>
+          <button class="nav-btn" data-year="2022">2022</button>
         </nav>
       </div>
       <div class="sidebar-note mobile-only">
-        <p><strong>Note:</strong> The Calendar Archive lists all past programmes/events that have already ended. Programmes are grouped by year.</p>
+        <p><strong>Note:</strong> CCE Archive lists completed on-campus events/activities under CCE. <br>
+        For upcoming events, visit the <a href="calendar.html">CCE Calendar</a>.</p>
         <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
+        <br>
+        <p>Developed by: <a href="mailto:aakashgautam@iitmandi.ac.in">Aakash Gautam, CCE</a></p>
       </div>
     </aside>
   </div>
@@ -46,15 +50,15 @@
       <div class="nav year-list">
         <nav class="nav">
           <button class="nav-btn active" data-year="all">ALL</button>
-          <button class="nav-btn" data-year="2022">2022</button>
-          <button class="nav-btn" data-year="2023">2023</button>
-          <button class="nav-btn" data-year="2024">2024</button>
           <button class="nav-btn" data-year="2025">2025</button>
+          <button class="nav-btn" data-year="2024">2024</button>
+          <button class="nav-btn" data-year="2023">2023</button>
+          <button class="nav-btn" data-year="2022">2022</button>
         </nav>
       </div>
 
       <div class="sidebar-note">
-        <p><strong>Note:</strong> The Calendar Archive lists all past programmes/events that have already ended. Programmes are grouped by year.</p>
+        <p><strong>Note:</strong> CCE Archive lists completed on-campus events/activities conducted by CCE, IIT Mandi. For upcoming events, visit the <a href="calendar.html">CCE Calendar</a>.</p>
         <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
         <br>
         <p>Developed by: <a href="mailto:aakashgautam@iitmandi.ac.in">Aakash Gautam, CCE</a></p>
@@ -65,28 +69,28 @@
     <main class="content">
       <div class="title-row non">
         <button id="prevYear" class="nav-arrow">&lsaquo;</button>
-        <h2 id="yearTitle">ALL Archived</h2>
+        <h2 id="yearTitle">ALL : Archived</h2>
         <button id="nextYear" class="nav-arrow">&rsaquo;</button>
         <span class="dot-separator">·</span>
         <span id="eventCount" class="event-count">[0]</span>
-        
 
         <!-- Category Filter -->
-        <select id="categoryFilter">
-          <option value="ALL" selected>ALL</option>
-          <option value="FDP">FDP</option>
-          <option value="Workshop">Workshop</option>
-          <option value="Conference">Conference</option>
+        <select id="categoryFilter" class="category-filter">
+          <option value="all">ALL</option>
           <option value="GIAN Course">GIAN Course</option>
-          <option value="Online Course">Online Course</option>
-          <option value="Minor">Minor</option>
+          <option value="Minors">Minors</option>
+          <option value="Workshop">Workshop (WRK)</option>
+          <option value="Conference">Conference (CNF)</option>
           <option value="STC">STC</option>
-          <option value="Skill Course">Skill Course</option>
-          <option value="Academic Course">Academic Course</option>
-          <option value="Seminar">Seminar</option>
+          <option value="FDP">FDP/CBP</option>
+          <option value="Symposium">Symposium (SYM)</option>
+          <option value="Skill Course">Skill Course (SKLC)</option>
+          <option value="Online Course">Online Course (ONLC)</option>         
         </select>
+
+        <button id="downloadCsv" class="download-btn">DOWNLOAD</button>
       </div>
-      <button id="downloadCSV" class="download-btn">⬇ Download CSV</button>
+      
       <div class="event-list" id="eventList"></div>
     </main>
   </div>
