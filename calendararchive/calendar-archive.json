@@ -7,7 +7,6 @@
     "start": "2022-12-05",
     "end": "2022-12-08",
     "participantCount": 250,
-    "location": "IIT Mandi Campus",
     "links": [
       { "label": "Poster", "url": "https://example.com/2022/robotics/poster.pdf" },
       { "label": "Website", "url": "https://example.com/2022/robotics" },
@@ -22,7 +21,6 @@
     "start": "2023-11-01",
     "end": "2023-11-10",
     "participantCount": 100,
-    "location": "CCE Hall, IIT Mandi",
     "links": [
       { "label": "Poster", "url": "https://example.com/2023/fdp/poster.pdf" },
       { "label": "Website", "url": "https://example.com/2023/fdp" },
@@ -37,7 +35,6 @@
     "start": "2024-03-15",
     "end": "2024-03-18",
     "participantCount": 80,
-    "location": "New Campus Auditorium",
     "links": [
       { "label": "Poster", "url": "https://example.com/2024/energy/poster.pdf" },
       { "label": "Website", "url": "https://example.com/2024/energy" },
@@ -52,7 +49,6 @@
     "start": "2024-09-20",
     "end": "2024-09-22",
     "participantCount": 150,
-    "location": "Main Seminar Hall",
     "links": [
       { "label": "Poster", "url": "https://example.com/2024/ds/poster.pdf" },
       { "label": "Website", "url": "https://example.com/2024/ds" }
@@ -66,7 +62,6 @@
     "start": "2025-08-01",
     "end": "2029-07-01",
     "participantCount": 120,
-    "location": "IIT Mandi Campus",
     "links": [
       { "label": "Website", "url": "https://example.com/2025/sdt" }
     ]
@@ -79,7 +74,6 @@
     "start": "2025-09-22",
     "end": "2025-09-26",
     "participantCount": 100,
-    "location": "CCE, IIT Mandi",
     "links": [
       { "label": "Poster", "url": "https://example.com/2025/math/poster.pdf" },
       { "label": "Group Photo", "url": "https://example.com/2025/math/group.jpg" }

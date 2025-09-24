@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.getElementById("nextYear");
   const menuBtn = document.getElementById("menuToggle");
   const modalOverlay = document.getElementById("modalOverlay");
+  const categorySelect = document.getElementById("categoryFilter");
 
   const yearOrder = ["2022", "2023", "2024", "2025"];
   let currentIndex = -1;
@@ -22,23 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function isOngoing(event, today) {
-    const start = new Date(event.start);
-    const end = new Date(event.end);
-    end.setHours(20, 0, 0, 0); // valid until 8 PM end date
-    return today >= start && today <= end;
-  }
-
   function renderEvents(filterYear = "all") {
     const today = new Date();
 
-    
-    let filtered = events.filter(e => {
-      const end = new Date(e.end);
-      return end < today; // only events that have fully ended
-    });
+    // Base filter: only events that ended before today
+    let filtered = events.filter(e => new Date(e.end) < today);
 
-    // filter by year
+    // Year filter
     if (filterYear !== "all") {
       filtered = filtered.filter(e => {
         const startYear = new Date(e.start).getFullYear();
@@ -48,32 +39,35 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // sort
+    // Category filter (single select)
+    const selected = categorySelect.value;
+    if (selected !== "ALL") {
+      filtered = filtered.filter(e => e.category && e.category === selected);
+    }
+
+    // Sorting
     filtered.sort((a, b) => {
       const aStart = new Date(a.start);
       const aEnd = new Date(a.end);
       const bStart = new Date(b.start);
       const bEnd = new Date(b.end);
 
-      const aMulti = aEnd.getFullYear() !== aStart.getFullYear() || aEnd.getMonth() !== aStart.getMonth();
-      const bMulti = bEnd.getFullYear() !== bStart.getFullYear() || bEnd.getMonth() !== bStart.getMonth();
-
-      // multi-year stick to top
+      const aMulti = aEnd.getFullYear() !== aStart.getFullYear();
+      const bMulti = bEnd.getFullYear() !== bStart.getFullYear();
       if (aMulti && !bMulti) return -1;
       if (!aMulti && bMulti) return 1;
 
       if (filterYear === "all") {
-        // ALL → latest ended first
-        return bEnd - aEnd;
+        return bEnd - aEnd; // latest ended first
       } else {
-        // year filter → Dec → Jan
         if (aStart.getMonth() !== bStart.getMonth()) {
-          return bStart.getMonth() - aStart.getMonth(); // reverse month order
+          return bStart.getMonth() - aStart.getMonth(); // Dec → Jan
         }
-        return aStart - bStart; // tie-breaker by start date
+        return aStart - bStart;
       }
     });
 
+    // Render
     eventCount.textContent = `[${filtered.length}]`;
     eventList.innerHTML = "";
 
@@ -83,42 +77,83 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     filtered.forEach(e => {
-  const card = document.createElement("div");
-  card.className = "event-card";
+      const card = document.createElement("div");
+      card.className = "event-card";
 
-  const startDate = e.start ? new Date(e.start) : null;
-  const endDate = e.end ? new Date(e.end) : null;
+      let html = `
+        <div class="event-title-row non">
+          <h3 class="event-title non">${e.title}</h3>
+          ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
+        </div>
+        <div class="event-info-inline">
+          ${e.id ? `🆔 ${e.id}` : ""}
+          ${e.start && e.end ? `📅 ${formatDate(e.start)} – ${formatDate(e.end)}` : ""}
+          ${e.coordinator ? `👤 ${e.coordinator}` : ""}
+          ${e.participantCount ? `👥 ${e.participantCount}` : ""}
+        </div>
+      `;
 
-  let details = "";
+      if (e.links && e.links.length > 0) {
+        html += `<div class="event-footer">`;
+        e.links.forEach(link => {
+          html += `<a href="${link.url}" target="_blank">${link.label}</a>`;
+        });
+        html += `</div>`;
+      }
 
-  if (e.id) details += ` 🆔 ${e.id}`;
-  if (startDate && endDate) details += ` 📅 ${formatDate(e.start)} – ${formatDate(e.end)}`;
-  if (e.coordinator) details += ` 👤 ${e.coordinator}`;
-  if (e.participantCount) details += ` 👥 ${e.participantCount}`;
-
-  let html = `
-    <div class="event-title-row non">
-      <h3 class="event-title non">${e.title}</h3>
-      ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
-    </div>
-    <div class="event-info-inline">
-      ${details.trim()}
-    </div>
-  `;
-
-  if (e.links && e.links.length > 0) {
-    html += `<div class="event-footer">`;
-    e.links.forEach(link => {
-      html += `<a href="${link.url}" target="_blank">${link.label}</a>`;
+      card.innerHTML = html;
+      eventList.appendChild(card);
     });
-    html += `</div>`;
+
+    return filtered;  // 🔥 return filtered list for CSV export
   }
 
-  card.innerHTML = html;
-  eventList.appendChild(card);
-});
+
+  // Download CSV
+  function downloadCSV(filteredEvents) {
+  if (!filteredEvents || filteredEvents.length === 0) {
+    alert("No events to export.");
+    return;
+  }
+
+  const rows = [
+    ["SNo", "Name of the Event/Activity", "ID", "Start Date", "End Date", "Coordinator", "Count of Participants"]
+  ];
+
+  filteredEvents.forEach((e, index) => {
+    rows.push([
+      index + 1,
+      e.title || "",
+      e.id || "",
+      e.start ? new Date(e.start).toLocaleDateString() : "",
+      e.end ? new Date(e.end).toLocaleDateString() : "",
+      e.coordinator || "",
+      e.participantCount || ""
+    ]);
+  });
+
+  // Convert to CSV string
+  const csvContent = rows.map(r => r.map(v => `"${v}"`).join(",")).join("\n");
+
+  // Create and download file
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "Archived_Events.csv";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
+
+  // Category filter listener
+  categorySelect.addEventListener("change", () => {
+    const activeYearBtn = document.querySelector(".nav-btn.active");
+    const year = activeYearBtn ? activeYearBtn.getAttribute("data-year") : "all";
+    renderEvents(year);
+  });
+
+  // Year filter buttons
   navButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       navButtons.forEach(b => b.classList.remove("active"));
@@ -128,7 +163,11 @@ document.addEventListener("DOMContentLoaded", function () {
       currentIndex = yearOrder.indexOf(y);
       renderEvents(y);
 
-      yearTitle.textContent = y === "all" ? "ALL Archived Events/Activities" : `Archived Events - ${y}`;
+      yearTitle.textContent = y === "all" ? "ALL Archived" : `Archive - ${y}`;
+
+      // Reset category filter to ALL when year changes
+      categorySelect.value = "ALL";
+
       if (window.innerWidth <= 768) modalOverlay.classList.remove("active");
     });
   });
@@ -160,7 +199,15 @@ document.addEventListener("DOMContentLoaded", function () {
       renderEvents("all");
     })
     .catch(err => {
-      console.error('Failed to load calendararchive.json', err);
+      console.error('Failed to load calendar-archive.json', err);
       eventList.innerHTML = '<p style="color: red;">Failed to load archive events.</p>';
     });
 });
+
+document.getElementById("downloadCSV").addEventListener("click", () => {
+  const activeYearBtn = document.querySelector(".nav-btn.active");
+  const year = activeYearBtn ? activeYearBtn.getAttribute("data-year") : "all";
+  const filtered = renderEvents(year);
+  downloadCSV(filtered);
+});
+

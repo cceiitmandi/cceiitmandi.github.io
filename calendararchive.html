@@ -8,7 +8,6 @@
   
   <link rel="stylesheet" href="calendararchive/calendar-archive.css"/>
   <link rel="stylesheet" href="css/non.css"/>
-
   <script defer src="calendararchive/calendar-archive.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -34,7 +33,7 @@
         </nav>
       </div>
       <div class="sidebar-note mobile-only">
-        <p><strong>Note:</strong> The Calendar Archive lists all past and ongoing programmes/events that have already started. Programmes are grouped by year.</p>
+        <p><strong>Note:</strong> The Calendar Archive lists all past programmes/events that have already ended. Programmes are grouped by year.</p>
         <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
       </div>
     </aside>
@@ -55,7 +54,7 @@
       </div>
 
       <div class="sidebar-note">
-        <p><strong>Note:</strong> The Calendar Archive lists all past and ongoing programmes/events that have already started. Programmes are grouped by year.</p>
+        <p><strong>Note:</strong> The Calendar Archive lists all past programmes/events that have already ended. Programmes are grouped by year.</p>
         <p>For Queries: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a></p>
         <br>
         <p>Developed by: <a href="mailto:aakashgautam@iitmandi.ac.in">Aakash Gautam, CCE</a></p>
@@ -66,11 +65,28 @@
     <main class="content">
       <div class="title-row non">
         <button id="prevYear" class="nav-arrow">&lsaquo;</button>
-        <h2 id="yearTitle">ALL Archived Events/Activities</h2>
+        <h2 id="yearTitle">ALL Archived</h2>
         <button id="nextYear" class="nav-arrow">&rsaquo;</button>
         <span class="dot-separator">·</span>
         <span id="eventCount" class="event-count">[0]</span>
+        
+
+        <!-- Category Filter -->
+        <select id="categoryFilter">
+          <option value="ALL" selected>ALL</option>
+          <option value="FDP">FDP</option>
+          <option value="Workshop">Workshop</option>
+          <option value="Conference">Conference</option>
+          <option value="GIAN Course">GIAN Course</option>
+          <option value="Online Course">Online Course</option>
+          <option value="Minor">Minor</option>
+          <option value="STC">STC</option>
+          <option value="Skill Course">Skill Course</option>
+          <option value="Academic Course">Academic Course</option>
+          <option value="Seminar">Seminar</option>
+        </select>
       </div>
+      <button id="downloadCSV" class="download-btn">⬇ Download CSV</button>
       <div class="event-list" id="eventList"></div>
     </main>
   </div>
