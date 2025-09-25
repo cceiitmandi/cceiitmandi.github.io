@@ -401,13 +401,13 @@ body {
   padding: 6px 12px;
   font-size: 0.9rem;
   margin-left: 10px;
-  background-color: #147c5a;
+  background-color: #05442f;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.25s;
 }
 
 .download-btn:hover {
-  background-color: #05442f;
+  background-color: #147c5a; 
 }
 
 @media (max-width: 768px) {
