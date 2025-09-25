@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (yearBtn) yearBtn.classList.add("active");
 
       renderEvents(initialYear, initialCategory);
-      yearTitle.textContent = (initialYear === "all") ? "All Years : Archived" : "Archived : " + initialYear;
+      yearTitle.textContent = (initialYear === "all") ? "ALL Years : Archived" : "Archived : " + initialYear;
     })
     .catch(err => {
       console.error('Failed to load archive.json', err);

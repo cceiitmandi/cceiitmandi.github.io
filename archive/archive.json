@@ -96,7 +96,7 @@
     ]
   },
   {
-    "title": "AiXCELRATE",
+    "title": "AiXCELRATE 2.0",
     "category": "Symposium",
     "id": "",
     "start": "2024-10-05",
@@ -612,8 +612,8 @@
     ]
   },
   {
-    "title": "Short-term Skill Training on Carpenter (PM Vishwakarma Scheme)",
-    "category": "Skill Course (for PM Vishwakarma)",
+    "title": "PM Vishwakarma Short-term Skill Training on Carpentery",
+    "category": "Skill Course",
     "id": "",
     "start": "2025-06-19",
     "end": "2025-06-23",
@@ -625,7 +625,7 @@
   },
   {
     "title": "Robotics, AI & IoT – PRAYAS 3.0",
-    "category": "Camp (for PRAYAS)",
+    "category": "Camp",
     "id": "",
     "start": "2025-06-16",
     "end": "2025-07-15",
