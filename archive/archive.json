@@ -1,52 +1,662 @@
 [
   {
-    "title": "Workshop on Advanced Instrumentation – 2024",
-    "category": "Workshop",
-    "id": "IITM/WS/AMRC/2024/001",
-    "start": "2024-12-05",
-    "end": "2024-12-06",
-    "coordinator": "Prof. Aditi Halder, SCS",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/WS/2024/AMRC/001"
-  },
-  {
-    "title": "National Seminar on Renewable Energy – 2023",
+    "title": "9th International Conference on Sustainable Energy and Environmental Changes",
     "category": "Conference",
-    "id": "IITM/Conf/RE/2023/010",
-    "start": "2023-12-20",
-    "end": "2023-12-22",
-    "coordinator": "Dr. X Y, Department of Energy",
+    "id": "",
+    "start": "2024-12-13",
+    "end": "2024-12-15",
+    "coordinator": "Prof. Atul Dhar, Dr. Satvasheel Powar, Prof. Shyam Kumar Masakapalli, Dr. Sarthak Nag, Dr. Gajendra Singh",
     "links": [
-      { "label": "Program", "url": "https://example.com/seminar2023" },
-      { "label": "Brochure", "url": "https://example.com/brochure2023.pdf" }
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Symposium on AI and Society – 2023",
-    "category": "Symposium",
-    "id": "IITM/Symp/AI/2023/005",
-    "start": "2023-11-10",
-    "end": "2023-11-12",
-    "coordinator": "Prof. Z W, Department of CS",
-    "location": "IIT Mandi",
-    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/Symp/AI/2023/005"
-  },
-  {
-    "title": "Annual Tech Fest – 2022",
-    "category": "Festival",
-    "id": "IITM/Fest/Tech/2022/100",
-    "start": "2022-12-08",
-    "end": "2022-12-10",
-    "coordinator": "Team Tech, CCE"
-  },
-  {
-    "title": "ICE Workshop – 2022",
-    "category": "Workshop",
-    "id": "IITM/WS/ICE/2022/020",
-    "start": "2022-10-05",
-    "end": "2022-10-07",
-    "coordinator": "Dr. A B, Department of Engineering",
+    "title": "Conference on “Professional Excellence: A Framework from Bhagavad Gita”",
+    "category": "Conference",
+    "id": "",
+    "start": "2024-09-13",
+    "end": "2024-09-15",
+    "coordinator": "Dr. Akhaya Kumar Nayak",
     "links": [
-      { "label": "Details", "url": "https://example.com/ice2022" }
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Conference on 2024 Indian Judgment and Decision Making",
+    "category": "Conference",
+    "id": "",
+    "start": "2024-10-05",
+    "end": "2024-10-06",
+    "coordinator": "Dr. Varun Dutt",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Conference on Interdisciplinary Approaches to South Asian Ecology",
+    "category": "Conference",
+    "id": "",
+    "start": "2024-10-23",
+    "end": "2024-10-25",
+    "coordinator": "Dr. Thirthankar Chakraborty",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Workshop on Detailed Project Report (DPR) Preparation for Mitigating Various Hazards",
+    "category": "Workshop",
+    "id": "",
+    "start": "2024-09-18",
+    "end": "2024-09-20",
+    "coordinator": "Dr. Kala Venkata Uday",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "A Hands-on Workshop on Composites Design and Manufacturing",
+    "category": "Workshop",
+    "id": "",
+    "start": "2025-06-16",
+    "end": "2025-06-20",
+    "coordinator": "Dr. Sunny Zafar, Dr. Himanshu Pathak",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Workshop on Clinical Challenges and Control: AI Landscape",
+    "category": "Workshop",
+    "id": "",
+    "start": "2024-10-19",
+    "end": "2024-10-19",
+    "coordinator": "Dr. Sneha Singh",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Workshop on DST-sponsored Expert Advisory Committee Meeting",
+    "category": "Workshop",
+    "id": "",
+    "start": "2024-10-25",
+    "end": "2024-10-26",
+    "coordinator": "Dr. Ajay Soni",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Symposium AiXCELRATE",
+    "category": "Symposium",
+    "id": "",
+    "start": "2024-10-05",
+    "end": "2024-10-06",
+    "coordinator": "Dr. Ashish Bollimbala",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Program for PGT Physics (FDP/CBP)",
+    "category": "FDP/CBP",
+    "id": "",
+    "start": "2024-11-05",
+    "end": "2024-11-09",
+    "coordinator": "Dr. Prabhakr Palni, Dr. Ravindra Kumar Yadav",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Short Term Course on Maintenance of Rural Road in Hilly Terrain",
+    "category": "STC",
+    "id": "",
+    "start": "2024-12-05",
+    "end": "2024-12-09",
+    "coordinator": "Dr. Ashutosh Kumar",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Programme for PGT Chemistry (FDP/CBP)",
+    "category": "FDP/CBP",
+    "id": "",
+    "start": "2024-11-05",
+    "end": "2024-11-09",
+    "coordinator": "Dr. Prem Felix Siril, Dr. Moupriya Das",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Short Term Course on Integrated Product Design and Development with CAE and CAM",
+    "category": "STC",
+    "id": "",
+    "start": "2024-12-09",
+    "end": "2024-12-14",
+    "coordinator": "Dr. Sunny Zafar, Dr. Himanshu Pathak",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Winter School on Modelling Water Flow and Contaminant Transport in Subsurface using HYDRUS 2D/3D",
+    "category": "STC",
+    "id": "",
+    "start": "2025-01-27",
+    "end": "2025-01-31",
+    "coordinator": "Dr. Deepak Swami",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "6th Winter School on Cognitive Modelling",
+    "category": "STC",
+    "id": "",
+    "start": "2024-11-09",
+    "end": "2024-11-09",
+    "coordinator": "Dr. Varun Dutt",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Program for PGT Mathematics (FDP/CBP)",
+    "category": "FDP/CBP",
+    "id": "",
+    "start": "2024-11-25",
+    "end": "2024-11-29",
+    "coordinator": "Dr. Manoj Thakur, Dr. Preeti",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Wide Band Gap Devices in Power Electronics Applications (NPTEL)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2024-07-01",
+    "end": "2024-12-01",
+    "coordinator": "Dr. Moumita Das",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Manufacturing of Turbines (NPTEL)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2025-01-01",
+    "end": "2025-04-01",
+    "coordinator": "Dr. Sunny Zafar",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Program for PGT Biology (FDP/CBP)",
+    "category": "FDP/CBP",
+    "id": "",
+    "start": "2024-11-19",
+    "end": "2024-11-23",
+    "coordinator": "Dr. Prasad Kasturi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Signals and Systems (NPTEL, rerun)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2025-01-01",
+    "end": "2025-04-30",
+    "coordinator": "Dr. Hitesh Shrimali",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Linear Dynamical Systems (NPTEL, rerun)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2025-01-01",
+    "end": "2025-04-01",
+    "coordinator": "Dr. Tushar Jain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Large Applications Practicum (NPTEL)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2025-01-01",
+    "end": "2025-04-01",
+    "coordinator": "Dr. Varun Dutt",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Symposium: Matrix Biology Research Convergence (MBRC) 2025",
+    "category": "Symposium",
+    "id": "",
+    "start": "2025-01-09",
+    "end": "2025-01-10",
+    "coordinator": "Dr. Trayambak Basak",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "State Space Approach to Control System Analysis and Design (NPTEL, rerun)",
+    "category": "NPTEL",
+    "id": "",
+    "start": "2025-01-01",
+    "end": "2025-04-01",
+    "coordinator": "Dr. Akhilanand Pati Tiwari",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Mastering 3D Printing: from Basic to Advanced Techniques",
+    "category": "STC",
+    "id": "",
+    "start": "2024-12-05",
+    "end": "2024-12-09",
+    "coordinator": "Dr. Prateek Saxena",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Mathematical Foundations of General Relativity",
+    "category": "STC",
+    "id": "",
+    "start": "2024-12-09",
+    "end": "2025-01-14",
+    "coordinator": "Dr. Rahul Kumar Kothari",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "A Deep Learning Workshop for Beginners",
+    "category": "Workshop",
+    "id": "",
+    "start": "2025-02-08",
+    "end": "2025-02-09",
+    "coordinator": "Dr. Aditya Nigam",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Workshop: Futuristic Technologies for Energy‑Efficient, Safe and Smart Ropeway Systems",
+    "category": "Workshop",
+    "id": "",
+    "start": "2025-07-21",
+    "end": "2025-07-21",
+    "coordinator": "Dr. Rajeev Kumar, Dr. Vishal Singh Chauhan",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "HCL – Training and Mentoring Program",
+    "category": "Skill Course",
+    "id": "",
+    "start": "2025-01-30",
+    "end": "2025-01-30",
+    "coordinator": "Dr. Aditya Nigam",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Entrepreneurship Mindset Development & Advance EMDP",
+    "category": "GIAN Course",
+    "id": "",
+    "start": "2025-01-27",
+    "end": "2025-03-01",
+    "coordinator": "Dr. Puran Singh",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Himalayan Business Summit (HiBS)",
+    "category": "Symposium",
+    "id": "",
+    "start": "2025-01-18",
+    "end": "2025-01-19",
+    "coordinator": "Dr. Ashish Bollimbala",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "1st SCS Research Meet, 2025",
+    "category": "Symposium",
+    "id": "",
+    "start": "2025-01-25",
+    "end": "2025-01-25",
+    "coordinator": "Dr. Indu Bala",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Molecular Intricacies of Plant Associated Microorganisms (MIPAM‑2025)",
+    "category": "Symposium",
+    "id": "",
+    "start": "2025-06-03",
+    "end": "2025-08-03",
+    "coordinator": "Dr. Shyam Kumar Masakapalli",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Program in Emerging Technologies and Pedagogy",
+    "category": "FDP/CBP",
+    "id": "",
+    "start": "2025-12-16",
+    "end": "2025-12-20",
+    "coordinator": "Dr. Anjan Kumar Swain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Data‑Based Systems and Control (GIAN Course)",
+    "category": "GIAN Course",
+    "id": "",
+    "start": "2025-04-07",
+    "end": "2025-04-11",
+    "coordinator": "Dr. Tushar Jain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Executive Development Program: Conduct of Lectures (Online Course)",
+    "category": "Online Course",
+    "id": "",
+    "start": "2025-01-29",
+    "end": "2025-02-08",
+    "coordinator": "Dr. Tushar Jain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN Course)",
+    "category": "GIAN Course",
+    "id": "",
+    "start": "2025-04-28",
+    "end": "2025-05-02",
+    "coordinator": "Dr. Parmod Kumar",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Data Science & Machine Learning (Batch 1, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2024-07-29",
+    "end": "2025-10-05",
+    "coordinator": "Dr. Indu Joshi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Data Science & Machine Learning (Batch 2, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2024-09-29",
+    "end": "2025-10-05",
+    "coordinator": "Dr. Indu Joshi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Embedded Systems (Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-17",
+    "end": "2026-02-18",
+    "coordinator": "Prof. Shubhajit Roy Chowdhury",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 1, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2024-10-05",
+    "end": "2025-09-28",
+    "coordinator": "Dr. Prateek Vishnoi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 2, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-01-10",
+    "end": "2025-11-10",
+    "coordinator": "Dr. Prateek Vishnoi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Software Development 2.0 With Emerging Tech (Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-04-28",
+    "end": "2026-02-12",
+    "coordinator": "Dr. Prateek Vishnoi",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in CSE (Batch 3, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-29",
+    "end": "2026-08-16",
+    "coordinator": "Dr. Varun Jaypaul, Dr. Preeti",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Cyber Security & Ethical Hacking (Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-02-17",
+    "end": "2025-11-26",
+    "coordinator": "Prof. Anjan K. Swain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in AI & DS (Batch 1, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-20",
+    "end": "2026-01-04",
+    "coordinator": "Dr. Indu Joshi, Prof. Manoj Thakur",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in AI & DS (Batch 2, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-08-25",
+    "end": "2026-05-25",
+    "coordinator": "Dr. Indu Joshi, Prof. Manoj Thakur",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Business Analytics (Batch 1, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-02-10",
+    "end": "2025-10-30",
+    "coordinator": "Prof. Anjan K. Swain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Business Analytics (Batch 2, Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-29",
+    "end": "2026-08-16",
+    "coordinator": "Prof. Anjan K. Swain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Artificial Intelligence (Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-29",
+    "end": "2026-08-16",
+    "coordinator": "Dr. Sneha Singh, Dr. Parimala Kancharla",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Minor Degree Program in Data Science (Online)",
+    "category": "Minor",
+    "id": "",
+    "start": "2025-03-29",
+    "end": "2026-08-16",
+    "coordinator": "Dr. Aditya Nigam, Dr. Adarsh Patel",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Short‑term training: Carpenter batch (PM Vishwakarma Scheme)",
+    "category": "STC",
+    "id": "",
+    "start": "2025-06-19",
+    "end": "2025-06-23",
+    "coordinator": "Dr. Tushar Jain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Robotics, AI & IoT (PRAYAS 3.0) Short Term Course",
+    "category": "Camp",
+    "id": "",
+    "start": "2025-06-16",
+    "end": "2025-07-15",
+    "coordinator": "Dr. Tushar Jain",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Conference on Indigeneity in the Global South",
+    "category": "Conference",
+    "id": "",
+    "start": "2025-09-10",
+    "end": "2025-09-12",
+    "coordinator": "Dr. Shyamsree Dasgupta",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Workshop Series on Structural Safety Audit, DPR Preparation, and Landslide & Earthquake Mitigation (DDMA Bilaspur)",
+    "category": "Workshop",
+    "id": "",
+    "start": "2025-05-26",
+    "end": "2025-06-11",
+    "coordinator": "Dr. Kala Venkata Uday",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
     ]
   }
 ]
