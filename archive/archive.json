@@ -12,7 +12,7 @@
     ]
   },
   {
-    "title": "Conference on “Professional Excellence: A Framework from Bhagavad Gita”",
+    "title": "Conference on Professional Excellence: A Framework from Bhagavad Gita",
     "category": "Conference",
     "id": "",
     "start": "2024-09-13",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "title": "Capacity Building Program for PGT Physics (FDP/CBP)",
+    "title": "Capacity Building Program for PGT Physics",
     "category": "FDP/CBP",
     "id": "",
     "start": "2024-11-05",
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "title": "Short Term Course on Maintenance of Rural Road in Hilly Terrain",
+    "title": "Maintenance of Rural Road in Hilly Terrain",
     "category": "STC",
     "id": "",
     "start": "2024-12-05",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "title": "Capacity Building Programme for PGT Chemistry (FDP/CBP)",
+    "title": "Capacity Building Programme for PGT Chemistry",
     "category": "FDP/CBP",
     "id": "",
     "start": "2024-11-05",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "title": "Short Term Course on Integrated Product Design and Development with CAE and CAM",
+    "title": "Integrated Product Design and Development with CAE and CAM",
     "category": "STC",
     "id": "",
     "start": "2024-12-09",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "title": "Capacity Building Program for PGT Mathematics (FDP/CBP)",
+    "title": "Capacity Building Program for PGT Mathematics",
     "category": "FDP/CBP",
     "id": "",
     "start": "2024-11-25",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "title": "Wide Band Gap Devices in Power Electronics Applications (NPTEL)",
+    "title": "Wide Band Gap Devices in Power Electronics Applications",
     "category": "NPTEL",
     "id": "",
     "start": "2024-07-01",
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "title": "Manufacturing of Turbines (NPTEL)",
+    "title": "Manufacturing of Turbines (gas, steam, hydro and wind)",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "title": "Capacity Building Program for PGT Biology (FDP/CBP)",
+    "title": "Capacity Building Program for PGT Biology",
     "category": "FDP/CBP",
     "id": "",
     "start": "2024-11-19",
@@ -264,7 +264,7 @@
     ]
   },
   {
-    "title": "Symposium: Matrix Biology Research Convergence (MBRC) 2025",
+    "title": "Matrix Biology Research Convergence (MBRC) 2025",
     "category": "Symposium",
     "id": "",
     "start": "2025-01-09",
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "title": "Workshop: Futuristic Technologies for Energy‑Efficient, Safe and Smart Ropeway Systems",
+    "title": "Futuristic Technologies for Energy-Efficient, Safe and Smart Ropeway Systems",
     "category": "Workshop",
     "id": "",
     "start": "2025-07-21",
@@ -348,7 +348,7 @@
     ]
   },
   {
-    "title": "Entrepreneurship Mindset Development & Advance EMDP",
+    "title": "Entrepreneurship Mindset Development Program (EMDP) & Advance EMDP",
     "category": "GIAN Course",
     "id": "",
     "start": "2025-01-27",
@@ -384,7 +384,7 @@
     ]
   },
   {
-    "title": "Molecular Intricacies of Plant Associated Microorganisms (MIPAM‑2025)",
+    "title": "MIPAM-2025 – Molecular Intricacies of Plant Associated Microorganisms",
     "category": "Symposium",
     "id": "",
     "start": "2025-06-03",
@@ -408,7 +408,7 @@
     ]
   },
   {
-    "title": "Data‑Based Systems and Control (GIAN Course)",
+    "title": "Data-Based Systems and Control (GIAN)",
     "category": "GIAN Course",
     "id": "",
     "start": "2025-04-07",
@@ -420,7 +420,7 @@
     ]
   },
   {
-    "title": "Executive Development Program: Conduct of Lectures (Online Course)",
+    "title": "Conduct of Lectures at Armoured Corps Centre & School (Online)",
     "category": "Online Course",
     "id": "",
     "start": "2025-01-29",
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN Course)",
+    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN)",
     "category": "GIAN Course",
     "id": "",
     "start": "2025-04-28",
@@ -444,7 +444,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Data Science & Machine Learning (Batch 1, Online)",
+    "title": "Minor Degree Program in Data Science and Machine Learning (Batch 1)",
     "category": "Minor",
     "id": "",
     "start": "2024-07-29",
@@ -456,7 +456,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Data Science & Machine Learning (Batch 2, Online)",
+    "title": "Minor Degree Program in Data Science and Machine Learning (Batch 2)",
     "category": "Minor",
     "id": "",
     "start": "2024-09-29",
@@ -468,7 +468,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Embedded Systems (Online)",
+    "title": "Minor Degree Program in Embedded Systems",
     "category": "Minor",
     "id": "",
     "start": "2025-03-17",
@@ -480,7 +480,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 1, Online)",
+    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 1)",
     "category": "Minor",
     "id": "",
     "start": "2024-10-05",
@@ -492,7 +492,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 2, Online)",
+    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 2)",
     "category": "Minor",
     "id": "",
     "start": "2025-01-10",
@@ -504,7 +504,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Software Development 2.0 With Emerging Tech (Online)",
+    "title": "Minor Degree Program in Software Development 2.0 with Emerging Tech",
     "category": "Minor",
     "id": "",
     "start": "2025-04-28",
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE (Batch 3, Online)",
+    "title": "Minor Degree Program in CSE (Batch 3)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -528,7 +528,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Cyber Security & Ethical Hacking (Online)",
+    "title": "Minor Degree Program in Cyber Security & Ethical Hacking",
     "category": "Minor",
     "id": "",
     "start": "2025-02-17",
@@ -540,7 +540,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in AI & DS (Batch 1, Online)",
+    "title": "Minor Degree Program in AI & DS (Batch 1)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-20",
@@ -552,7 +552,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in AI & DS (Batch 2, Online)",
+    "title": "Minor Degree Program in AI & DS (Batch 2)",
     "category": "Minor",
     "id": "",
     "start": "2025-08-25",
@@ -564,7 +564,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Business Analytics (Batch 1, Online)",
+    "title": "Minor Degree Program in Business Analytics (Batch 1)",
     "category": "Minor",
     "id": "",
     "start": "2025-02-10",
@@ -576,7 +576,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Business Analytics (Batch 2, Online)",
+    "title": "Minor Degree Program in Business Analytics (Batch 2)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -588,7 +588,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Artificial Intelligence (Online)",
+    "title": "Minor Degree Program in Artificial Intelligence",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -600,7 +600,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Data Science (Online)",
+    "title": "Minor Degree Program in Data Science",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -612,7 +612,7 @@
     ]
   },
   {
-    "title": "Short‑term training: Carpenter batch (PM Vishwakarma Scheme)",
+    "title": "Short-term Training: Carpenter Batch PM Vishwakarma Scheme",
     "category": "STC",
     "id": "",
     "start": "2025-06-19",
@@ -624,7 +624,7 @@
     ]
   },
   {
-    "title": "Robotics, AI & IoT (PRAYAS 3.0) Short Term Course",
+    "title": "PRAYAS 3.0 – Robotics, AI & IoT",
     "category": "Camp",
     "id": "",
     "start": "2025-06-16",
@@ -648,7 +648,7 @@
     ]
   },
   {
-    "title": "Workshop Series on Structural Safety Audit, DPR Preparation, and Landslide & Earthquake Mitigation (DDMA Bilaspur)",
+    "title": "Workshop Series on Structural Safety Audit, DPR Preparation, and Landslide & Earthquake Mitigation",
     "category": "Workshop",
     "id": "",
     "start": "2025-05-26",
