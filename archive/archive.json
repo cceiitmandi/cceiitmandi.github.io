@@ -12,7 +12,7 @@
     ]
   },
   {
-    "title": "Conference on Professional Excellence: A Framework from Bhagavad Gita",
+    "title": "Professional Excellence: A Framework from Bhagavad Gita",
     "category": "Conference",
     "id": "",
     "start": "2024-09-13",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "title": "Conference on 2024 Indian Judgment and Decision Making",
+    "title": "2024 Indian Judgment and Decision Making",
     "category": "Conference",
     "id": "",
     "start": "2024-10-05",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "title": "Conference on Interdisciplinary Approaches to South Asian Ecology",
+    "title": "Interdisciplinary Approaches to South Asian Ecology",
     "category": "Conference",
     "id": "",
     "start": "2024-10-23",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "title": "Workshop on Detailed Project Report (DPR) Preparation for Mitigating Various Hazards",
+    "title": "Detailed Project Report (DPR) Preparation for Mitigating Various Hazards",
     "category": "Workshop",
     "id": "",
     "start": "2024-09-18",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "title": "Workshop on Clinical Challenges and Control: AI Landscape",
+    "title": "Clinical Challenges and Control: AI Landscape",
     "category": "Workshop",
     "id": "",
     "start": "2024-10-19",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "title": "Workshop on DST-sponsored Expert Advisory Committee Meeting",
+    "title": "DST-sponsored Expert Advisory Committee Meeting",
     "category": "Workshop",
     "id": "",
     "start": "2024-10-25",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "title": "Symposium AiXCELRATE",
+    "title": "AiXCELRATE",
     "category": "Symposium",
     "id": "",
     "start": "2024-10-05",
@@ -109,11 +109,23 @@
   },
   {
     "title": "Capacity Building Program for PGT Physics",
-    "category": "FDP/CBP",
+    "category": "FDP/CBP/LDP",
     "id": "",
     "start": "2024-11-05",
     "end": "2024-11-09",
     "coordinator": "Dr. Prabhakr Palni, Dr. Ravindra Kumar Yadav",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Capacity Building Programme for PGT Chemistry",
+    "category": "FDP/CBP/LDP",
+    "id": "",
+    "start": "2024-11-05",
+    "end": "2024-11-09",
+    "coordinator": "Dr. Prem Felix Siril, Dr. Moupriya Das",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -132,18 +144,6 @@
     ]
   },
   {
-    "title": "Capacity Building Programme for PGT Chemistry",
-    "category": "FDP/CBP",
-    "id": "",
-    "start": "2024-11-05",
-    "end": "2024-11-09",
-    "coordinator": "Dr. Prem Felix Siril, Dr. Moupriya Das",
-    "links": [
-      { "label": "", "url": "" },
-      { "label": "", "url": "" }
-    ]
-  },
-  {
     "title": "Integrated Product Design and Development with CAE and CAM",
     "category": "STC",
     "id": "",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "title": "Winter School on Modelling Water Flow and Contaminant Transport in Subsurface using HYDRUS 2D/3D",
+    "title": "Winter School on Modelling Water Flow and Contaminant Transport in Subsurface using HYDRUS 2D/3D Software Packages",
     "category": "STC",
     "id": "",
     "start": "2025-01-27",
@@ -181,7 +181,7 @@
   },
   {
     "title": "Capacity Building Program for PGT Mathematics",
-    "category": "FDP/CBP",
+    "category": "FDP/CBP/LDP",
     "id": "",
     "start": "2024-11-25",
     "end": "2024-11-29",
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "title": "Manufacturing of Turbines (gas, steam, hydro and wind)",
+    "title": "Manufacturing of turbines (gas, steam, hydro and wind)",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -217,7 +217,7 @@
   },
   {
     "title": "Capacity Building Program for PGT Biology",
-    "category": "FDP/CBP",
+    "category": "FDP/CBP/LDP",
     "id": "",
     "start": "2024-11-19",
     "end": "2024-11-23",
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "title": "Signals and Systems (NPTEL, rerun)",
+    "title": "Signals and Systems (NPTEL rerun)",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -240,7 +240,7 @@
     ]
   },
   {
-    "title": "Linear Dynamical Systems (NPTEL, rerun)",
+    "title": "Linear Dynamical Systems (NPTEL rerun)",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "title": "Large Applications Practicum (NPTEL)",
+    "title": "Large Applications Practicum",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "title": "State Space Approach to Control System Analysis and Design (NPTEL, rerun)",
+    "title": "State Space Approach to Control System Analysis and Design (NPTEL rerun)",
     "category": "NPTEL",
     "id": "",
     "start": "2025-01-01",
@@ -337,7 +337,7 @@
   },
   {
     "title": "HCL – Training and Mentoring Program",
-    "category": "Skill Course",
+    "category": "STC",
     "id": "",
     "start": "2025-01-30",
     "end": "2025-01-30",
@@ -349,7 +349,7 @@
   },
   {
     "title": "Entrepreneurship Mindset Development Program (EMDP) & Advance EMDP",
-    "category": "GIAN Course",
+    "category": "STC",
     "id": "",
     "start": "2025-01-27",
     "end": "2025-03-01",
@@ -384,7 +384,7 @@
     ]
   },
   {
-    "title": "MIPAM-2025 – Molecular Intricacies of Plant Associated Microorganisms",
+    "title": "Molecular Intricacies of Plant Associated Microorganisms – 2025 (MIPAM-2025)",
     "category": "Symposium",
     "id": "",
     "start": "2025-06-03",
@@ -397,7 +397,7 @@
   },
   {
     "title": "Capacity Building Program in Emerging Technologies and Pedagogy",
-    "category": "FDP/CBP",
+    "category": "FDP/CBP/LDP",
     "id": "",
     "start": "2025-12-16",
     "end": "2025-12-20",
@@ -420,7 +420,7 @@
     ]
   },
   {
-    "title": "Conduct of Lectures at Armoured Corps Centre & School (Online)",
+    "title": "Conduct of Lectures at School of Technical Training, Armoured Corps Centre & School, Ahmednagar",
     "category": "Online Course",
     "id": "",
     "start": "2025-01-29",
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN)",
+    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations",
     "category": "GIAN Course",
     "id": "",
     "start": "2025-04-28",
@@ -444,7 +444,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Data Science and Machine Learning (Batch 1)",
+    "title": "Minor Degree Program in Data Science and Machine Learning (1st Batch)",
     "category": "Minor",
     "id": "",
     "start": "2024-07-29",
@@ -456,7 +456,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Data Science and Machine Learning (Batch 2)",
+    "title": "Minor Degree Program in Data Science and Machine Learning (2nd Batch)",
     "category": "Minor",
     "id": "",
     "start": "2024-09-29",
@@ -480,7 +480,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 1)",
+    "title": "Minor Degree Program in CSE & Advanced Technology (1st Batch)",
     "category": "Minor",
     "id": "",
     "start": "2024-10-05",
@@ -492,7 +492,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE & Advanced Technology (Batch 2)",
+    "title": "Minor Degree Program in CSE & Advanced Technology (2nd Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-01-10",
@@ -504,7 +504,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Software Development 2.0 with Emerging Tech",
+    "title": "Minor Degree Program in Software Development 2.0 With Emerging Tech",
     "category": "Minor",
     "id": "",
     "start": "2025-04-28",
@@ -516,7 +516,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in CSE (Batch 3)",
+    "title": "Minor Degree Program in CSE (3rd Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -540,7 +540,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in AI & DS (Batch 1)",
+    "title": "Minor Degree Program in AI & DS (1st Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-20",
@@ -552,7 +552,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in AI & DS (Batch 2)",
+    "title": "Minor Degree Program in AI & DS (2nd Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-08-25",
@@ -564,7 +564,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Business Analytics (Batch 1)",
+    "title": "Minor Degree Program in Business Analytics (1st Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-02-10",
@@ -576,7 +576,7 @@
     ]
   },
   {
-    "title": "Minor Degree Program in Business Analytics (Batch 2)",
+    "title": "Minor Degree Program in Business Analytics (2nd Batch)",
     "category": "Minor",
     "id": "",
     "start": "2025-03-29",
@@ -612,8 +612,8 @@
     ]
   },
   {
-    "title": "Short-term Training: Carpenter Batch PM Vishwakarma Scheme",
-    "category": "STC",
+    "title": "Short-term Skill Training on Carpenter (PM Vishwakarma Scheme)",
+    "category": "Skill Course (for PM Vishwakarma)",
     "id": "",
     "start": "2025-06-19",
     "end": "2025-06-23",
@@ -624,8 +624,8 @@
     ]
   },
   {
-    "title": "PRAYAS 3.0 – Robotics, AI & IoT",
-    "category": "Camp",
+    "title": "Robotics, AI & IoT – PRAYAS 3.0",
+    "category": "Camp (for PRAYAS)",
     "id": "",
     "start": "2025-06-16",
     "end": "2025-07-15",
@@ -636,7 +636,7 @@
     ]
   },
   {
-    "title": "Conference on Indigeneity in the Global South",
+    "title": "Indigeneity in the Global South",
     "category": "Conference",
     "id": "",
     "start": "2025-09-10",
@@ -648,7 +648,7 @@
     ]
   },
   {
-    "title": "Workshop Series on Structural Safety Audit, DPR Preparation, and Landslide & Earthquake Mitigation",
+    "title": "Workshop Series on Structural Safety Audit, DPR Preparation, and Landslide and Earthquake Mitigation",
     "category": "Workshop",
     "id": "",
     "start": "2025-05-26",
