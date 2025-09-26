@@ -104,7 +104,7 @@
     ]
   },
   {
-    "title": "AiXCELRATE 2.0",
+    "title": "AiXCELRATE",
     "category": "Symposium",
     "id": "",
     "start": "2024-10-05",
@@ -208,8 +208,8 @@
     ]
   },
   {
-    "title": "NPTEL Course on Wide Band Gap Devices in Power Electronics Applications",
-    "category": "NPTEL",
+    "title": "Wide Band Gap Devices in Power Electronics Applications (NPTEL)",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2024-07-01",
     "end": "2024-12-01",
@@ -221,8 +221,8 @@
     ]
   },
   {
-    "title": "Manufacturing of Turbines (Gas, Steam, Hydro and Wind)",
-    "category": "NPTEL",
+    "title": "Manufacturing of turbines (gas, steam, hydro and wind)",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2025-01-01",
     "end": "2025-04-01",
@@ -247,8 +247,8 @@
     ]
   },
   {
-    "title": "NPTEL Course on Signals and Systems (rerun)",
-    "category": "NPTEL",
+    "title": "NPTEL (rerun) short-term course on Signals and Systems",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2025-01-01",
     "end": "2025-04-30",
@@ -260,8 +260,8 @@
     ]
   },
   {
-    "title": "NPTEL Course on Liner Dynamical Systems",
-    "category": "NPTEL",
+    "title": "NPTEL (rerun) short-term course on Liner Dynamical Systems",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2025-01-01",
     "end": "2025-04-01",
@@ -273,8 +273,8 @@
     ]
   },
   {
-    "title": "NPTEL Course on Large Applications Practicum",
-    "category": "NPTEL",
+    "title": "NPTEL short-term course on Large Applications Practicum",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2025-01-01",
     "end": "2025-04-01",
@@ -299,8 +299,8 @@
     ]
   },
   {
-    "title": "NPTEL Course on State Space Approach to Control System Analysis and Design",
-    "category": "NPTEL",
+    "title": "NPTEL (rerun) State Space Approach to Control System Analysis and Design",
+    "category": "NPTEL Course",
     "id": "",
     "start": "2025-01-01",
     "end": "2025-04-01",
@@ -422,7 +422,7 @@
     "start": "2025-06-03",
     "end": "2025-08-03",
     "insitelink": "#",
-    "coordinator": "Prof. Shyam Kumar Masakapalli",
+    "coordinator": "Dr. Shyam Kumar Masakapalli",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -435,15 +435,15 @@
     "start": "2025-12-16",
     "end": "2025-12-20",
     "insitelink": "#",
-    "coordinator": "Prof. Anjan Kumar Swain",
+    "coordinator": "Dr. Anjan Kumar Swain",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Data-Based Systems and Control",
-    "category": "GIAN",
+    "title": "Data-Based Systems and Control (GIAN)",
+    "category": "GIAN Course",
     "id": "",
     "start": "2025-04-07",
     "end": "2025-04-11",
@@ -455,7 +455,7 @@
     ]
   },
   {
-    "title": "Lectures at School of Technical Training, Armoured Corps Centre & School, Ahmednagar (online)",
+    "title": "Conduct of Lectures at School of Technical Training, Armoured Corps Centre & School, Ahmednagar (online mode)",
     "category": "Online Course",
     "id": "",
     "start": "2025-01-29",
@@ -468,8 +468,8 @@
     ]
   },
   {
-    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations",
-    "category": "GIAN",
+    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN)",
+    "category": "GIAN Course",
     "id": "",
     "start": "2025-04-28",
     "end": "2025-05-02",
@@ -676,7 +676,7 @@
     ]
   },
   {
-    "title": "PRAYAS 3.0: Robotics, AI & IoT",
+    "title": "Robotics, AI & IoT (PRAYAS 3.0)",
     "category": "Camp",
     "id": "",
     "start": "2025-06-16",
