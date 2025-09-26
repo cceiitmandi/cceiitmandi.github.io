@@ -80,12 +80,43 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      html += `</div>`; // close event-info-row
+      html += `</div>`;
       card.innerHTML = html;
       eventList.appendChild(card);
     });
 
     window.currentFilteredEvents = filtered;
+  }
+
+  function getURLParameter(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function applyInitialFilters() {
+    const urlYear = getURLParameter("year");
+    const urlCategory = getURLParameter("category");
+
+    const validYears = ["2025", "2024", "2023", "2022"];
+    const selectedYear = validYears.includes(urlYear) ? urlYear : "all";
+
+    // Set active year button
+    const targetBtn = document.querySelector(`.nav-btn[data-year="${selectedYear}"]`);
+    if (targetBtn) {
+      navButtons.forEach(b => b.classList.remove("active"));
+      targetBtn.classList.add("active");
+      currentYearIndex = yearButtons.indexOf(selectedYear);
+    }
+
+    // Set category dropdown
+    if (urlCategory) {
+      categoryFilter.value = urlCategory;
+    }
+
+    renderEvents(selectedYear, urlCategory || "all");
+    yearTitle.textContent =
+      selectedYear === "all"
+        ? "All Years : Archived"
+        : `Archived : ${selectedYear}`;
   }
 
   navButtons.forEach(btn => {
@@ -98,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       categoryFilter.value = "all";
 
       renderEvents(yr, "all");
-      yearTitle.textContent = (yr === "all") ? "All Years : Archived" : "Archived : " + yr;
+      yearTitle.textContent = yr === "all" ? "All Years : Archived" : "Archived : " + yr;
 
       if (window.innerWidth <= 768) modalOverlay.classList.remove("active");
     });
@@ -129,12 +160,58 @@ document.addEventListener("DOMContentLoaded", function () {
     renderEvents(year, categoryFilter.value);
   });
 
+  // CSV download
+  document.getElementById("downloadCsv").addEventListener("click", () => {
+    const events = window.currentFilteredEvents || [];
+
+    if (events.length === 0) {
+      alert("No events to export.");
+      return;
+    }
+
+    const baseHeaders = ["SNo", "Title", "Year", "Start Date", "End Date", "ID", "Coordinator", "Insite Link"];
+    const maxLinks = Math.max(...events.map(e => (e.links || []).length));
+    const linkHeaders = Array.from({ length: maxLinks }, (_, i) => `Link ${i + 1}`);
+    const headers = [...baseHeaders, ...linkHeaders];
+
+    const rows = events.map((event, index) => {
+      const baseRow = [
+        index + 1,
+        event.title || "",
+        event.start ? new Date(event.start).getFullYear() : "",
+        event.start ? new Date(event.start).toLocaleDateString() : "",
+        event.end ? new Date(event.end).toLocaleDateString() : "",
+        event.id || "",
+        event.coordinator || "",
+        event.insitelink || ""
+      ];
+
+      const linkValues = (event.links || []).map(link => link.url || "");
+      while (linkValues.length < maxLinks) linkValues.push("");
+
+      return [...baseRow, ...linkValues];
+    });
+
+    const csvContent = [headers, ...rows]
+      .map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(","))
+      .join("\n");
+
+    const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "CCE_Archive.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+
   fetch('archive/archive.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       events = data;
-      renderEvents("all", "all");
-      yearTitle.textContent = "All Years : Archived";
+      applyInitialFilters(); // ← apply year & category filters from URL
     })
     .catch(err => {
       console.error('Failed to load archive.json', err);
