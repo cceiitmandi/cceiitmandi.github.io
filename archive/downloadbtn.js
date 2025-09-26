@@ -6,48 +6,45 @@ document.getElementById("downloadCsv").addEventListener("click", () => {
     return;
   }
 
-  // Prepare data rows
-  const headers = ["SNo", "Title", "Year", "Start Date", "End Date", "ID", "Coordinator", "Insite Link"];
-  const rows = events.map((e, i) => {
-    const base = [
-      i + 1,
-      e.title || "",
-      e.start ? new Date(e.start).getFullYear() : "",
-      e.start ? new Date(e.start).toLocaleDateString() : "",
-      e.end ? new Date(e.end).toLocaleDateString() : "",
-      e.id || "",
-      e.coordinator || "",
-      e.insitelink || ""
+  // Build headers
+  const baseHeaders = ["SNo", "Title", "Year", "Start Date", "End Date", "ID", "Coordinator", "Insite Link"];
+  const maxLinks = Math.max(...events.map(e => (e.links || []).length));
+  const linkHeaders = Array.from({ length: maxLinks }, (_, i) => `Link ${i + 1}`);
+  const headers = [...baseHeaders, ...linkHeaders];
+
+  // Build rows
+  const rows = events.map((event, index) => {
+    const baseRow = [
+      index + 1,
+      event.title || "",
+      event.start ? new Date(event.start).getFullYear() : "",
+      event.start ? new Date(event.start).toLocaleDateString() : "",
+      event.end ? new Date(event.end).toLocaleDateString() : "",
+      event.id || "",
+      event.coordinator || "",
+      event.insitelink || ""
     ];
 
-    const linkCols = (e.links || []).map(l => l.url || "");
-    return [...base, ...linkCols];
+    const linkValues = (event.links || []).map(link => link.url || "");
+    while (linkValues.length < maxLinks) linkValues.push(""); // pad missing links
+
+    return [...baseRow, ...linkValues];
   });
 
-  // Determine max number of links to add as header
-  const maxLinks = Math.max(...events.map(e => (e.links || []).length));
-  for (let i = 1; i <= maxLinks; i++) {
-    headers.push(`Link ${i}`);
-  }
+  // Combine all into CSV string
+  const csvContent = [headers, ...rows]
+    .map(row =>
+      row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(",")
+    )
+    .join("\n");
 
-  // Normalize row lengths
-  rows.forEach(row => {
-    while (row.length < headers.length) row.push("");
-  });
-
-  const allRows = [headers, ...rows];
-
-  // Convert to CSV format
-  const csv = allRows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(",")).join("\n");
-
-  // Convert CSV to Excel MIME type
-  const blob = new Blob(["\uFEFF" + csv], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8;" });
+  // Create blob and trigger download
+  const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
   const url = URL.createObjectURL(blob);
 
-  // Trigger download
   const a = document.createElement("a");
   a.href = url;
-  a.download = "CCE_Archive.xlsx";
+  a.download = "CCE_Archive.csv";
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
