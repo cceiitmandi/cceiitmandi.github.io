@@ -23,12 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderEvents(filterMonth = "all") {
-    const today = new Date(); // real-time date
-    
+    const today = new Date();
+
     let filtered = events.filter(e => {
-      let endDate = new Date(e.end);
-      endDate.setHours(20, 0, 0, 0); // Include Only Until 8:00 PM on END date
-      return endDate >= today;
+      const start = new Date(e.start);
+      const end = new Date(e.end);
+      end.setHours(20, 0, 0, 0);
+
+      const isCurrentMonth =
+        start.getFullYear() === today.getFullYear() &&
+        start.getMonth() === today.getMonth();
+
+      // Keep event if:
+      // 1. It’s ongoing/upcoming, OR
+      // 2. It belongs to the current month (even if completed)
+      return end >= today || isCurrentMonth;
     });
 
     if (filterMonth !== "all") {
@@ -38,14 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const start = new Date(e.start);
         const end = new Date(e.end);
 
-        // Range for the selected month
-        const monthStart = new Date(year, month - 1, 1);                // first day of the month
-        const monthEnd = new Date(year, month, 0, 23, 59, 59, 999);     // last day of the month
+        const monthStart = new Date(year, month - 1, 1);
+        const monthEnd = new Date(year, month, 0, 23, 59, 59, 999);
 
-        // Keep event if it overlaps with the month
         return start <= monthEnd && end >= monthStart;
-    });}
-
+      });
+    }
 
     filtered.sort((a, b) => {
       const aStart = new Date(a.start);
@@ -56,11 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const aMultiMonth = (aEnd.getFullYear() !== aStart.getFullYear()) || (aEnd.getMonth() !== aStart.getMonth());
       const bMultiMonth = (bEnd.getFullYear() !== bStart.getFullYear()) || (bEnd.getMonth() !== bStart.getMonth());
 
-      // Multi-month events first
       if (aMultiMonth && !bMultiMonth) return -1;
       if (!aMultiMonth && bMultiMonth) return 1;
 
-      // Otherwise, sort by start date
       return aStart - bStart;
     });
 
@@ -78,12 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const startDate = new Date(e.start);
       const endDate = new Date(e.end);
-      endDate.setHours(20, 0, 0, 0); // make LIVE valid until 8 PM of end date
+      endDate.setHours(20, 0, 0, 0);
+
       const isOngoing = today >= startDate && today <= endDate;
+      const isCurrentMonth =
+        startDate.getFullYear() === today.getFullYear() &&
+        startDate.getMonth() === today.getMonth();
+      const isConcluded = isCurrentMonth && today > endDate;
 
       let html = `
         <div class="event-title-row non">
-          <h3 class="event-title non">${e.title} ${isOngoing ? '<span class="ongoing-tag">ONGOING</span>' : ''}</h3>
+          <h3 class="event-title non">
+            ${e.title}
+            ${isOngoing ? '<span class="ongoing-tag">ONGOING</span>' : ''}
+            ${isConcluded ? '<span class="concluded-tag">CONCLUDED</span>' : ''}
+          </h3>
           ${e.category ? `<span class="tag non">${e.category}</span>` : ""}
         </div>
         <div class="event-info-row">
@@ -142,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!e.target.closest(".sidebar")) modalOverlay.classList.remove("active");
   });
 
-  // Load events from JSON
   fetch('calendar/calendar.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
