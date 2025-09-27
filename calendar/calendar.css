@@ -382,7 +382,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #e5e7eb; /* grey background */
+  background-color: #d7dff0; /* greyish-blue background */
   color: #374151; /* dark grey text */
   font-size: 0.85rem;
   font-weight: bold;

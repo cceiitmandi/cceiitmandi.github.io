@@ -1,12 +1,38 @@
 [
   {
+    "title": "Machine Learning for Real World Application (Sponsored by TCS)",
+    "category": "Skill Course",
+    "id": "IITM/Spons-ML/PKL/276",
+    "start": "2024-03-18",
+    "end": "2024-06-03",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-191",
+    "coordinator": "Dr. Parimala Kancharla, Assistant Professor (SCEE)",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Chip Operational Amplifier Design Techniques",
+    "category": "Workshop",
+    "id": "IITM/WS/HS/253",
+    "start": "2025-04-11",
+    "end": "2025-04-13",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/04-163",
+    "coordinator": "Prof. Hitesh Shrimali (SCEE)",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
     "title": "9th International Conference on Sustainable Energy and Environmental Changes",
     "category": "Conference",
-    "id": "",
+    "id": "IITM/Conf/SN/176",
     "start": "2024-12-13",
     "end": "2024-12-15",
-    "insitelink": "#",
-    "coordinator": "Prof. Atul Dhar, Dr. Satvasheel Powar, Prof. Shyam Kumar Masakapalli, Dr. Sarthak Nag, Dr. Gajendra Singh",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/09-115",
+    "coordinator": "Prof. Atul Dhar, Dr. Satvasheel Powar, Prof. Shyam Kumar Masakapalli, Dr. Sarthak Nag & Dr. Gajendra Singh",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -15,10 +41,10 @@
   {
     "title": "Professional Excellence: A Framework from Bhagavad Gita",
     "category": "Conference",
-    "id": "",
+    "id": "IITM/Conf/AKN/205",
     "start": "2024-09-13",
     "end": "2024-09-15",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/04-99",
     "coordinator": "Dr. Akhaya Kumar Nayak",
     "links": [
       { "label": "", "url": "" },
@@ -28,10 +54,10 @@
   {
     "title": "2024 Indian Judgment and Decision Making",
     "category": "Conference",
-    "id": "",
+    "id": "IITM/Conf/IKSMHA/VD/210",
     "start": "2024-10-05",
     "end": "2024-10-06",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/06-105",
     "coordinator": "Dr. Varun Dutt",
     "links": [
       { "label": "", "url": "" },
@@ -41,11 +67,11 @@
   {
     "title": "Interdisciplinary Approaches to South Asian Ecology",
     "category": "Conference",
-    "id": "",
+    "id": "IITM/Conf/TC/212",
     "start": "2024-10-23",
     "end": "2024-10-25",
-    "insitelink": "#",
-    "coordinator": "Dr. Thirthankar Chakraborty",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/09-114",
+    "coordinator": "Dr. Thirthankar Chakraborty, SHSS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -54,10 +80,10 @@
   {
     "title": "Detailed Project Report (DPR) Preparation for Mitigating Various Hazards",
     "category": "Workshop",
-    "id": "",
+    "id": "IITM/WS/KVU/213",
     "start": "2024-09-18",
     "end": "2024-09-20",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/09-112",
     "coordinator": "Dr. Kala Venkata Uday",
     "links": [
       { "label": "", "url": "" },
@@ -65,13 +91,13 @@
     ]
   },
   {
-    "title": "A Hands-on Workshop on Composites Design and Manufacturing",
+    "title": "Hands-on Workshop on Composites Design and Manufacturing",
     "category": "Workshop",
-    "id": "",
+    "id": "IITM/WS/SZ-HP/215",
     "start": "2025-06-16",
     "end": "2025-06-20",
-    "insitelink": "#",
-    "coordinator": "Dr. Sunny Zafar, Dr. Himanshu Pathak",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-116",
+    "coordinator": "Dr. Sunny Zafar & Dr. Himanshu Pathak, SMME",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -80,11 +106,11 @@
   {
     "title": "Clinical Challenges and Control: AI Landscape",
     "category": "Workshop",
-    "id": "",
+    "id": "IITM/WS/SS/216",
     "start": "2024-10-19",
     "end": "2024-10-19",
-    "insitelink": "#",
-    "coordinator": "Dr. Sneha Singh",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-119",
+    "coordinator": "Dr. Sneha Singh, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -104,13 +130,13 @@
     ]
   },
   {
-    "title": "AiXCELRATE",
+    "title": "AiXCELRATE 2.0",
     "category": "Symposium",
-    "id": "",
+    "id": " IITM/AiX/AB/217",
     "start": "2024-10-05",
     "end": "2024-10-06",
-    "insitelink": "#",
-    "coordinator": "Dr. Ashish Bollimbala",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-117",
+    "coordinator": "Dr. Ashish Bollimbala, SOM",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -119,11 +145,11 @@
   {
     "title": "Capacity Building Program for PGT Physics",
     "category": "FDP/CBP/LDP",
-    "id": "",
+    "id": "IITM/CBP/Physics/PP-RKY/219",
     "start": "2024-11-05",
     "end": "2024-11-09",
-    "insitelink": "#",
-    "coordinator": "Dr. Prabhakr Palni, Dr. Ravindra Kumar Yadav",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-120",
+    "coordinator": "Dr. Prabhakr Palni & Dr. Ravindra Kumar Yadav, SPS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -132,11 +158,24 @@
   {
     "title": "Maintenance of Rural Road in Hilly Terrain",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC-NRIDA/AK/220",
     "start": "2024-12-05",
     "end": "2024-12-09",
-    "insitelink": "#",
-    "coordinator": "Dr. Ashutosh Kumar",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-121",
+    "coordinator": "Dr. Ashutosh Kumar, SCENE",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Nanomaterials and Nanomedicine for College Faculties",
+    "category": "Workshop",
+    "id": "IITM/WS/AJ/239",
+    "start": "2025-01-09",
+    "end": "2025-01-10",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/01-142",
+    "coordinator": "Dr. Amit Jaiswal, SBB",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -145,11 +184,11 @@
   {
     "title": "Capacity Building Programme for PGT Chemistry",
     "category": "FDP/CBP/LDP",
-    "id": "",
+    "id": " IITM/CBP-Chem/PFS-MD/221",
     "start": "2024-11-05",
     "end": "2024-11-09",
-    "insitelink": "#",
-    "coordinator": "Dr. Prem Felix Siril, Dr. Moupriya Das",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-122",
+    "coordinator": "Dr. Prem Felix Siril & Dr. Moupriya Das, SCS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -158,11 +197,11 @@
   {
     "title": "Integrated Product Design and Development with CAE and CAM",
     "category": "STC",
-    "id": "",
+    "id": "IITM/Spons/SZ-HP/222",
     "start": "2024-12-09",
     "end": "2024-12-14",
-    "insitelink": "#",
-    "coordinator": "Dr. Sunny Zafar, Dr. Himanshu Pathak",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/10-123",
+    "coordinator": "Dr. Sunny Zafar & Dr. Himanshu Pathak, SMME",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -171,11 +210,11 @@
   {
     "title": "Winter School on Modelling Water Flow and Contaminant Transport in Subsurface using HYDRUS 2D/3D Software Packages",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC/DS/223",
     "start": "2025-01-27",
     "end": "2025-01-31",
-    "insitelink": "#",
-    "coordinator": "Dr. Deepak Swami",
+    "insitelink": "http://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/11-124",
+    "coordinator": "Dr. Deepak Swami, SCENE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -184,10 +223,10 @@
   {
     "title": "6th Winter School on Cognitive Modelling",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC/VD/224",
     "start": "2024-11-09",
     "end": "2024-11-09",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/11-125",
     "coordinator": "Dr. Varun Dutt",
     "links": [
       { "label": "", "url": "" },
@@ -197,23 +236,23 @@
   {
     "title": "Capacity Building Program for PGT Mathematics",
     "category": "FDP/CBP/LDP",
-    "id": "",
+    "id": "IITM/CBP-Math/MT-P/225",
     "start": "2024-11-25",
     "end": "2024-11-29",
-    "insitelink": "#",
-    "coordinator": "Dr. Manoj Thakur, Dr. Preeti",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/11-126",
+    "coordinator": "Dr. Manoj Thakur & Dr. Preeti, SMSS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Wide Band Gap Devices in Power Electronics Applications (NPTEL)",
+    "title": "Wide Band Gap Devices in Power Electronics Applications",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/MD/226",
     "start": "2024-07-01",
     "end": "2024-12-01",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/11-127",
     "coordinator": "Dr. Moumita Das",
     "links": [
       { "label": "", "url": "" },
@@ -221,12 +260,12 @@
     ]
   },
   {
-    "title": "Manufacturing of turbines (gas, steam, hydro and wind)",
+    "title": "Manufacturing of Turbines (Gas, Steam, Hydro and Wind)",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/SZ/227",
     "start": "2025-01-01",
-    "end": "2025-04-01",
-    "insitelink": "#",
+    "end": "2025-04-30",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/11-128",
     "coordinator": "Dr. Sunny Zafar",
     "links": [
       { "label": "", "url": "" },
@@ -236,11 +275,11 @@
   {
     "title": "Capacity Building Program for PGT Biology",
     "category": "FDP/CBP/LDP",
-    "id": "",
+    "id": "IITM/CBP-BIO/PK/228",
     "start": "2024-11-19",
     "end": "2024-11-23",
-    "insitelink": "#",
-    "coordinator": "Dr. Prasad Kasturi",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-130",
+    "coordinator": "Dr. Prasad Kasturi, SBB",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -249,24 +288,24 @@
   {
     "title": "NPTEL (rerun) short-term course on Signals and Systems",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/HS/229",
     "start": "2025-01-01",
     "end": "2025-04-30",
-    "insitelink": "#",
-    "coordinator": "Dr. Hitesh Shrimali",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-133",
+    "coordinator": "Dr. Hitesh Shrimali, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "NPTEL (rerun) short-term course on Liner Dynamical Systems",
+    "title": "NPTEL (rerun) short-term course on Linear Dynamical Systems",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/TJ/230",
     "start": "2025-01-01",
     "end": "2025-04-01",
-    "insitelink": "#",
-    "coordinator": "Dr. Tushar Jain",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-132",
+    "coordinator": "Dr. Tushar Jain, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -275,10 +314,10 @@
   {
     "title": "NPTEL short-term course on Large Applications Practicum",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/VD/231",
     "start": "2025-01-01",
     "end": "2025-04-01",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-131",
     "coordinator": "Dr. Varun Dutt",
     "links": [
       { "label": "", "url": "" },
@@ -288,24 +327,37 @@
   {
     "title": "Matrix Biology Research Convergence (MBRC) 2025",
     "category": "Symposium",
-    "id": "",
+    "id": " IITM/Symposium/TB/232",
     "start": "2025-01-09",
     "end": "2025-01-10",
-    "insitelink": "#",
-    "coordinator": "Dr. Trayambak Basak",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-134",
+    "coordinator": "Dr. Trayambak Basak, SBB",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
+    "title": "Masterclass on Statistical Data Analysis and Deep Learning",
+    "category": "Workshop",
+    "id": "IITM/WS/SA/261",
+    "start": "2025-06-23",
+    "end": "2025-06-27",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-169",
+    "coordinator": "Dr. Sarita Azad, SMSS",
+    "links": [
+      { "label": "Group Photo", "url": "../assets/imgs/masterclass-sdadl.jpg" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
     "title": "NPTEL (rerun) State Space Approach to Control System Analysis and Design",
     "category": "NPTEL Course",
-    "id": "",
+    "id": "IITM/STC-NPTEL/APT/233",
     "start": "2025-01-01",
     "end": "2025-04-01",
-    "insitelink": "#",
-    "coordinator": "Dr. Akhilanand Pati Tiwari",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-140",
+    "coordinator": "Dr. Akhilanand Pati Tiwari, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -314,11 +366,11 @@
   {
     "title": "Mastering 3D Printing: from Basic to Advanced Techniques",
     "category": "STC",
-    "id": "",
+    "id": " IITM/STC/PS/234",
     "start": "2024-12-05",
     "end": "2024-12-09",
-    "insitelink": "#",
-    "coordinator": "Dr. Prateek Saxena",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-139",
+    "coordinator": "Dr. Prateek Saxena, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -327,23 +379,23 @@
   {
     "title": "Mathematical Foundations of General Relativity",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC/RKK/235",
     "start": "2024-12-09",
     "end": "2025-01-14",
-    "insitelink": "#",
-    "coordinator": "Dr. Rahul Kumar Kothari",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-138",
+    "coordinator": "Dr. Rahul Kumar Kothari, SPS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "A Deep Learning Workshop for Beginners",
+    "title": "A Deep Learning Workshop for Faculty Members",
     "category": "Workshop",
-    "id": "",
+    "id": "IITM/WS/AN/236",
     "start": "2025-02-08",
     "end": "2025-02-09",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/02-151",
     "coordinator": "Dr. Aditya Nigam",
     "links": [
       { "label": "", "url": "" },
@@ -353,10 +405,10 @@
   {
     "title": "Futuristic Technologies for Energy-Efficient, Safe and Smart Ropeway Systems",
     "category": "Workshop",
-    "id": "",
+    "id": "IITM/WS/RK-VSC/266",
     "start": "2025-07-21",
     "end": "2025-07-21",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-175",
     "coordinator": "Dr. Rajeev Kumar, Dr. Vishal Singh Chauhan",
     "links": [
       { "label": "", "url": "" },
@@ -366,37 +418,50 @@
   {
     "title": "HCL – Training and Mentoring Program",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC/AN/237",
     "start": "2025-01-30",
     "end": "2025-01-30",
-    "insitelink": "#",
-    "coordinator": "Dr. Aditya Nigam",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/12-137",
+    "coordinator": "Dr. Aditya Nigam, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Entrepreneurship Mindset Development Program (EMDP) & Advance EMDP on General Management /Leadership",
+    "title": "Entrepreneurship Mindset Development Program (EMDP)",
     "category": "STC",
-    "id": "",
+    "id": "IITM/STC/PS/238",
     "start": "2025-01-27",
     "end": "2025-02-01",
-    "insitelink": "#",
-    "coordinator": "Dr. Puran Singh",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/03-155",
+    "coordinator": "Dr. Puran Singh, SOM",
     "links": [
-      { "label": "", "url": "" },
+      { "label": "Group Photo", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Entrepreneurship Mindset Development Program (EMDP) (2nd Batch)",
+    "category": "STC",
+    "id": "IITM/STC/PS/238",
+    "start": "2025-02-24",
+    "end": "2025-03-01",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/03-155",
+    "coordinator": "Dr. Puran Singh, SOM",
+    "links": [
+      { "label": "Group Photo", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
     "title": "Himalayan Business Summit (HiBS)",
     "category": "Symposium",
-    "id": "",
+    "id": "IITM/HiBS/AB/240",
     "start": "2025-01-18",
     "end": "2025-01-19",
-    "insitelink": "#",
-    "coordinator": "Dr. Ashish Bollimbala",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/01-144",
+    "coordinator": "Dr. Ashish Bollimbala, SOM",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -405,11 +470,11 @@
   {
     "title": "1st SCS Research Meet, 2025",
     "category": "Symposium",
-    "id": "",
+    "id": "IITM/Symposium/IB/241",
     "start": "2025-01-25",
     "end": "2025-01-25",
-    "insitelink": "#",
-    "coordinator": "Dr. Indu Bala",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/01-145",
+    "coordinator": "Dr. Indu Bala, SCS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -442,20 +507,20 @@
     ]
   },
   {
-    "title": "Data-Based Systems and Control (GIAN)",
+    "title": "Data-Based Systems and Control",
     "category": "GIAN Course",
-    "id": "",
+    "id": "IITM/GIAN/TJ/252",
     "start": "2025-04-07",
     "end": "2025-04-11",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/04-159",
     "coordinator": "Dr. Tushar Jain",
     "links": [
-      { "label": "", "url": "" },
+      { "label": "Group Photo", "url": "../images/highlight/2.jpg" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Conduct of Lectures at School of Technical Training, Armoured Corps Centre & School, Ahmednagar (online mode)",
+    "title": "Conduct of Lectures at School of Technical Training, Armoured Corps Centre & School, Ahmednagar (Online)",
     "category": "Online Course",
     "id": "",
     "start": "2025-01-29",
@@ -468,13 +533,39 @@
     ]
   },
   {
-    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations (GIAN)",
+    "title": "Wetting, Capillarity and Phase Transitions: Experiments and Simulations",
     "category": "GIAN Course",
-    "id": "",
+    "id": "IITM/STC-GIAN/PK/260",
     "start": "2025-04-28",
     "end": "2025-05-02",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-168",
     "coordinator": "Dr. Parmod Kumar",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "International Art Conference – Science Business Climate Conference",
+    "category": "Conference",
+    "id": "IITM/Conf/KVU-DS/197",
+    "start": "2024-08-17",
+    "end": "2024-08-18",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/HCCE/2024/04-91",
+    "coordinator": "Dr. K.V. Uday r & Dr. Deepak Swam, SCENE",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+  {
+    "title": "Writer In Residence Programme",
+    "category": "Workshop",
+    "id": "IITM/WS/NVA-TC/251",
+    "start": "2024-08-17",
+    "end": "2024-08-18",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/03-158",
+    "coordinator": "Dr. Neethi V. Alexander & Dr. Thirthankar Chakraborty, SHSS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -483,11 +574,11 @@
   {
     "title": "Minor Degree Program in Data Science and Machine Learning (1st batch)",
     "category": "Minor",
-    "id": "",
+    "id": "IITM/MDP/IJ/214",
     "start": "2024-07-29",
     "end": "2025-10-05",
-    "insitelink": "#",
-    "coordinator": "Dr. Indu Joshi",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2024/09-113",
+    "coordinator": "Dr. Indu Joshi, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -500,7 +591,7 @@
     "start": "2024-09-29",
     "end": "2025-10-05",
     "insitelink": "#",
-    "coordinator": "Dr. Indu Joshi",
+    "coordinator": "Dr. Indu Joshi, SCEE",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -676,33 +767,33 @@
     ]
   },
   {
-    "title": "Robotics, AI & IoT (PRAYAS 3.0)",
+    "title": "PRAYAS 3.0: Robotics, AI & IoT",
     "category": "Camp",
-    "id": "",
+    "id": "IITM/STC-PRAYAS3.0/TJ/264",
     "start": "2025-06-16",
     "end": "2025-07-15",
-    "insitelink": "#",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/06-173",
     "coordinator": "Dr. Tushar Jain",
     "links": [
-      { "label": "", "url": "" },
+      { "label": "Group Photo", "url": "../images/highlight/4.jpg" },
       { "label": "", "url": "" }
     ]
   },
   {
     "title": "Indigeneity in the Global South",
     "category": "Conference",
-    "id": "",
+    "id": "IITM/Conf/SSD/263",
     "start": "2025-09-10",
     "end": "2025-09-12",
-    "insitelink": "#",
-    "coordinator": "Dr. Shyamsree Dasgupta",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-171",
+    "coordinator": "Dr. Shyamsree Dasgupta, SHSS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },
   {
-    "title": "Structural Safety Audit, DPR Preparation, and Landslide and Earthquake Mitigation (Three-part Workshop Series)",
+    "title": "Structural Safety Audit, DPR Preparation, and Landslide and Earthquake Mitigation (3-part Workshop Series)",
     "category": "Workshop",
     "id": "",
     "start": "2025-05-26",

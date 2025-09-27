@@ -23,59 +23,71 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderEvents(filterMonth = "all") {
-    const today = new Date();
+  const today = new Date();
 
-    let filtered = events.filter(e => {
+  let filtered = events.filter(e => {
+    const start = new Date(e.start);
+    const end = new Date(e.end);
+    end.setHours(20, 0, 0, 0);
+
+    const isCurrentMonth =
+      start.getFullYear() === today.getFullYear() &&
+      start.getMonth() === today.getMonth();
+
+    return end >= today || isCurrentMonth;
+  });
+
+  if (filterMonth !== "all") {
+    // ---- MONTHLY VIEW ----
+    const [year, month] = filterMonth.split("-").map(Number);
+    const monthStart = new Date(year, month - 1, 1);
+    const monthEnd = new Date(year, month, 0, 23, 59, 59, 999);
+
+    filtered = filtered.filter(e => {
       const start = new Date(e.start);
       const end = new Date(e.end);
-      end.setHours(20, 0, 0, 0);
-
-      const isCurrentMonth =
-        start.getFullYear() === today.getFullYear() &&
-        start.getMonth() === today.getMonth();
-
-      // Keep event if:
-      // 1. It’s ongoing/upcoming, OR
-      // 2. It belongs to the current month (even if completed)
-      return end >= today || isCurrentMonth;
+      return start <= monthEnd && end >= monthStart; // overlaps this month
     });
-
-    if (filterMonth !== "all") {
-      const [year, month] = filterMonth.split("-").map(Number);
-
-      filtered = filtered.filter(e => {
-        const start = new Date(e.start);
-        const end = new Date(e.end);
-
-        const monthStart = new Date(year, month - 1, 1);
-        const monthEnd = new Date(year, month, 0, 23, 59, 59, 999);
-
-        return start <= monthEnd && end >= monthStart;
-      });
-    }
 
     filtered.sort((a, b) => {
       const aStart = new Date(a.start);
-      const aEnd = new Date(a.end);
       const bStart = new Date(b.start);
-      const bEnd = new Date(b.end);
 
-      const aMultiMonth = (aEnd.getFullYear() !== aStart.getFullYear()) || (aEnd.getMonth() !== aStart.getMonth());
-      const bMultiMonth = (bEnd.getFullYear() !== bStart.getFullYear()) || (bEnd.getMonth() !== bStart.getMonth());
+      const aCrosses = aStart < monthStart && new Date(a.end) >= monthStart;
+      const bCrosses = bStart < monthStart && new Date(b.end) >= monthStart;
 
-      if (aMultiMonth && !bMultiMonth) return -1;
-      if (!aMultiMonth && bMultiMonth) return 1;
+      // multi-month carryover goes first
+      if (aCrosses && !bCrosses) return -1;
+      if (!aCrosses && bCrosses) return 1;
 
       return aStart - bStart;
     });
 
-    eventCount.textContent = `[${filtered.length}]`;
-    eventList.innerHTML = "";
+  } else {
+    // ---- ALL VIEW ----
+    filtered.sort((a, b) => {
+      const aStart = new Date(a.start);
+      const bStart = new Date(b.start);
 
-    if (filtered.length === 0) {
-      eventList.innerHTML = '<p style="font-size: 1.1rem; color: #888; padding: 0.8rem;">No Events/Activities this month yet.</p>';
-      return;
-    }
+      const aCrosses = aStart < today && new Date(a.end) >= today;
+      const bCrosses = bStart < today && new Date(b.end) >= today;
+
+      // events still running from earlier months → float up
+      if (aCrosses && !bCrosses) return -1;
+      if (!aCrosses && bCrosses) return 1;
+
+      return aStart - bStart;
+    });
+  }
+
+  // ---- rendering cards stays unchanged ----
+  eventCount.textContent = `[${filtered.length}]`;
+  eventList.innerHTML = "";
+
+  if (filtered.length === 0) {
+    eventList.innerHTML = '<p style="font-size: 1.1rem; color: #888; padding: 0.8rem;">No Events/Activities this month yet.</p>';
+    return;
+  }
 
     filtered.forEach(e => {
       const card = document.createElement("div");

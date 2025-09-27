@@ -1,5 +1,23 @@
 [
   {
+    "title": "Data Mining for Decision Making",
+    "category": "NPTEL Course",
+    "id": "IITM/STC-NPTEL/VD/268",
+    "start": "2026-01-01",
+    "end": "2026-04-30",
+    "coordinator": "Prof. Varun Dutt, SCEE",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-180"
+  },
+  {
+    "title": "AiXcelerate 3.0",
+    "category": "Conference",
+    "id": "IITM/Symp/AB/279",
+    "start": "2025-09-06",
+    "end": "2025-09-07",
+    "coordinator": "Dr. Ashish Bollimbala, SOM",
+    "insiteLink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-194"
+  },
+  {
     "title": "Advances in Electron Microscopy and Its Applications (AEMA-2025)",
     "category": "Conference",
     "id": "IITM/Conf/PFS/269",
