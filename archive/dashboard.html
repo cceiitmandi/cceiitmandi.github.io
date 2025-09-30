@@ -6,11 +6,14 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>CCE Archive | CCE, IIT Mandi</title>
   
-  <link rel="stylesheet" href="archive/archive.css"/>
-  <link rel="stylesheet" href="css/non.css"/>
+  <link rel="stylesheet" href="archive.css"/>
+  <link rel="stylesheet" href="dash.css"/>
 
-  <script defer src="archive/archive.js"></script>
-  <script defer src="archive/downloadbtn.js"></script>
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script defer src="dash.js"></script>
+  <script defer src="downloadbtn.js"></script>
   
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +21,7 @@
 
   <!-- Mobile Topbar -->
   <div class="topbar-mobile">
-    <a href="index.html"><img src="ccelogo.png" class="mobile-logo" alt="Logo"></a>
+    <a href="index.html"><img src="../ccelogo.png" class="mobile-logo" alt="Logo"></a>
     <h1 class="mobile-title non">CCE Archive</h1>
     <button id="menuToggle" class="menu-btn">☰</button>
   </div>
@@ -33,6 +36,7 @@
           <button class="nav-btn" data-year="2024">2024</button>
           <button class="nav-btn" data-year="2023">2023</button>
           <button class="nav-btn" data-year="2022">2022</button>
+          <button class="nav-btn dashboard-btn" id="dashboardBtn">📊 Dashboard</button>
         </nav>
       </div>
       <div class="sidebar-note mobile-only">
@@ -56,6 +60,7 @@
           <button class="nav-btn" data-year="2024">2024</button>
           <button class="nav-btn" data-year="2023">2023</button>
           <button class="nav-btn" data-year="2022">2022</button>
+          <button class="nav-btn dashboard-btn" id="dashboardBtnDesktop">📊 Dashboard</button>
         </nav>
       </div>
 
@@ -89,13 +94,18 @@
           <option value="FDP/CBP/LDP">FDP/CBP/LDP</option>
           <option value="Skill Course">Skill Course</option>
           <option value="Online Course">Online Course</option>
-          <option value="Camp">Camp</option>         
+          <option value="Camp">Camp</option>
         </select>
 
         <button id="downloadCsv" class="download-btn">DOWNLOAD</button>
       </div>
       
       <div class="event-list" id="eventList"></div>
+
+      <!-- Dashboard Section -->
+      <div id="dashboardSection" style="display: none;">
+        <canvas id="dashboardChart"></canvas>
+      </div>
     </main>
   </div>
 

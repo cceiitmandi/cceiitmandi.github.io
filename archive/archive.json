@@ -12,6 +12,21 @@
       { "label": "", "url": "" }
     ]
   },
+
+  
+  {
+    "title": "Machine Learning for Real World Application (Sponsored by TCS)",
+    "category": "Skill Course",
+    "id": "IITM/Spons-ML/PKL/276",
+    "start": "2024-03-18",
+    "end": "2024-06-03",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-191",
+    "coordinator": "Dr. Parimala Kancharla, Assistant Professor (SCEE)",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
   {
     "title": "Chip Operational Amplifier Design Techniques",
     "category": "Workshop",

@@ -1,0 +1,23 @@
+[
+  {
+    "text": "This was a good programme for us. Improved our teaching techniques. Highly recommend this programme to other teachers also. I will also apply the technique and knowledge given by IIT Mandi in future.",
+    "name": "Santosh Kumar, PGT Matjs",
+    "role": "Particpant of CBP for PGT Mathematics",
+    "stars": 5,
+    "image": "imgs/profile.png"
+  },
+  {
+    "text": "Beyond my expectations.",
+    "name": "Alok Kumar Jain, PGT Maths",
+    "role": "Particpant of CBP for PGT Mathematics",
+    "stars": 5,
+    "image": "imgs/profile.png"
+  },
+  {
+    "text": "My overall experience was excellent. I explored some untouched topics like Latex, Geogebra. I am looking forward to learn these topics at much more deeper level.",
+    "name": "Diksha, PGT Maths",
+    "role": "Particpant of CBP for PGT Mathematics",
+    "stars": 5,
+    "image": "imgs/profile.png"
+  }
+]

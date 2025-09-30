@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Centre for Continuing Education (CCE), IIT Mandi</title>
+
+  <!-- External CSS, FONTS -->
+  <link rel="stylesheet" href="css/floatbar.css" />
+  <link rel="stylesheet" href="css/slideshow.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/announcementbanner.css" />
+  <link rel="stylesheet" href="css/responsivecss.css" />
+  <link rel="stylesheet" href="css/waves.css" />
+  <link rel="stylesheet" href="css/popupmodal.css" />
+  <link rel="stylesheet" href="splash/splashscreen.css" />
+  <link rel="stylesheet" href="css/experience2.css" />
+  
+  <link rel="stylesheet" href="css/non.css" />
+
+  <script src="splash/splashscreen.js" defer></script>
+  <script src="js/experience2.js" defer></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+
+  <script src="js/floatbar.js"></script>
+  <script src="js/popupmodal.js" defer></script>
+
+  <style>
+ 
+  </style>
+
+<!-- Splash Screen SCRIPT (1/2) -->
+    <script>
+      (function () {
+        try {
+          if (sessionStorage.getItem('cceSplashSeen') === '1') {
+            document.documentElement.classList.add('splash-seen');
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script> 
+
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash" role="status" aria-live="polite" aria-label="Loading">
+      <div class="splash-inner">
+        
+        <img src="splash/ashokachakra.gif" alt="IIT Mandi Logo" class="splash-logo">
+        <!-- <img src="ccelogo.png" alt="CCE Logo" class="splash-logo"> -->
+
+        <p class="splash-text">Happy 79th Independence Day</p>
+
+        <div class="spinner" aria-hidden="true"></div>
+      </div>
+    </div>
+
+  <!-- Navigation Bar -->
+  <header class="floating-navbar">
+    <div class="navbar-content">
+      <div class="navbar-left">
+        <a href="index.html">
+          <img src="iitmdlogo.png" alt="IIT Mandi" class="nav-logo">
+          <img src="ccelogo.png" alt="CCE" class="nav-logo">
+        </a>
+        <span class="brand-text">CCE, IIT Mandi</span>
+      </div>
+      <nav class="navbar-links" id="menu">
+        <div class="dropdown">
+          <a href="#">Activities</a>
+          <div class="dropdown-content">
+            <a style="background-color: #42bfed; color: #16135b; " href="calendar.html">Upcoming Activities</a>
+            <a href="activities/leadership-dev.html">Leadership Training Programme</a>
+            <a href="activities/pm-vishwakarma.html">PM Vishwakarma Courses</a>
+            <a href="activities/stc.html">Short-Term Courses (STCs)</a>
+            <a href="activities/online.html">Online Courses</a>
+            <a href="activities/faculty-dev.html">Faculty Development Programs (FDPs)</a>
+            <a href="activities/wcs.html">Workshops, Conferences & Symposiums</a>
+            <a href="activities/GIAN.html">GIAN Courses</a>
+            <a href="activities/NPTEL.html">NPTEL Courses</a>
+            <a href="activities/msme.html">MSME Courses</a>
+            <a href="activities/egd.html">Exposure Gateway Day (EGD)</a>
+          </div>
+        </div>
+        <a href="prayas/index.html">PRAYAS</a>
+        <a href="mmttp.html">MMTTP</a>
+        <a href="mous.html">MOUs</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="tinkeringlab.html">Tinkering Lab</a>
+        <a href="team.html">Team</a>
+        <a href="downloads.html">Downloads</a>
+      </nav>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/heroimg.jpg" alt="Hero Background">
+    <h2>Centre for</h2>
+    <h1>Continuing Education</h1>
+    <p>Indian Institute of Technology Mandi</p>
+
+  <!-- Waves HR -->
+    <section class="waves" style="bottom:0;">
+      <div>
+      <svg viewBox="0 0 120 28" preserveAspectRatio="none">
+      <defs> 
+        <mask id="xxx">
+          <circle cx="7" cy="12" r="40" fill="#fff" />
+        </mask>
+        
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0  
+                0 1 0 0 0  
+                0 0 1 0 0  
+                0 0 0 13 -9" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+          <path id="wave" d="M 0,10 C 30,10 30,12.5 60,12.5 90,12.5 90,10 120,10 150,10 150,12.5 180,12.5 210,12.5 210,10 240,10 v 28 h -240 z" />
+        </defs> 
+
+        <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+        <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        <g class="gooeff">
+          <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </svg>
+      </div>
+    </section>
+  </section>
+
+ 
+  <!-- ONGOING/CURRENT ACTIVITIES -->
+  <section class="activities">
+    <h2>Ongoing Activities</h2>
+    <div class="card">
+      Advanced Optical Diagnostic Techniques (8-12 December, 2025)
+      <span><a href="assets/posters/Advanced Optical Diagnostic Techniques.pdf" target="_blank">Poster</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLScMBWIKc-zO6kPn5pooQxZoQ4MFEeMdT8XdZkggUvcvrv8afw/viewform" target="_blank">Regsitration Form</a></span>
+    </div>
+    <div class="card">
+      Short-Term Course on Electric and Hybrid Vehicles (8-12 December, 2025)
+      <span><a href="assets/posters/Short-Term Course on Electric and Hybrid Vehicles.pdf" target="_blank">Poster</a> | <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW5VVO3apVBLPA_yFuKcBDnaT4BCFeusMj6We2ThlCFkPh3A/viewform" target="_blank">Regsitration Form</a></span>
+    </div>
+    <div class="card">
+      GIAN course on Elements of Smart Structure at IIT Mandi (15-20 December, 2025)
+      <span><a href="https://research.iitmandi.ac.in/eoss2025/" target="_blank">Website</a> | <a href="https://research.iitmandi.ac.in/eoss2025/files/Poster_stc.pdf">Brochure</a></span>
+    </div>
+    <br>
+    <a href="calendar.html" class="calendarlink">Check CCE Calendar →</a>
+  </section>
+
+
+  <!-- IMAGE SLIDESHOW -->
+  <section class="slideshow" aria-label="Highlights slideshow">
+    <h2>Highlights</h2>
+
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <figure class="slide">
+          <img src="images/highlights/1.jpg" alt="Sh. Rajnath Singh inaugurating CCE Office">
+          <figcaption class="caption">Sh. Rajnath Singh, Hon'ble Defence Minister of India, inaugurating CCE Office</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/6.jpg" alt="One-Week Training Program on Electric Vehicles for ITI Instructors">
+          <figcaption class="caption">Group Photo: One-Week Training Program on Electric Vehicles for ITI Instructors</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/2.jpg" alt="Group Photo: GIAN Course on Data Control and Systems">
+          <figcaption class="caption">Group Photo: GIAN Course on Data Control and Systems</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/3.jpg" alt="Group Photo: GIAN Course on Wetting, Capillarity, and Phase Transitions">
+          <figcaption class="caption">Group Photo: GIAN Course on Wetting, Capillarity, and Phase Transitions</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/4.jpg" alt="Group Photo: PRAYAS 3.0 (2025)">
+          <figcaption class="caption">Group Photo: PRAYAS 3.0 (2025)</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="images/highlights/5.jpg" alt="Group Photo: CCE Minor's Campus Immersion, June 2025">
+          <figcaption class="caption">Group Photo: CCE Minor in CSE/CyberSec/AI&ML - Campus Immersion, June 2025</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel-btn prev" type="button" aria-label="Previous slide">❮</button>
+      <button class="carousel-btn next" type="button" aria-label="Next slide">❯</button>
+    </div>
+  </section>
+
+
+  <!-- VISION/MISSION -->
+  <section class="vision-mission">
+
+    <div>
+      <h2>Vision</h2>
+      <p>To be a leading hub for inclusive, impactful learning that empowers individuals and builds a skilled workforce for nation capacity building in STEM and management-related fields.</p>
+    </div>
+    <div>
+      <h2>Mission</h2>
+      <p>Provide learners with a platform to study and gain exposure at IIT Mandi through outreach programmes and to deliver accessible, high-quality continuing education that equips learners with skills, knowledge, and opportunities for lifelong growth.
+      </p>
+    </div>
+
+  </section>
+  
+
+  <!-- ABOUT -->
+  <section class="about-section" style="background-color: rgb(233, 242, 248);">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About CCE, IIT Mandi</h2>
+        <p>
+          The <strong>Centre for Continuing Education (CCE)</strong> was established in early 2022 at IIT Mandi to dedicatedly cater
+          for the national requirement for skilling, up-skilling, and re-skilling of individuals from various
+          Govt./Semi Govt. organizations, public and private undertakings, research institutions and industries.
+          A variety of continuing education programmes have been organized fulfilling the needs for nation-building
+          at all levels starting from elementary schools to dropouts to working professionals from diverse backgrounds
+          so that learners around the globe can get opportunities to gain knowledge and/or develop professional
+          growth skill sets. CCE also provides necessary logistics, and administrative support to run such programs.
+          All institute academic outreach activities like Conferences, Workshops, Symposia, Short-term courses,
+          Training programs, and other similar activities are executed under the umbrella of the CCE.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="images/aboutimg.jpg" alt="IIT Mandi campus" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonial-marquee-container">
+    <div class="testimonial-track-wrapper">
+      <div class="testimonial-track" id="testimonial-track">
+        <!-- Loaded via JS -->
+      </div>
+      <div class="testimonial-track" id="testimonial-track-duplicate">
+        <!-- Duplicate -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ANNOUNCEMENT BANNER 
+  <div class="announcement-banner" id="announcementBanner">
+    <a class="link" href="prayas/index.html"><p><strong>CCE, IIT Mandi </strong> &nbsp;·&nbsp; NextGen Learning &nbsp;·&nbsp; Newsletter 2025 →</p></a>
+    <button class="close-banner" id="closeBanner">×</button>
+  </div> -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+  <!-- WAVES -->
+  <section class="waves" style="top:0; transform: rotate(180deg);">
+    <div>
+    <svg viewBox="0 0 120 28" preserveAspectRatio="none">
+    <defs> 
+      <mask id="xxx">
+        <circle cx="7" cy="12" r="40" fill="#fff" />
+      </mask>
+      
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="
+              1 0 0 0 0  
+              0 1 0 0 0  
+              0 0 1 0 0  
+              0 0 0 13 -9" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+        <path id="wave" d="M 0,10 C 30,10 30,12.5 60,12.5 90,12.5 90,10 120,10 150,10 150,12.5 180,12.5 210,12.5 210,10 240,10 v 28 h -240 z" />
+      </defs> 
+
+      <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+      <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+      <g class="gooeff">
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+    </svg>
+    </div>
+  </section>
+
+    <div class="footer-content">
+      <h3>Centre for Continuing Education</h3>
+      <p>
+        North Campus, IIT Mandi,<br>
+        Kamand, Mandi, Himachal Pradesh - 175075<br>
+        Email: <a href="mailto:cceoffice@iitmandi.ac.in">cceoffice@iitmandi.ac.in</a><br>
+        P: 01905-267742, 267788 <br>
+        <a href="https://www.google.com/maps?q=31.781483,76.994398">CCE ON GOOGLE MAP</a>
+      </p>
+
+      <!-- Social Links -->
+      <section class="footer-socials">
+        <a href="https://www.linkedin.com/company/cce-iitmandi" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://www.youtube.com/@cce-iitmandi" target="_blank" aria-label="YouTube">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" />
+        </a>
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" />
+        </a>
+      </section>
+    </div>
+    <br>
+    <p class="copyrighttext">&copy; 2025, CCE, IIT Mandi. All rights reserved.</p>
+  </footer> 
+
+
+<!-- SLIDESHOW JS -->
+<script src="js/slideshow.js"></script>
+
+
+  <!-- Menu Toggle Script (INSIDE HTML) -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    // Toggle menu on icon click
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent bubbling
+      menu.classList.toggle('active');
+    });
+
+    // Close menu when clicking anywhere else
+    document.addEventListener('click', (event) => {
+      const isClickInsideMenu = menu.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
+
+  <!-- DISMISS BANNER (should be INSIDE) -->
+  <script>
+    document.getElementById("closeBanner").addEventListener("click", function () {
+      document.getElementById("announcementBanner").style.display = "none";
+    });
+  </script>
+
+<!-- Newsletter Modal -->
+<div id="nlModal" class="nl" data-enable="true" data-once="true">
+  <div class="nl__backdrop" data-close="true"></div>
+
+  <div class="nl__dialog" tabindex="-1">
+    <!-- <h3 class="nl__title">CCE Newsletter 2025</h3> -->
+
+    <img class="nl__cover" src="assets/newsletter2025.jpg"
+         alt="CCE Newsletter 2025 cover">
+
+    <p class="nl__desc">Would you like to view this Newsletter?</p>
+
+    <div class="nl__actions">
+      <a class="nl__btn nl__btn--primary"
+         href="assets/CCE Newsletter 2025.pdf"
+         target="_blank" rel="noopener" download>Yes, please</a>
+
+      <button class="nl__btn nl__btn--ghost" type="button" data-close="true">
+        Maybe not this time
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

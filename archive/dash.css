@@ -1,0 +1,18 @@
+#dashboardSection {
+  margin-top: 2rem;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#dashboardChart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.nav-btn.dashboard-btn {
+  /* inherits from nav-btn */
+}

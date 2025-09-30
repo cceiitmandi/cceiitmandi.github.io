@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalOverlay = document.getElementById("modalOverlay");
   const navButtons = document.querySelectorAll(".nav-btn");
   const categoryFilter = document.getElementById("categoryFilter");
+  
+  const dashboardBtn = document.getElementById("dashboardBtn");
+  // Also handle desktop dashboard button if separate
+  const dashboardBtnDesktop = document.getElementById("dashboardBtnDesktop");
+  const dashboardSection = document.getElementById("dashboardSection");
+  let dashboardChart = null;
 
   const yearButtons = ["2025", "2024", "2023", "2022"];
   let currentYearIndex = -1;
@@ -125,8 +131,18 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.classList.add("active");
 
       const yr = btn.getAttribute("data-year");
+      // If this is “Dashboard” tab, we handle elsewhere
+      if (!yr) {
+        // dashboard case handled by dashboardBtn listener
+        return;
+      }
+
       currentYearIndex = yearButtons.indexOf(yr);
       categoryFilter.value = "all";
+
+      // Show events list, hide dashboard
+      eventList.style.display = "block";
+      dashboardSection.style.display = "none";
 
       renderEvents(yr, "all");
       yearTitle.textContent = yr === "all" ? "ALL Years : Archived" : "Archived : " + yr;
@@ -162,19 +178,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // CSV download
   document.getElementById("downloadCsv").addEventListener("click", () => {
-    const events = window.currentFilteredEvents || [];
+    const eventsToExport = window.currentFilteredEvents || [];
 
-    if (events.length === 0) {
+    if (eventsToExport.length === 0) {
       alert("No events to export.");
       return;
     }
 
     const baseHeaders = ["SNo", "Title", "Year", "Start Date", "End Date", "ID", "Coordinator", "Insite Link"];
-    const maxLinks = Math.max(...events.map(e => (e.links || []).length));
+    const maxLinks = Math.max(...eventsToExport.map(e => (e.links || []).length));
     const linkHeaders = Array.from({ length: maxLinks }, (_, i) => `Link ${i + 1}`);
     const headers = [...baseHeaders, ...linkHeaders];
 
-    const rows = events.map((event, index) => {
+    const rows = eventsToExport.map((event, index) => {
       const baseRow = [
         index + 1,
         event.title || "",
@@ -207,11 +223,89 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(a);
   });
 
+  function renderDashboard() {
+    const yearRange = ["2022", "2023", "2024", "2025"];
+    const yearData = { 2022: 0, 2023: 0, 2024: 0, 2025: 0 };
+
+    events.forEach(e => {
+      if (e.start && e.end) {
+        const start = new Date(e.start);
+        const end = new Date(e.end);
+        // Only count if same year and same month (single-month event)
+        if (
+          start.getFullYear() === end.getFullYear() &&
+          start.getMonth() === end.getMonth()
+        ) {
+          const y = start.getFullYear();
+          if (yearData[y] !== undefined) {
+            yearData[y]++;
+          }
+        }
+      }
+    });
+
+    const ctx = document.getElementById("dashboardChart").getContext("2d");
+    if (dashboardChart) dashboardChart.destroy();
+
+    dashboardChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: yearRange,
+        datasets: [{
+          label: 'Event Count (Single‑Month Events)',
+          data: yearRange.map(y => yearData[y]),
+          backgroundColor: '#0f7556',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'Event/Activity Count by Year'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              precision: 0
+            }
+          }
+        }
+      }
+    });
+  }
+
+  function activateDashboard() {
+    navButtons.forEach(b => b.classList.remove("active"));
+    if (dashboardBtn) dashboardBtn.classList.add("active");
+    if (dashboardBtnDesktop) dashboardBtnDesktop.classList.add("active");
+
+    eventList.style.display = "none";
+    dashboardSection.style.display = "block";
+    yearTitle.textContent = "CCE Dashboard 📊";
+    eventCount.textContent = "";
+
+    renderDashboard();
+
+    if (window.innerWidth <= 768) modalOverlay.classList.remove("active");
+  }
+
+  if (dashboardBtn) {
+    dashboardBtn.addEventListener("click", activateDashboard);
+  }
+  if (dashboardBtnDesktop) {
+    dashboardBtnDesktop.addEventListener("click", activateDashboard);
+  }
+
+  // Fetch data
   fetch('archive/archive.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       events = data;
-      applyInitialFilters(); // ← apply year & category filters from URL
+      applyInitialFilters();
     })
     .catch(err => {
       console.error('Failed to load archive.json', err);

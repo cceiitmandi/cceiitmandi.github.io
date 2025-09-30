@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../css/non.css" />
+
+  <title>Scrolling Testimonials</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #1a1a1a;
+    }
+
+    .testimonial-marquee-container {
+      overflow: hidden;
+      padding: 40px 0;
+      background-color: #e6e6e6;
+    }
+
+    .testimonial-track-wrapper {
+      display: flex;
+      width: max-content;
+    }
+
+    .testimonial-track {
+      display: flex;
+      animation: scroll 45s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .testimonial {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 0 16px;
+      width: 310px;
+      min-height: 230px;
+      color: #1a1a1a;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial .stars {
+      color: #1c3c85; /* dark navy blue */
+      font-size: 1.55rem;
+      margin-bottom: 8px;
+    }
+
+    .testimonial p {
+      margin: 0 0 12px;
+      font-size: 1.55rem;
+      line-height: 1.25;
+      font-family: 'Caveat', sans-serif;
+    }
+
+    .testimonial .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: auto;
+    }
+
+    .testimonial .profile img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #1b2a4e;
+    }
+
+    .testimonial .author-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      font-size: 0.95rem;
+      color: #142d68;
+    }
+
+    .testimonial .role {
+      font-size: 0.75rem;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial {
+        width: 240px;
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial {
+        width: 200px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="testimonial-marquee-container">
+    <div class="testimonial-track-wrapper">
+      <div class="testimonial-track" id="testimonial-track">
+        <!-- Loaded via JS -->
+      </div>
+      <div class="testimonial-track" id="testimonial-track-duplicate">
+        <!-- Duplicate -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function fetchTestimonials() {
+      try {
+        const response = await fetch('testimonials.json');
+        if (!response.ok) throw new Error('Fetch failed');
+        const data = await response.json();
+        return data;
+      } catch (err) {
+        console.warn("Using fallback testimonials due to error:", err);
+        // Fallback testimonials
+        return [
+          {
+            text: "Error. Fallback testimonial. JSON file could not be loaded.",
+            name: "Fallback User",
+            role: "Demo User",
+            stars: 4,
+            image: "imgs/profile.png"
+          }
+        ];
+      }
+    }
+
+    function createTestimonialCard(t) {
+      const div = document.createElement('div');
+      div.className = 'testimonial';
+      div.innerHTML = `
+        <div class="stars">${'★'.repeat(t.stars)}${'☆'.repeat(5 - t.stars)}</div>
+        <p>"${t.text}"</p>
+        <div class="profile">
+          <img src="${t.image}" alt="${t.name}">
+          <div class="author-info">
+            <div class="author">${t.name}</div>
+            <div class="role">${t.role}</div>
+          </div>
+        </div>
+      `;
+      return div;
+    }
+
+    async function renderTestimonials() {
+      const data = await fetchTestimonials();
+      const track = document.getElementById('testimonial-track');
+      const duplicate = document.getElementById('testimonial-track-duplicate');
+
+      data.forEach(t => {
+        track.appendChild(createTestimonialCard(t));
+        duplicate.appendChild(createTestimonialCard(t));
+      });
+    }
+
+    renderTestimonials();
+  </script>
+
+</body>
+</html>
