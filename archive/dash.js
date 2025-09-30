@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch data
-  fetch('archive/archive.json?v=' + Date.now())
+  fetch('archive.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       events = data;
