@@ -1,12 +1,54 @@
 [
   {
-    "title": "Machine Learning for Real World Application (Sponsored by TCS)",
-    "category": "Skill Course",
-    "id": "IITM/Spons-ML/PKL/276",
-    "start": "2024-03-18",
-    "end": "2024-06-03",
-    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-191",
-    "coordinator": "Dr. Parimala Kancharla, Assistant Professor (SCEE)",
+    "title": "AiXcelerate 3.0",
+    "category": "Conference",
+    "id": "IITM/Symp/AB/279",
+    "start": "2025-09-06",
+    "end": "2025-09-07",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/08-194",
+    "coordinator": "Dr. Ashish Bollimbala, SOM",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+
+  {
+    "title": "“Indigeneity in the Global South“",
+    "category": "Conference",
+    "id": "IITM/Conf/SSD/263",
+    "start": "2025-09-10",
+    "end": "2025-09-12",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-171",
+    "coordinator": "Dr. Shyamsree Dasgupta, SHSS",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+
+  {
+    "title": "Building Cognitive Experiments: Hands on Training in Psychtoolbox, Psychopy MATLAB & Python Basics",
+    "category": "Workshop",
+    "id": "IITM/WS/RG/272",
+    "start": "2025-09-18",
+    "end": "2025-09-20",
+    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/07-184",
+    "coordinator": "Dr. Ramajayam Govindaraji, IKSHMA",
+    "links": [
+      { "label": "", "url": "" },
+      { "label": "", "url": "" }
+    ]
+  },
+
+  {
+    "title": "Capacity Building Programme for PGT Mathematics (SCERT Delhi)",
+    "category": "FDP/CBP/LDP",
+    "id": "00",
+    "start": "2025-09-22",
+    "end": "2025-09-26",
+    "insitelink": "",
+    "coordinator": "Prof. Manoj Thakur, SOM & SMSS",
     "links": [
       { "label": "", "url": "" },
       { "label": "", "url": "" }
@@ -791,19 +833,6 @@
     "coordinator": "Dr. Tushar Jain",
     "links": [
       { "label": "Group Photo", "url": "../images/highlight/4.jpg" },
-      { "label": "", "url": "" }
-    ]
-  },
-  {
-    "title": "Indigeneity in the Global South",
-    "category": "Conference",
-    "id": "IITM/Conf/SSD/263",
-    "start": "2025-09-10",
-    "end": "2025-09-12",
-    "insitelink": "https://insite.iitmandi.ac.in/circulars/show.php?ID=IITM/CCE/2025/05-171",
-    "coordinator": "Dr. Shyamsree Dasgupta, SHSS",
-    "links": [
-      { "label": "", "url": "" },
       { "label": "", "url": "" }
     ]
   },

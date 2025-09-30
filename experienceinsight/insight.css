@@ -1,0 +1,231 @@
+:root {
+  --dark-orange: #a3290a;
+  --white: #ffffff;
+  --gray-bg: #f9fafb;
+  --border: #d3d4d6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--gray-bg);
+  color: #1f2937;
+}
+
+/* ----------------- HEADER ----------------- */
+.topbar-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark-orange);
+  padding: 12px 16px;
+  color: white;
+}
+
+.mobile-logo {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.mobile-title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* ----------------- RATING TILES GRID ----------------- */
+.rating-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .rating-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------- TILE STYLING ----------------- */
+.rating-tile {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rating-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.rating-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-orange);
+  margin: 16px 0 8px;
+}
+
+.rating-subtext {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+/* ----------------- CIRCULAR RATING ----------------- */
+.circular-rating {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring__background {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 12;
+}
+
+.progress-ring__circle {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 326.72;
+  stroke-dashoffset: 326.72;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+/* Centered label inside the circle */
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.rating-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.rating-scale {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: -2px;
+}
+
+/* ----------------- COLOR VARIANTS ----------------- */
+.progress-ring__circle.red { stroke: #f87171; }
+.progress-ring__circle.green { stroke: #4ade80; }
+.progress-ring__circle.blue { stroke: #3272da; }
+.progress-ring__circle.orange { stroke: #fb923c; }
+.progress-ring__circle.purple { stroke: #a855f7; }
+
+/* ----------------- BAR RATINGS ----------------- */
+.bar-ratings {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.bar-label {
+  flex: 0 0 140px;
+  text-align: left;
+  font-weight: 500;
+  color: #374151;
+}
+
+.bar-track {
+  flex: 1;
+  background: #e5e7eb;
+  border-radius: 6px;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.bar-fill {
+  background: #3272da;
+  height: 100%;
+  width: 0;
+  border-radius: 6px;
+  transition: width 1s ease-out;
+}
+
+.bar-value {
+  font-size: 0.9rem;
+  color: #374151;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* ----------------- MOBILE FIX ----------------- */
+@media (max-width: 600px) {
+  .bar-item {
+    flex-wrap: wrap;   /* allow wrapping instead of column */
+    gap: 6px;
+  }
+
+  .bar-label {
+    flex: 0 0 100%;    /* label takes full row */
+    text-align: left;
+  }
+
+  .bar-track {
+    flex: 1;
+    width: auto;       /* bar grows naturally */
+    min-width: 100px;
+  }
+
+  .bar-value {
+    flex: 0 0 auto;
+    align-self: center; /* keeps value aligned with bar */
+  }
+}

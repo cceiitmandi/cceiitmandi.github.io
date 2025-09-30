@@ -1,5 +1,13 @@
 [
   {
+    "title": "Winter School on Statistical Data Anlytics and Deep Learning (v2)",
+    "category": "STC",
+    "id": "",
+    "start": "2026-01-02",
+    "end": "2026-01-11",
+    "coordinator": "Dr. Sarita Azad and Dr. Rishikesh Yadav, SMSS"
+  },
+  {
     "title": "Data Mining for Decision Making",
     "category": "NPTEL Course",
     "id": "IITM/STC-NPTEL/VD/268",
