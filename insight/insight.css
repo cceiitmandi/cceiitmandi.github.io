@@ -60,6 +60,9 @@ body {
   gap: 20px;
   padding: 40px 20px;
   box-sizing: border-box;
+
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
