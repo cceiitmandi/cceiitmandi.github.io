@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("ratingTiles");
 
-  fetch("insight.json")
+  fetch("insight/insight.json")
     .then(response => response.json())
     .then(data => {
       data.forEach(entry => {
